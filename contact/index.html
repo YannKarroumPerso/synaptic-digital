@@ -107,24 +107,16 @@
 </head>
 <body class="bg-background font-body text-on-background selection:bg-primary-dim selection:text-on-primary-fixed">
 
-<!-- Top Navigation -->
-<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-white/5">
 <nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
-<div class="flex items-center h-20">
-<a href="index.html">
-<img alt="Synaptic Digital Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/>
-</a>
-</div>
+<a href="/"><div class="flex items-center h-16"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></div></a>
 <div class="hidden md:flex items-center space-x-10">
-<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="agence.html">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a>
 </div>
-<a href="contact.html">
-<button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:glow-primary hover:scale-[1.02] transition-all active:scale-95 duration-200">
-    Start Project
-</button>
-</a>
+<a href="/contact"><button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
 </nav>
 </header>
 
@@ -195,8 +187,8 @@
             </div>
 
             <!-- 📬 Formulaire Formspree -->
-            <!-- ⚠️ REMPLACE "xlgagnly" par ton ID Formspree (voir instructions ci-dessous) -->
-            <form id="contact-form" action="https://formspree.io/f/xlgagnly" method="POST" class="space-y-10">
+            <!-- ⚠️ REMPLACE "YOUR_FORM_ID" par ton ID Formspree (voir instructions ci-dessous) -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-10">
 
                 <div class="grid md:grid-cols-2 gap-10">
                     <!-- Nom -->
