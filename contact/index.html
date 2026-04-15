@@ -116,9 +116,36 @@
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a>
 </div>
+<div class="flex items-center gap-4">
 <a href="/contact"><button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
+<button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onclick="toggleMenu()">
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b1"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b2"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b3"></span>
+</button>
+</div>
 </nav>
+<div id="mobile-menu" class="hidden md:hidden bg-[#0e0e10] border-t border-white/5 px-8 py-6 flex flex-col gap-6">
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a>
+<a href="/contact"><button class="w-full px-5 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded transition-all">Démarrer mon projet</button></a>
+</div>
 </header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const b1 = document.getElementById("b1");
+  const b2 = document.getElementById("b2");
+  const b3 = document.getElementById("b3");
+  menu.classList.toggle("hidden");
+  b1.classList.toggle("rotate-45");
+  b1.classList.toggle("translate-y-2");
+  b2.classList.toggle("opacity-0");
+  b3.classList.toggle("-rotate-45");
+  b3.classList.toggle("-translate-y-2");
+}
+</script>
 
 <main class="relative min-h-screen pt-40 pb-20 overflow-hidden neural-bg">
 <!-- Background Elements -->
