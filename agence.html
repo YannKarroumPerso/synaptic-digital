@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Agence | Synaptic Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#7000ff",
+                        "error-container": "#9f0519",
+                        "primary-fixed": "#00F0FF",
+                        "outline-variant": "#48474a",
+                        "error-dim": "#d7383b",
+                        "on-primary": "#005d63",
+                        "on-secondary-fixed": "#41009a",
+                        "on-error": "#490006",
+                        "surface-container-lowest": "#000000",
+                        "surface-tint": "#00F0FF",
+                        "on-primary-fixed-variant": "#005e64",
+                        "tertiary-dim": "#ff60cd",
+                        "surface-dim": "#0e0e10",
+                        "surface-container-highest": "#262529",
+                        "on-primary-container": "#005359",
+                        "primary-fixed-dim": "#00deec",
+                        "tertiary": "#ff60cd",
+                        "on-surface-variant": "#adaaad",
+                        "inverse-surface": "#fcf8fb",
+                        "surface-bright": "#2c2c2f",
+                        "inverse-primary": "#006a71",
+                        "on-tertiary": "#430033",
+                        "tertiary-container": "#fd00c6",
+                        "primary": "#00F0FF",
+                        "primary-dim": "#00deec",
+                        "on-tertiary-container": "#000000",
+                        "surface-container-high": "#1f1f22",
+                        "error": "#ff716c",
+                        "on-tertiary-fixed": "#350027",
+                        "background": "#0e0e10",
+                        "on-secondary-container": "#f8f1ff",
+                        "secondary-fixed": "#dac9ff",
+                        "on-surface": "#ffffff",
+                        "on-error-container": "#ffa8a3",
+                        "tertiary-fixed": "#ff88d3",
+                        "tertiary-fixed-dim": "#ff6dce",
+                        "outline": "#767578",
+                        "on-primary-fixed": "#003f43",
+                        "secondary-dim": "#874cff",
+                        "surface-container": "#19191c",
+                        "surface-variant": "#262529",
+                        "secondary": "#ac89ff",
+                        "on-tertiary-fixed-variant": "#700056",
+                        "inverse-on-surface": "#565457",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "surface-container-low": "#131316",
+                        "surface": "#0e0e10",
+                        "on-background": "#ffffff",
+                        "on-secondary": "#290067",
+                        "primary-container": "#00F0FF"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary:hover {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #00F0FF 0%, #ac89ff 50%, #ff60cd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(31, 31, 34, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .cta-gradient-button {
+            background: linear-gradient(90deg, #00F0FF 0%, #ac89ff 100%);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl bg-gradient-to-b from-[#131316] to-transparent shadow-2xl shadow-black/40 border-b border-white/5">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="flex items-center gap-3">
+<a href="index.html" class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-xl font-black tracking-tighter text-[#00F0FF] font-headline">Synaptic Digital</span>
+</a>
+</div>
+<div class="hidden md:flex gap-10 font-headline tracking-[0.05em] uppercase text-xs font-bold items-center">
+<a class="text-[#00F0FF] border-b border-[#00F0FF] pb-1" href="agence.html">L'Agence</a>
+<a class="text-[#adaaad] hover:text-on-surface transition-colors duration-300" href="#">Vision</a>
+<a class="text-[#adaaad] hover:text-on-surface transition-colors duration-300" href="#">Expertise</a>
+</div>
+<a href="contact.html"><button class="bg-gradient-to-br from-primary to-primary-container text-[#003f43] px-6 py-3 rounded font-headline text-xs font-bold uppercase tracking-widest hover:glow-primary transition-all duration-300 scale-95 active:scale-90">
+            Démarrer un projet
+        </button></a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBePwFE207lAkz1XeD9joLQgGJPFCg2mBrCm58Y0eDcsIqmH5XLIcQkOd_jol2FiRkksPtk7Vq458Bsg8gvb8ZX_UUIR1_Z1i02eHkFVunFV8hi4ZdaYmpFISI50GuWugxlvI8IfoQNljpvjnu0MoVBm82jKdQ77xLFdkiHw1xmVL7-Ef9n-J4_jr7H_MnzKNpW6fUOWzZbjT_ElnjfogaF76VrB31vZjbgvS_kn2caxBHQpSR7xYWdLfLDuHdvLl_lLbibG74-MTY" alt="neural network visualization"/>
+</div>
+<div class="relative z-10 max-w-3xl">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-sm mb-6 block">Intelligence Collaborative</span>
+<h1 class="font-headline font-extrabold text-7xl md:text-8xl tracking-tighter leading-tight mb-8">
+                Votre Performance, <br/>
+<span class="text-gradient-primary italic">Notre Architecture.</span>
+</h1>
+<p class="text-[#adaaad] text-xl md:text-2xl font-light leading-relaxed mb-12 max-w-2xl">
+                Nous fusionnons ingénierie de pointe et design émotionnel pour catalyser la croissance des PME visionnaires. Un engagement total sur vos résultats business.
+            </p>
+<div class="flex flex-wrap gap-6">
+<a href="contact.html"><button class="bg-primary text-[#003f43] px-10 py-5 rounded font-headline font-bold uppercase tracking-widest text-sm hover:glow-primary transition-all">
+                    Explorer nos solutions
+                </button></a>
+<button class="border border-outline-variant hover:border-primary text-on-surface px-10 py-5 rounded font-headline font-bold uppercase tracking-widest text-sm transition-all">
+                    Notre manifeste
+                </button>
+</div>
+</div>
+</section>
+<!-- Section ADN -->
+<section class="py-32 px-8 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline font-bold text-5xl tracking-tight mb-6 text-on-surface">L'ADN Synaptic.</h2>
+<p class="text-[#adaaad] text-lg leading-relaxed">
+                        Trois piliers fondamentaux qui guident chaque ligne de code et chaque pixel. Nous ne construisons pas seulement des outils, nous bâtissons des avantages compétitifs.
+                    </p>
+</div>
+<div class="font-label text-outline text-8xl opacity-10 select-none hidden lg:block">CORE_SYSTEM</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<div class="group p-12 bg-surface-container border border-outline-variant/10 hover:bg-surface-container-high transition-all duration-500">
+<div class="w-16 h-16 mb-10 flex items-center justify-center bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">account_tree</span>
+</div>
+<h3 class="font-headline font-bold text-2xl mb-4 text-on-surface">Maîtrise Technique</h3>
+<p class="text-[#adaaad] leading-relaxed mb-8">Une expertise "Deep Tech" pour des infrastructures robustes, scalables et sécurisées.</p>
+<div class="h-40 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMyQUtX8uIpLTfdvhMQNVFR7IqiBJAR8Yl4CoUWE_f485lMBvGvCZn4A_MaSICx7p8CaiHq04gdkqk2e5Y2740H927793AeqWW2YYWmCBx6H164HDP0S6zmM-5JzpEXEtBdlgmqlsiBG_YpTFQHaddXy6lP1wDEUXsgMqYVrRukSxzeZRJQLFsIpmmJOhN08qtO99nXIROoX_gbgBlLnrnBJXo8uKg4hA-CwO_-IeJcN7LrVlc6sOOkd19VjCQkAOIQwkWmYWqVj0" alt="processor chip"/>
+</div>
+</div>
+<div class="group p-12 bg-surface-container-high border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 scale-105 z-10 shadow-2xl">
+<div class="w-16 h-16 mb-10 flex items-center justify-center bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">visibility</span>
+</div>
+<h3 class="font-headline font-bold text-2xl mb-4 text-secondary">Exigence Design</h3>
+<p class="text-[#adaaad] leading-relaxed mb-8">Le design n'est pas un vernis, c'est une fonction. Nous créons des expériences intuitives et mémorables.</p>
+<div class="h-40 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu5uSxu5lCSqzo2WpcWMMitV0sSEV-g1japL-M_gCfI5GF2vpVm_3G-qUj-s6dsbyKJKh_fFg3q1HF_uaQaQfwE0EhYxwtnnZvWJS3KyfKOMCnojuEJ5Hu_MrWj4qeJOKNq58XCr7S4_ZIXmtZTTbl-uP1RvjkZUn7muZCEcKS3IkCb0D7Zrf-7NJegK3_WP8xhM9pQVz7_8hwAS7QXi9-4AY4XHdzAghRiROy5jZeKJV9LovqRFSm0qirOPioDuAQ87H1l2VtG5Y" alt="gradient design"/>
+</div>
+</div>
+<div class="group p-12 bg-surface-container border border-outline-variant/10 hover:bg-surface-container-high transition-all duration-500">
+<div class="w-16 h-16 mb-10 flex items-center justify-center bg-tertiary/10 rounded-lg group-hover:bg-tertiary/20 transition-colors">
+<span class="material-symbols-outlined text-tertiary text-4xl">psychology</span>
+</div>
+<h3 class="font-headline font-bold text-2xl mb-4 text-tertiary">Performance Business</h3>
+<p class="text-[#adaaad] leading-relaxed mb-8">Chaque décision est pilotée par la donnée pour garantir un retour sur investissement tangible et rapide.</p>
+<div class="h-40 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHzZyyAYX8dyRg0HaeQCjHcA9LBJEvSf6y-Krqox7hTvi-WR_Q4Kiaqp0YsB0jZ31g94KvlX_Q6jTbAIOE0HnWi7oK9MpoYU9ov6ujVU1q4rnWId3Wt_0vkIWevy0PhdzOtddp8cOjpURpTok6JbkELNC696HFxq5iFH5m9VaZnCJUIUiHuqauDNJeNbwL9HfJZFVAkGTb7MrkWMOI_-71GVv5Kj7xkaWmSm7lGIh653HPPWeZ9_esp8scmxd281Pxt9hLYBVhqjA" alt="data dashboard"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Méthodologie -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="font-label text-primary tracking-[0.2em] uppercase text-xs font-bold mb-4 block">Notre Protocole</span>
+<h2 class="font-headline font-bold text-6xl tracking-tight text-on-surface">De l'Analyse à l'Optimisation.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="relative group">
+<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">01</div>
+<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
+<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Analyse</h4>
+<p class="text-[#adaaad] text-sm leading-relaxed">Immersion totale dans votre écosystème pour identifier les leviers de croissance inexploités.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">02</div>
+<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
+<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Architecture</h4>
+<p class="text-[#adaaad] text-sm leading-relaxed">Conception d'une roadmap stratégique et technologique sur-mesure pour votre structure.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">03</div>
+<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
+<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Développement</h4>
+<p class="text-[#adaaad] text-sm leading-relaxed">Exécution agile par nos ingénieurs avec des cycles de feedback courts et itératifs.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">04</div>
+<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
+<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Optimisation</h4>
+<p class="text-[#adaaad] text-sm leading-relaxed">Monitoring continu et ajustements basés sur les comportements utilisateurs réels.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Engagement -->
+<section class="py-32 px-8">
+<div class="max-w-5xl mx-auto glass-panel p-16 rounded-xl border border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline font-bold text-4xl mb-8 leading-tight text-on-surface">Un partenaire, <br/><span class="text-primary">pas un simple prestataire.</span></h2>
+<ul class="space-y-6">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">verified</span>
+<div>
+<h5 class="font-bold mb-1 text-on-surface">Garantie de Disponibilité</h5>
+<p class="text-[#adaaad] text-sm">Support prioritaire et maintenance proactive 24/7 pour vos systèmes critiques.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">update</span>
+<div>
+<h5 class="font-bold mb-1 text-on-surface">Accompagnement Long Terme</h5>
+<p class="text-[#adaaad] text-sm">Conseil stratégique continu pour adapter votre tech aux évolutions du marché.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full border-2 border-primary/20 flex items-center justify-center p-8">
+<div class="text-center">
+<span class="block font-headline text-6xl font-black text-primary mb-2">98%</span>
+<span class="font-label text-xs tracking-widest uppercase text-[#adaaad]">Taux de rétention clients</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="relative py-48 bg-surface">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline font-bold text-6xl md:text-7xl tracking-tight mb-8 text-on-surface">Votre projet commence ici</h2>
+<p class="text-[#adaaad] text-lg font-light mb-12">Nous acceptons actuellement des collaborations à fort impact pour fin 2024.<br/>Sécurisez votre place dans le réseau.</p>
+<div class="flex justify-center">
+<a href="contact.html"><button class="cta-gradient-button text-[#0e0e10] px-14 py-5 rounded-lg font-label font-bold uppercase tracking-[0.2em] text-xs hover:scale-105 active:scale-95 transition-all duration-300">
+                    Démarrer un projet
+                </button></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-12 mt-auto border-t border-[#48474a]/15 bg-[#0e0e10]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#adaaad]">© 2024 Synaptic Digital. Neural Ether Architecture.</p>
+</div>
+<div class="flex gap-8 font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">
+<a class="text-[#adaaad] hover:text-[#00F0FF] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#adaaad] hover:text-[#00F0FF] transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#adaaad] hover:text-[#00F0FF] transition-opacity opacity-80 hover:opacity-100" href="#">Network Status</a>
+</div>
+</div>
+</footer>
+</body></html>
