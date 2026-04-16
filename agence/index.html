@@ -105,29 +105,27 @@
 <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
 <!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-white/5">
-<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
-<!-- Desktop : logo gauche | Mobile : burger gauche -->
+<nav class="relative flex justify-between items-center w-full px-4 md:px-8 py-4 max-w-[1920px] mx-auto">
+<!-- Gauche : burger mobile / logo desktop -->
 <div class="flex items-center">
-<!-- Logo desktop (gauche) -->
 <a href="/" class="hidden md:flex items-center h-16"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></a>
-<!-- Burger mobile (gauche) -->
 <button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onclick="toggleMenu()">
 <span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b1"></span>
 <span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b2"></span>
 <span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b3"></span>
 </button>
 </div>
-<!-- Desktop : menu centre -->
+<!-- Centre : menu desktop / logo mobile -->
 <div class="hidden md:flex items-center space-x-10">
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/vision">Vision</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/expertises">Nos Expertises</a>
 </div>
-<!-- Mobile : logo centré -->
-<a href="/" class="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center h-14"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></a>
-<!-- CTA droite (desktop + mobile) -->
+<a href="/" class="md:hidden absolute left-1/2 -translate-x-1/2"><img alt="Synaptic Digital" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></a>
+<!-- Droite : CTA -->
 <div class="flex items-center">
-<a href="/contact"><button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
+<a href="/contact"><button class="hidden md:block px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
+<a href="/contact"><button class="md:hidden px-3 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-[9px] uppercase tracking-wide rounded transition-all active:scale-95 whitespace-nowrap">Démarrer</button></a>
 </div>
 </nav>
 <div id="mobile-menu" class="hidden md:hidden bg-[#0e0e10] border-t border-white/5 px-8 py-6 flex flex-col gap-6">
