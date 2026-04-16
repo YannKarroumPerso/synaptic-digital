@@ -1,80 +1,93 @@
 <!DOCTYPE html>
-<html class="dark" lang="fr"><head>
+
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>L'Agence | Synaptic Digital</title>
+<title>Synaptic Digital | Digital Environments</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "secondary-container": "#7000ff",
-                        "error-container": "#9f0519",
-                        "primary-fixed": "#00F0FF",
-                        "outline-variant": "#48474a",
-                        "error-dim": "#d7383b",
-                        "on-primary": "#005d63",
-                        "on-secondary-fixed": "#41009a",
-                        "on-error": "#490006",
-                        "surface-container-lowest": "#000000",
-                        "surface-tint": "#00F0FF",
-                        "on-primary-fixed-variant": "#005e64",
-                        "tertiary-dim": "#ff60cd",
-                        "surface-dim": "#0e0e10",
-                        "surface-container-highest": "#262529",
-                        "on-primary-container": "#005359",
-                        "primary-fixed-dim": "#00deec",
-                        "tertiary": "#ff60cd",
-                        "on-surface-variant": "#adaaad",
-                        "inverse-surface": "#fcf8fb",
-                        "surface-bright": "#2c2c2f",
-                        "inverse-primary": "#006a71",
-                        "on-tertiary": "#430033",
-                        "tertiary-container": "#fd00c6",
-                        "primary": "#00F0FF",
-                        "primary-dim": "#00deec",
-                        "on-tertiary-container": "#000000",
-                        "surface-container-high": "#1f1f22",
-                        "error": "#ff716c",
-                        "on-tertiary-fixed": "#350027",
-                        "background": "#0e0e10",
-                        "on-secondary-container": "#f8f1ff",
+                        "outline": "#767578",
                         "secondary-fixed": "#dac9ff",
-                        "on-surface": "#ffffff",
+                        "on-background": "#fffbfe",
+                        "secondary-dim": "#874cff",
+                        "inverse-on-surface": "#565457",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "inverse-primary": "#006a71",
+                        "surface-container-low": "#131316",
+                        "surface-container-lowest": "#000000",
+                        "on-surface-variant": "#adaaad",
+                        "secondary": "#ac89ff",
+                        "surface-dim": "#0e0e10",
+                        "tertiary-fixed-dim": "#ff6dce",
+                        "error-container": "#9f0519",
+                        "on-primary-fixed": "#003f43",
+                        "surface-container-high": "#1f1f22",
+                        "surface-container-highest": "#262529",
+                        "tertiary": "#ff60cd",
+                        "on-tertiary-container": "#000000",
+                        "surface-bright": "#2c2c2f",
+                        "primary-fixed": "#00eefc",
+                        "surface-container": "#19191c",
+                        "error-dim": "#d7383b",
+                        "on-primary-fixed-variant": "#005e64",
+                        "on-secondary-container": "#f8f1ff",
+                        "outline-variant": "#48474a",
+                        "secondary-container": "#7000ff",
+                        "on-primary": "#005d63",
+                        "inverse-surface": "#fcf8fb",
+                        "on-error": "#490006",
+                        "background": "#0e0e10",
+                        "error": "#ff716c",
+                        "tertiary-container": "#fd00c6",
+                        "on-tertiary": "#430033",
+                        "primary-container": "#00eefc",
+                        "tertiary-dim": "#ff60cd",
+                        "on-secondary": "#290067",
+                        "surface-tint": "#8ff5ff",
+                        "surface": "#0e0e10",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "surface-variant": "#262529",
+                        "primary-fixed-dim": "#00deec",
+                        "on-primary-container": "#005359",
                         "on-error-container": "#ffa8a3",
                         "tertiary-fixed": "#ff88d3",
-                        "tertiary-fixed-dim": "#ff6dce",
-                        "outline": "#767578",
-                        "on-primary-fixed": "#003f43",
-                        "secondary-dim": "#874cff",
-                        "surface-container": "#19191c",
-                        "surface-variant": "#262529",
-                        "secondary": "#ac89ff",
+                        "on-secondary-fixed": "#41009a",
+                        "on-surface": "#fffbfe",
                         "on-tertiary-fixed-variant": "#700056",
-                        "inverse-on-surface": "#565457",
-                        "secondary-fixed-dim": "#ceb9ff",
-                        "on-secondary-fixed-variant": "#6300e2",
-                        "surface-container-low": "#131316",
-                        "surface": "#0e0e10",
-                        "on-background": "#ffffff",
-                        "on-secondary": "#290067",
-                        "primary-container": "#00F0FF"
+                        "primary": "#8ff5ff",
+                        "on-tertiary-fixed": "#350027",
+                        "primary-dim": "#00deec"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
                         "lg": "0.25rem",
                         "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "full": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "4xl": "2.5rem"
                     },
                     "fontFamily": {
                         "headline": ["Manrope"],
                         "body": ["Inter"],
-                        "label": ["Space Grotesk"]
+                        "label": ["Space Grotesk"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    "animation": {
+                        "marquee": "marquee 30s linear infinite",
+                    },
+                    "keyframes": {
+                        "marquee": {
+                            "0%": { transform: "translateX(0%)" },
+                            "100%": { transform: "translateX(-100%)" },
+                        }
                     }
                 },
             },
@@ -85,31 +98,60 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         .glow-primary:hover {
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 15px rgba(143, 245, 255, 0.4);
         }
-        .text-gradient-primary {
-            background: linear-gradient(135deg, #00F0FF 0%, #ac89ff 50%, #ff60cd 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .text-glow {
+            text-shadow: 0 0 12px rgba(143, 245, 255, 0.3);
         }
-        .glass-panel {
-            background: rgba(31, 31, 34, 0.6);
+        .neural-bg {
+            background: radial-gradient(circle at 50% 50%, #19191c 0%, #0e0e10 100%);
+        }
+        .glass-card {
+            background: rgba(25, 25, 28, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(72, 71, 74, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(143, 245, 255, 0.4);
+            background: rgba(25, 25, 28, 0.6);
+        }
+        .expertise-glass {
+            background: rgba(25, 25, 28, 0.3);
             backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        .cta-gradient-button {
-            background: linear-gradient(90deg, #00F0FF 0%, #ac89ff 100%);
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+        .expertise-glass:hover {
+            border-color: rgba(143, 245, 255, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(143, 245, 255, 0.1);
+        }
+        .floating-particles {
+            background-image: radial-gradient(circle, rgba(143, 245, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .premium-card-gradient {
+            background: linear-gradient(180deg, rgba(14, 14, 16, 0.2) 0%, rgba(14, 14, 16, 0.95) 100%);
+        }
+        .logo-glow {
+            filter: grayscale(1) brightness(2);
+            opacity: 0.5;
+            transition: all 0.5s ease;
+        }
+        .logo-glow:hover {
+            filter: grayscale(0) brightness(1) drop-shadow(0 0 8px rgba(143, 245, 255, 0.5));
+            opacity: 1;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
 <!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-white/5">
 <nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
 <a href="/"><div class="flex items-center h-16"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></div></a>
 <div class="hidden md:flex items-center space-x-10">
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
-<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/vision">Vision</a>
 <a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/expertises">Nos Expertises</a>
 </div>
 <div class="flex items-center gap-4">
@@ -123,7 +165,7 @@
 </nav>
 <div id="mobile-menu" class="hidden md:hidden bg-[#0e0e10] border-t border-white/5 px-8 py-6 flex flex-col gap-6">
 <a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
-<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/vision">Vision</a>
 <a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/expertises">Nos Expertises</a>
 <a href="/contact"><button class="w-full px-5 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded transition-all">Démarrer mon projet</button></a>
 </div>
@@ -143,18 +185,19 @@ function toggleMenu() {
 }
 </script>
 <main>
-<!-- Hero Section — structure identique à la home -->
+<!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden neural-bg pt-36 md:pt-24 pb-16">
 
-<canvas id="constellation-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
+<!-- Floating particles canvas -->
+<canvas id="particles-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
 
 <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
 <span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Agence Digitale Orientée Performance</span>
 <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-none mb-6">
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Des sites web qui génèrent du business.</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Plus qu'un site, un accélérateur de business.</span>
 </h1>
 <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
-    Stratégie, design et performance réunis pour transformer votre site en véritable levier de croissance.
+    Des expériences digitales pensées pour générer des leads, structurer votre acquisition et améliorer vos résultats.
 </p>
 <div class="flex items-center justify-center">
 <a href="/contact"><button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold tracking-tight rounded-lg hover:glow-primary transition-all">
@@ -165,193 +208,224 @@ function toggleMenu() {
 
 <script>
 (function() {
-  const canvas = document.getElementById('constellation-canvas');
-  if (!canvas) return;
+  const canvas = document.getElementById('particles-canvas');
   const ctx = canvas.getContext('2d');
-  let W, H, nodes = [];
-  const N = 140;
-  const MAX_DIST = 160;
-  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
-  function init() {
-    nodes = [];
-    for (let i = 0; i < N; i++) nodes.push({ x: Math.random()*W, y: Math.random()*H, vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35, r:Math.random()*1.5+.5, pulse:Math.random()*Math.PI*2 });
+  let W, H, pts = [];
+  const N = 80;
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
   }
+
+  function init() {
+    pts = Array.from({length: N}, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - .5) * .3,
+      vy: (Math.random() - .5) * .3,
+      r: Math.random() * 2 + .5,
+      a: Math.random() * Math.PI * 2
+    }));
+  }
+
   function draw() {
-    ctx.clearRect(0,0,W,H);
-    for (let i=0;i<N;i++) for (let j=i+1;j<N;j++) { const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y, d=Math.sqrt(dx*dx+dy*dy); if(d<MAX_DIST){ctx.beginPath();ctx.strokeStyle=`rgba(143,245,255,${(1-d/MAX_DIST)*.45})`;ctx.lineWidth=.5;ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();} }
-    nodes.forEach(n => {
-      n.pulse+=.018; const g=.5+.5*Math.sin(n.pulse);
-      const gr=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*5); gr.addColorStop(0,`rgba(143,245,255,${.9*g})`); gr.addColorStop(1,'rgba(143,245,255,0)');
-      ctx.beginPath(); ctx.arc(n.x,n.y,n.r*5,0,Math.PI*2); ctx.fillStyle=gr; ctx.fill();
-      ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,Math.PI*2); ctx.fillStyle=`rgba(220,250,255,${g})`; ctx.fill();
-      n.x+=n.vx; n.y+=n.vy; if(n.x<0||n.x>W)n.vx*=-1; if(n.y<0||n.y>H)n.vy*=-1;
+    ctx.clearRect(0, 0, W, H);
+    pts.forEach(p => {
+      p.a += .012;
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      const alpha = 0.3 + 0.3 * Math.sin(p.a);
+      const r = p.r * (0.7 + 0.3 * Math.sin(p.a));
+      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 5);
+      grad.addColorStop(0, `rgba(143, 245, 255, ${alpha})`);
+      grad.addColorStop(1, 'rgba(143, 245, 255, 0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r * 5, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(200, 250, 255, ${alpha + .2})`;
+      ctx.fill();
     });
     requestAnimationFrame(draw);
   }
-  window.addEventListener('resize',()=>{resize();init();}); resize(); init(); draw();
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  resize();
+  init();
+  draw();
 })();
 </script>
 </section>
-
-
-<!-- Section ADN -->
-<section class="py-20 md:py-32 px-6 md:px-8 bg-surface-container-low relative">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
-<div class="max-w-xl">
-<h2 class="font-headline font-bold text-3xl md:text-5xl tracking-tight mb-6 text-on-surface">L'ADN Synaptic.</h2>
-<p class="text-[#adaaad] text-base md:text-lg leading-relaxed">
-    Trois piliers fondamentaux qui guident chaque ligne de code et chaque pixel. Nous ne construisons pas seulement des outils, nous bâtissons des avantages compétitifs.
-</p>
+<!-- Agency DNA Section -->
+<section class="py-24 px-8 bg-background border-y border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+<div>
+<span class="font-label text-primary tracking-[0.3em] uppercase text-[10px] mb-4 block">Neural Identity</span>
+<h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-6">L'Élite du Code Créatif</h2>
 </div>
-<div class="font-label text-outline text-8xl opacity-10 select-none hidden lg:block">CORE_SYSTEM</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="group p-8 md:p-12 bg-surface-container border border-outline-variant/10 hover:bg-surface-container-high transition-all duration-500">
-<div class="w-16 h-16 mb-8 flex items-center justify-center bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined text-primary text-4xl">account_tree</span>
-</div>
-<h3 class="font-headline font-bold text-xl md:text-2xl mb-4 text-on-surface">Maîtrise Technique</h3>
-<p class="text-[#adaaad] leading-relaxed mb-6">Une expertise "Deep Tech" pour des infrastructures robustes, scalables et sécurisées.</p>
-<div class="h-40 rounded overflow-hidden">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMyQUtX8uIpLTfdvhMQNVFR7IqiBJAR8Yl4CoUWE_f485lMBvGvCZn4A_MaSICx7p8CaiHq04gdkqk2e5Y2740H927793AeqWW2YYWmCBx6H164HDP0S6zmM-5JzpEXEtBdlgmqlsiBG_YpTFQHaddXy6lP1wDEUXsgMqYVrRukSxzeZRJQLFsIpmmJOhN08qtO99nXIROoX_gbgBlLnrnBJXo8uKg4hA-CwO_-IeJcN7LrVlc6sOOkd19VjCQkAOIQwkWmYWqVj0" alt="processor chip"/>
+<div class="lg:pt-8">
+<p class="font-body text-xl md:text-2xl text-on-surface leading-tight font-light border-l-2 border-primary pl-8">
+                        "Nous ne construisons pas des sites, nous forgeons des <span class="text-primary font-bold">avantages compétitifs</span>."
+                    </p>
 </div>
 </div>
-<div class="group p-8 md:p-12 bg-surface-container-high border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 md:scale-105 z-10 shadow-2xl">
-<div class="w-16 h-16 mb-8 flex items-center justify-center bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
-<span class="material-symbols-outlined text-secondary text-4xl">visibility</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass-card p-8 rounded-xl transition-all duration-300 group">
+<div class="w-10 h-10 mb-6 flex items-center justify-center bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">diamond</span>
 </div>
-<h3 class="font-headline font-bold text-xl md:text-2xl mb-4 text-secondary">Exigence Design</h3>
-<p class="text-[#adaaad] leading-relaxed mb-6">Le design n'est pas un vernis, c'est une fonction. Nous créons des expériences intuitives et mémorables.</p>
-<div class="h-40 rounded overflow-hidden">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu5uSxu5lCSqzo2WpcWMMitV0sSEV-g1japL-M_gCfI5GF2vpVm_3G-qUj-s6dsbyKJKh_fFg3q1HF_uaQaQfwE0EhYxwtnnZvWJS3KyfKOMCnojuEJ5Hu_MrWj4qeJOKNq58XCr7S4_ZIXmtZTTbl-uP1RvjkZUn7muZCEcKS3IkCb0D7Zrf-7NJegK3_WP8xhM9pQVz7_8hwAS7QXi9-4AY4XHdzAghRiROy5jZeKJV9LovqRFSm0qirOPioDuAQ87H1l2VtG5Y" alt="gradient design"/>
+<h3 class="font-headline text-lg font-bold mb-2">Haute Couture Digitale</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Précision pixel-perfect sans compromis pour des expériences uniques.</p>
+</div>
+<div class="glass-card p-8 rounded-xl transition-all duration-300 group">
+<div class="w-10 h-10 mb-6 flex items-center justify-center bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<h3 class="font-headline text-lg font-bold mb-2">Architecture de Performance</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Vitesse radicale et stabilité infra-structurante à l'échelle globale.</p>
+</div>
+<div class="glass-card p-8 rounded-xl transition-all duration-300 group">
+<div class="w-10 h-10 mb-6 flex items-center justify-center bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<h3 class="font-headline text-lg font-bold mb-2">Design Cognitif</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Des interfaces qui anticipent l'intention utilisateur via l'analyse de données.</p>
+</div>
+<div class="glass-card p-8 rounded-xl transition-all duration-300 group">
+<div class="w-10 h-10 mb-6 flex items-center justify-center bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<h3 class="font-headline text-lg font-bold mb-2">Maîtrise Technologique</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">WebGL, Three.js et shaders personnalisés pour une immersion totale.</p>
 </div>
 </div>
-<div class="group p-8 md:p-12 bg-surface-container border border-outline-variant/10 hover:bg-surface-container-high transition-all duration-500">
-<div class="w-16 h-16 mb-8 flex items-center justify-center bg-tertiary/10 rounded-lg group-hover:bg-tertiary/20 transition-colors">
-<span class="material-symbols-outlined text-tertiary text-4xl">psychology</span>
 </div>
-<h3 class="font-headline font-bold text-xl md:text-2xl mb-4 text-tertiary">Performance Business</h3>
-<p class="text-[#adaaad] leading-relaxed mb-6">Chaque décision est pilotée par la donnée pour garantir un retour sur investissement tangible et rapide.</p>
-<div class="h-40 rounded overflow-hidden">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHzZyyAYX8dyRg0HaeQCjHcA9LBJEvSf6y-Krqox7hTvi-WR_Q4Kiaqp0YsB0jZ31g94KvlX_Q6jTbAIOE0HnWi7oK9MpoYU9ov6ujVU1q4rnWId3Wt_0vkIWevy0PhdzOtddp8cOjpURpTok6JbkELNC696HFxq5iFH5m9VaZnCJUIUiHuqauDNJeNbwL9HfJZFVAkGTb7MrkWMOI_-71GVv5Kj7xkaWmSm7lGIh653HPPWeZ9_esp8scmxd281Pxt9hLYBVhqjA" alt="data dashboard"/>
+</section>
+<!-- Premium Services Section: NOS EXPERTISES -->
+<section class="py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 floating-particles opacity-30 pointer-events-none"></div>
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none"></div>
+<div class="absolute -right-20 top-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-primary tracking-[0.5em] uppercase text-[10px] mb-6 block">Nos Expertises</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tight leading-none">
+                        Façonner le futur du <br class="hidden md:block"/>
+<span class="font-serif italic font-normal text-on-surface-variant">digital d'excellence.</span>
+</h2>
+</div>
+<div class="hidden md:block">
+<div class="h-px w-48 bg-gradient-to-r from-primary/50 to-transparent"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group relative aspect-[3/4] rounded-4xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-2 border border-white/5 hover:border-primary/30">
+<img alt="Abstract neural network" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM6K-Nzj6IOsepvKs5dz4Bx6oOn4UFGMdm3RzgA_LAfZRoGJid29t58XumDtTvKwUJMc7OvtuhCYGrh_0TsALb9DQCTSqAf5lHeaTFMSi_EGrApwT952gIH8bIANUEPlDU-E9pHoRuZCw2j7u1HZpDJ1zXW90Jd3YxQL-7dTVPRHp49a-ZUEZzw2N2l7eKTpJdgccwVVlWW0xTS_IXY39oKuhCLi0Y9wHgq-iP25NcHjt8ajUGoCk4jBKbzc5omOjflSjUew59YDw"/>
+<div class="absolute inset-0 premium-card-gradient"></div>
+<div class="absolute inset-0 p-10 flex flex-col justify-end">
+<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors mb-6">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'wght' 200">browse_gallery</span>
+</div>
+<h3 class="font-serif text-3xl text-on-surface mb-3">Sites vitrines</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Convertir l'attention en désir via une présence digitale immersive et haute couture.</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-4xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-2 border border-white/5 hover:border-secondary/30">
+<img alt="Digital flow network" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWCIYIpQlYTPVFIeDvK7GcCeSdfehKYZLH2y77C9gXWsLMS_bnQ1NthQQqyagd4bSmltG5goJJW8p-to4BThLOTaNuRK3MgF15w8DjMjbRTDBReIX0lxXQLImEumo2iXlowg07hi8Qu7FstCX7R-m4SrnZMu71oM8GBLwiuf_t_4Ku0UceBL6JC3nmX58Gyir52Y1WzVV_1OozBWmBt5XbjNCOtgDT9Qtxeo7uKw6ufnWxuOdlZn7IynRz8UANDWnEGkR2iyZvCDY"/>
+<div class="absolute inset-0 premium-card-gradient"></div>
+<div class="absolute inset-0 p-10 flex flex-col justify-end">
+<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:border-secondary/50 transition-colors mb-6">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'wght' 200">shopping_bag</span>
+</div>
+<h3 class="font-serif text-3xl text-on-surface mb-3">E-commerce</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Maximiser vos revenus via des plateformes de vente fluides, sécurisées et optimisées.</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-4xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-2 border border-white/5 hover:border-tertiary/30">
+<img alt="Neon connectivity" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTpEOfPFLHKv0MJhuT8X2j_RxUGA4ScIIBZKW9_XTMenrMX8By0xv9q0KOFZSVgRNgw5zqkPuKWAxhM7roWohfjiq2cTbPQzJB9LfWpRuP-tFt-7bPoBLwRd_vWD-A7Qo50jHQFc17lM0D1wqs8BhpBnbUlXeLLh33TGmyzrYnd-2_IpySUdPu7PyyIXvxtK2U1Mlc_JXu8ZGCyfarOj-0JQkM06uMS5uKlV7jatzichyuGEch-p2CduqHgAm2YLqS5n1Idg4hIvU"/>
+<div class="absolute inset-0 premium-card-gradient"></div>
+<div class="absolute inset-0 p-10 flex flex-col justify-end">
+<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:border-tertiary/50 transition-colors mb-6">
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'wght' 200">smartphone</span>
+</div>
+<h3 class="font-serif text-3xl text-on-surface mb-3">Application mobile</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Engagez vos utilisateurs au quotidien avec des expériences natives sans faille.</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-4xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-2 border border-white/5 hover:border-primary-fixed/30">
+<img alt="High-end server cluster" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxiYGeUoAgMhO76AvLv76iE5eCOe8zCmiMdb9ilD6_xYb1dzR6giIMG5VsdCUa5z4NzvMV9GhwRSr4WeGg79ZF2DflW-WzLiZ9c5kIw_51kcTXXwemM0LhskSvyc6GP8ePBsTSwNX4eV4tU20biRceggOqtmLQN0suRBr1Sl1ajM2SkUb0XwjNQz3AwITSdP6RpIm5iXC-TwEEdtHe0w_UpkcHsHV5q4lT5wJ1fkPDP8-sZGTzM4iK5UZe_D6OYMW3dgSY9i6gpfk"/>
+<div class="absolute inset-0 premium-card-gradient"></div>
+<div class="absolute inset-0 p-10 flex flex-col justify-end">
+<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:border-primary-fixed/50 transition-colors mb-6">
+<span class="material-symbols-outlined text-primary-fixed text-2xl" style="font-variation-settings: 'wght' 200">layers</span>
+</div>
+<h3 class="font-serif text-3xl text-on-surface mb-3">Plateforme métier</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Industrialisez vos processus internes avec des outils SaaS sur mesure ultra-performants.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Section Méthodologie -->
-<section class="py-20 md:py-32 px-6 md:px-8 max-w-7xl mx-auto">
-<div class="text-center mb-16 md:mb-24">
-<span class="font-label text-primary tracking-[0.2em] uppercase text-xs font-bold mb-4 block">Notre Protocole</span>
-<h2 class="font-headline font-bold text-3xl md:text-6xl tracking-tight text-on-surface">De l'Analyse à l'Optimisation.</h2>
+<!-- Tech Stack Section -->
+<section class="py-32 px-8 bg-background overflow-hidden">
+<div class="max-w-[1440px] mx-auto mb-20 text-center">
+<span class="font-label text-primary tracking-[0.5em] uppercase text-[10px] mb-4 block">Notre Stack</span>
+<h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter uppercase">Technologie : notre écosystème digital</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<div class="relative group">
-<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">01</div>
-<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
-<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Analyse</h4>
-<p class="text-[#adaaad] text-sm leading-relaxed">Immersion totale dans votre écosystème pour identifier les leviers de croissance inexploités.</p>
+<div class="relative flex overflow-x-hidden group">
+<div class="flex animate-marquee whitespace-nowrap items-center py-10">
+<div class="flex items-center space-x-24 px-12">
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">DRUPAL</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">WORDPRESS</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">SHOPIFY</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">VERCEL</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">PRESTASHOP</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">WOOCOMMERCE</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">SALESFORCE</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">ANDROID</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">IOS</span>
 </div>
-</div>
-<div class="relative group">
-<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">02</div>
-<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
-<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Architecture</h4>
-<p class="text-[#adaaad] text-sm leading-relaxed">Conception d'une roadmap stratégique et technologique sur-mesure pour votre structure.</p>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">03</div>
-<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
-<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Développement</h4>
-<p class="text-[#adaaad] text-sm leading-relaxed">Exécution agile par nos ingénieurs avec des cycles de feedback courts et itératifs.</p>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute -top-6 -left-4 font-label text-6xl font-black text-outline-variant/20 group-hover:text-primary/20 transition-colors">04</div>
-<div class="p-8 pt-12 border-t-2 border-outline-variant group-hover:border-primary transition-all">
-<h4 class="font-headline font-bold text-xl mb-4 uppercase tracking-tighter text-on-surface">Optimisation</h4>
-<p class="text-[#adaaad] text-sm leading-relaxed">Monitoring continu et ajustements basés sur les comportements utilisateurs réels.</p>
+<div class="flex items-center space-x-24 px-12">
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">DRUPAL</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">WORDPRESS</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">SHOPIFY</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">VERCEL</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">PRESTASHOP</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">WOOCOMMERCE</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">SALESFORCE</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">ANDROID</span>
+<span class="font-['Space_Grotesk'] text-3xl font-bold tracking-tighter text-on-surface/40 logo-glow">IOS</span>
 </div>
 </div>
+<div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10"></div>
+<div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10"></div>
 </div>
 </section>
-<!-- Section Engagement -->
-<section class="py-20 md:py-32 px-6 md:px-8">
-<div class="max-w-5xl mx-auto glass-panel p-10 md:p-16 rounded-xl border border-primary/10 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-
-<!-- Colonne gauche -->
-<div>
-<h2 class="font-headline font-bold text-3xl md:text-4xl mb-4 leading-tight text-on-surface">Une approche <span class="text-primary">orientée performance.</span></h2>
-<p class="text-[#adaaad] text-base leading-relaxed mb-10">Nous concevons des sites utiles, pensés pour servir vos objectifs business à court et long terme.</p>
-<ul class="space-y-5">
-<li class="flex gap-4 items-start group">
-<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors mt-0.5">
-<span class="material-symbols-outlined text-primary text-base">psychology</span>
+<!-- CTA Section -->
+<section class="py-24 px-8 text-center bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<div class="grid grid-cols-12 h-full w-full">
+<div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div>
 </div>
-<div>
-<h5 class="font-bold mb-1 text-on-surface">Vision stratégique</h5>
-<p class="text-[#adaaad] text-sm">Chaque décision est guidée par vos objectifs business, pas par les tendances.</p>
 </div>
-</li>
-<li class="flex gap-4 items-start group">
-<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors mt-0.5">
-<span class="material-symbols-outlined text-secondary text-base">build</span>
-</div>
-<div>
-<h5 class="font-bold mb-1 text-on-surface">Exécution maîtrisée</h5>
-<p class="text-[#adaaad] text-sm">Des livrables précis, dans les délais, avec une qualité sans compromis.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start group">
-<div class="w-8 h-8 rounded-lg bg-tertiary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-tertiary/20 transition-colors mt-0.5">
-<span class="material-symbols-outlined text-tertiary text-base">trending_up</span>
-</div>
-<div>
-<h5 class="font-bold mb-1 text-on-surface">Amélioration continue</h5>
-<p class="text-[#adaaad] text-sm">Suivi des performances et optimisations régulières pour maximiser vos résultats.</p>
-</div>
-</li>
-</ul>
-</div>
-
-<!-- Colonne droite -->
-<div class="relative flex items-center justify-center">
-<div class="w-full rounded-xl border border-primary/20 bg-surface-container p-10 text-center relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"></div>
-<div class="relative z-10">
-<span class="material-symbols-outlined text-primary mb-4 block" style="font-size:48px; font-variation-settings:'FILL' 1;">rocket_launch</span>
-<p class="font-headline font-black text-2xl md:text-3xl text-on-surface mb-3 leading-tight">Des projets conçus<br/>pour durer.</p>
-<div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto my-4"></div>
-<p class="text-[#adaaad] text-sm leading-relaxed">Nous ne livrons pas juste un site. Nous construisons un actif digital qui travaille pour vous dans la durée.</p>
-<a href="/contact" class="inline-block mt-6">
-<button class="px-6 py-3 bg-gradient-to-br from-primary to-secondary text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded-lg font-bold hover:scale-105 transition-all">
-    Discutons de votre projet
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-8">Votre projet commence ici</h2>
+<p class="font-body text-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Partagez votre vision et nous nous occupons du reste.</p>
+<button class="group relative px-12 py-5 bg-gradient-to-br from-primary to-secondary text-on-primary-fixed font-label text-sm tracking-[0.2em] uppercase rounded-full overflow-hidden transition-all duration-500 hover:glow-primary hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(143,245,255,0.2)]">
+<a href="/contact"><span class="relative z-10 font-bold italic">Démarrer mon projet</span></a>
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
 </button>
-</a>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-<!-- CTA -->
-<section class="relative py-24 md:py-48 bg-surface">
-<div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
-<h2 class="font-headline font-bold text-3xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-on-surface">Votre projet commence ici</h2>
-<p class="text-[#adaaad] text-base md:text-lg font-light mb-10">Partagez votre vision et nous nous occupons du reste.</p>
-<div class="flex justify-center">
-<a href="/contact"><button class="cta-gradient-button text-[#0e0e10] px-10 md:px-14 py-4 md:py-5 rounded-lg font-label font-bold uppercase tracking-[0.2em] text-xs hover:scale-105 active:scale-95 transition-all duration-300">
-    Démarrer mon projet
-</button></a>
-</div>
 </div>
 </section>
 </main>
+<!-- Footer -->
 <footer class="w-full border-t border-[#48474a]/15 bg-[#131316]">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-12 gap-6 max-w-[1920px] mx-auto">
 <div class="flex flex-col items-center md:items-start">
