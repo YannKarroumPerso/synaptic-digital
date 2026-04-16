@@ -186,16 +186,10 @@ function toggleMenu() {
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden neural-bg pt-36 md:pt-24 pb-16">
-<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
-<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-<svg class="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-<circle cx="200" cy="200" fill="#8ff5ff" r="1"></circle>
-<circle cx="800" cy="300" fill="#ff60cd" r="1"></circle>
-<path d="M200 200 L800 300" stroke="#8ff5ff" stroke-width="0.2"></path>
-<circle cx="500" cy="800" fill="#ac89ff" r="1"></circle>
-<path d="M800 300 L500 800" stroke="#ac89ff" stroke-width="0.2"></path>
-</svg>
-</div>
+
+<!-- Floating particles canvas -->
+<canvas id="particles-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
+
 <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
 <span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Agence Digitale Orientée Performance</span>
 <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-none mb-6">
@@ -211,6 +205,60 @@ function toggleMenu() {
 </div>
 </div>
 
+<script>
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [];
+  const N = 80;
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function init() {
+    pts = Array.from({length: N}, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - .5) * .3,
+      vy: (Math.random() - .5) * .3,
+      r: Math.random() * 2 + .5,
+      a: Math.random() * Math.PI * 2
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    pts.forEach(p => {
+      p.a += .012;
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      const alpha = 0.3 + 0.3 * Math.sin(p.a);
+      const r = p.r * (0.7 + 0.3 * Math.sin(p.a));
+      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 5);
+      grad.addColorStop(0, `rgba(143, 245, 255, ${alpha})`);
+      grad.addColorStop(1, 'rgba(143, 245, 255, 0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r * 5, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(200, 250, 255, ${alpha + .2})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  resize();
+  init();
+  draw();
+})();
+</script>
 </section>
 <!-- Agency DNA Section -->
 <section class="py-24 px-8 bg-background border-y border-outline-variant/10">
