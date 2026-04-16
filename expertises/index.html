@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nos Expertises | Synaptic Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "outline": "#767578",
+                "on-background": "#fffbfe",
+                "on-surface-variant": "#adaaad",
+                "secondary": "#ac89ff",
+                "tertiary": "#ff60cd",
+                "outline-variant": "#48474a",
+                "on-primary": "#005d63",
+                "on-error": "#490006",
+                "background": "#0e0e10",
+                "primary": "#8ff5ff",
+                "on-surface": "#fffbfe",
+                "surface": "#0e0e10",
+                "surface-container": "#19191c",
+                "surface-container-high": "#1f1f22",
+                "surface-container-low": "#131316",
+                "primary-container": "#00eefc",
+                "on-primary-fixed": "#003f43",
+                "secondary-container": "#7000ff",
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"],
+                "serif": ["Playfair Display", "serif"]
+            }
+        }
+    }
+}
+</script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .glow-primary:hover { box-shadow: 0 0 15px rgba(143, 245, 255, 0.4); }
+    .neural-bg { background: radial-gradient(circle at 50% 50%, #19191c 0%, #0e0e10 100%); }
+    .glass-card {
+        background: rgba(25, 25, 28, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(72, 71, 74, 0.2);
+    }
+    .glass-card:hover { border-color: rgba(143, 245, 255, 0.3); }
+    .tab-content { display: none; animation: fadeIn 0.4s ease-out; }
+    .tab-content.active { display: grid; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .bg-neural {
+        background-image: radial-gradient(circle at 2px 2px, rgba(143, 245, 255, 0.04) 1px, transparent 0);
+        background-size: 40px 40px;
+    }
+    .text-gradient-primary {
+        background: linear-gradient(135deg, #8ff5ff 0%, #ac89ff 50%, #ff60cd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @keyframes flow { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+    .animated-gradient-bg {
+        background: linear-gradient(-45deg, rgba(14,14,16,0.8), rgba(25,25,28,0.8), rgba(31,31,34,0.8));
+        background-size: 400% 400%;
+        animation: flow 15s ease infinite;
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+
+<!-- Header identique au site -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-white/5">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
+<a href="/"><div class="flex items-center h-16"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></div></a>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#8ff5ff] font-bold border-b border-[#8ff5ff] pb-1" href="/expertises">Nos Expertises</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="/contact"><button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
+<button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onclick="toggleMenu()">
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b1"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b2"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b3"></span>
+</button>
+</div>
+</nav>
+<div id="mobile-menu" class="hidden md:hidden bg-[#0e0e10] border-t border-white/5 px-8 py-6 flex flex-col gap-6">
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#8ff5ff]" href="/expertises">Nos Expertises</a>
+<a href="/contact"><button class="w-full px-5 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded transition-all">Démarrer mon projet</button></a>
+</div>
+</header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const b1 = document.getElementById("b1");
+  const b2 = document.getElementById("b2");
+  const b3 = document.getElementById("b3");
+  menu.classList.toggle("hidden");
+  b1.classList.toggle("rotate-45"); b1.classList.toggle("translate-y-2");
+  b2.classList.toggle("opacity-0");
+  b3.classList.toggle("-rotate-45"); b3.classList.toggle("-translate-y-2");
+}
+</script>
+
+<main>
+<!-- Hero Section avec constellation comme la home -->
+<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden neural-bg pt-36 md:pt-24 pb-16">
+<canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
+<div class="absolute inset-0 pointer-events-none" style="z-index:1; background:rgba(14,14,16,0.5);"></div>
+<div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Services & Technologies</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-none mb-6">
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Des solutions pensées pour performer.</span>
+</h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+Sites, applications, e-commerce : chaque architecture est construite sur un socle technologique de pointe pour maximiser votre impact business.
+</p>
+<a href="/contact"><button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold tracking-tight rounded-lg hover:glow-primary transition-all">
+Démarrer mon projet
+</button></a>
+</div>
+</section>
+<script>
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [];
+  const N = 140, MAX_DIST = 160;
+  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  function init() {
+    nodes = [];
+    for (let i = 0; i < N; i++) nodes.push({ x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35, r:Math.random()*1.5+.5, pulse:Math.random()*Math.PI*2 });
+  }
+  function draw() {
+    ctx.clearRect(0,0,W,H);
+    for (let i=0;i<N;i++) for (let j=i+1;j<N;j++) { const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y, d=Math.sqrt(dx*dx+dy*dy); if(d<MAX_DIST){ctx.beginPath();ctx.strokeStyle=`rgba(143,245,255,${(1-d/MAX_DIST)*.45})`;ctx.lineWidth=.5;ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();} }
+    nodes.forEach(n => {
+      n.pulse+=.018; const g=.5+.5*Math.sin(n.pulse);
+      const gr=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*5); gr.addColorStop(0,`rgba(143,245,255,${.9*g})`); gr.addColorStop(1,'rgba(143,245,255,0)');
+      ctx.beginPath(); ctx.arc(n.x,n.y,n.r*5,0,Math.PI*2); ctx.fillStyle=gr; ctx.fill();
+      ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,Math.PI*2); ctx.fillStyle=`rgba(220,250,255,${g})`; ctx.fill();
+      n.x+=n.vx; n.y+=n.vy; if(n.x<0||n.x>W)n.vx*=-1; if(n.y<0||n.y>H)n.vy*=-1;
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>{resize();init();}); resize(); init(); draw();
+})();
+</script>
+
+<!-- Citation -->
+<section class="bg-surface-container-low py-20 px-6 border-y border-outline-variant/10 relative">
+<div class="max-w-3xl mx-auto text-center">
+<p class="font-body text-xl md:text-2xl text-on-surface leading-relaxed font-light italic opacity-90">
+"Un produit digital n'est pas une fin en soi. C'est un moteur de croissance qui doit être réglé avec une précision chirurgicale."
+</p>
+<div class="h-10 w-px bg-gradient-to-b from-primary to-transparent mx-auto my-8"></div>
+<h3 class="font-headline text-2xl md:text-3xl font-bold tracking-tight">
+La question n'est plus quoi créer, <span class="font-serif italic text-tertiary">mais comment dominer.</span>
+</h3>
+</div>
+</section>
+
+<!-- Expertises Slider -->
+<section class="bg-background py-24 px-6 md:px-8" id="expertises">
+<div class="max-w-[1440px] mx-auto">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold mb-12 tracking-tighter">Nos <span class="font-serif italic text-tertiary">domaines.</span></h2>
+
+<!-- Tabs navigation -->
+<div class="flex flex-wrap gap-3 mb-0" id="expertise-tabs">
+<button class="tab-btn px-6 py-2.5 rounded-t-xl font-label font-bold text-xs uppercase tracking-widest transition-all bg-primary text-on-primary-fixed" data-tab="0">E-commerce</button>
+<button class="tab-btn px-6 py-2.5 rounded-t-xl font-label font-bold text-xs uppercase tracking-widest transition-all bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-on-surface" data-tab="1">Sites vitrine</button>
+<button class="tab-btn px-6 py-2.5 rounded-t-xl font-label font-bold text-xs uppercase tracking-widest transition-all bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-on-surface" data-tab="2">Applications mobiles</button>
+<button class="tab-btn px-6 py-2.5 rounded-t-xl font-label font-bold text-xs uppercase tracking-widest transition-all bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-on-surface" data-tab="3">Plateformes métiers</button>
+</div>
+
+<!-- Slider container -->
+<div class="glass-card rounded-b-3xl rounded-tr-3xl overflow-hidden relative" style="border-top: 2px solid rgba(143,245,255,0.3);">
+<div class="absolute inset-0 bg-neural opacity-20 pointer-events-none"></div>
+
+<!-- Slides wrapper -->
+<div id="slider-wrapper" class="relative" style="overflow:hidden;">
+<div id="slider-track" class="flex transition-transform duration-500 ease-in-out">
+
+<!-- Slide 0 : E-commerce -->
+<div class="slide w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-16 relative z-10">
+<div>
+<h3 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 leading-tight">E-Commerce<br/><span class="font-serif italic text-primary">BtoC & BtoB</span></h3>
+<p class="font-body text-lg text-on-surface-variant mb-10 font-light leading-relaxed">Transformer votre trafic en chiffre d'affaires. Des plateformes e-commerce qui convertissent et propulsent votre croissance.</p>
+<ul class="space-y-5">
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">Création de boutiques performantes</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">Optimisation du tunnel de conversion</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">Expérience utilisateur orientée achat</span></li>
+</ul>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<img class="w-full h-auto rounded-2xl shadow-2xl relative z-10 border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFQqCQPOU8TNeOHCpg94aGd47En-dGPxV7wjhuFpyOkB9fb-o5kCT090ENLfZwxR543VuLLHj8f7qnhyEnwoYLYr6SJw9euwQZHcTXQDfpxBEdVfMQsdp1FGmEKj7SjhiMl6TAuh3kvZQ0PpJRZ8YUtR81jIaPxvWizdTJlwI-3AOzp3D5jcc-gjQ8iIZDdznAdw_eA9HF5Gw7Vay-3wQpssZl0UCzCZEqRdOjoJiARl4rZs88vFGbELfHeF9gSIUeZa1bxGzUjSI" alt="E-commerce"/>
+</div>
+</div>
+
+<!-- Slide 1 : Sites vitrine -->
+<div class="slide w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-16 relative z-10">
+<div>
+<h3 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Site Vitrine<br/><span class="font-serif italic text-secondary">Premium</span></h3>
+<p class="font-body text-lg text-on-surface-variant mb-10 font-light leading-relaxed">Clarifier votre offre et générer des opportunités. Votre marque mérite un écrin digital à la hauteur de votre expertise.</p>
+<ul class="space-y-5">
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Structuration du message</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Mise en valeur de votre proposition de valeur</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Parcours optimisé pour la conversion</span></li>
+</ul>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<img class="w-full h-auto rounded-2xl shadow-2xl relative z-10 border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5AOeBqv0pWe-kDZAX419baKdxmmLiwSAifIG00DY-yX2_hPd_RlS3K_dKlht7v59ghBT1Y4qNe9c9buwaXPrVxkf-uYABAGJD9azHJeCgfBkxCI4RVjx7OwvjAV98_U7YdMevu3CHpmGBPgyTiolO0mj765G9x8cbldyKX7Oh_qBrSR0-m5pjjPez-u1yIvDE7DWGBLLPc-TxNnJxZqy2ggWIbWGJbawve-PBiiGBtekatMWMbL7xdDiMFj_D0uP4lwoSwctCSrc" alt="Site vitrine"/>
+</div>
+</div>
+
+<!-- Slide 2 : Applications mobiles -->
+<div class="slide w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-16 relative z-10">
+<div>
+<h3 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Application<br/><span class="font-serif italic text-primary">Mobile native</span></h3>
+<p class="font-body text-lg text-on-surface-variant mb-10 font-light leading-relaxed">Créer un lien direct avec vos utilisateurs. Une expérience mobile sans friction, pensée pour les usages nomades.</p>
+<ul class="space-y-5">
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">UX fluide et intuitive</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">Expérience mobile-first</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #8ff5ff"></span><span class="font-body text-on-surface font-light">Fonctionnalités adaptées aux usages</span></li>
+</ul>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<img class="w-full h-auto rounded-2xl shadow-2xl relative z-10 border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNsTjBHsXTDRTPA0Pk-gg2eJWGKrvKPadlBsnh9_FyKcBDwLx8Gu7NQ8gkAJm61u6Ht8QpmvtPnj2ZEUDnK8r7NqzziQPsxbQuuJvNCIaw4tKInItFcXQbf5jd7K1dfIXmOkM6ckDSNc85Axv6QzPSoyIRaAvASnLgKT0x8DuiBcA-yOtI5tMj77boDWm87zx-K2qpNeGJGZT5XDNcPDijOlBSB5oXqtkYt1heMDF4hTO6LpGKOZgVEPjQGhRJH4qoF4H9ympeQs" alt="Application mobile"/>
+</div>
+</div>
+
+<!-- Slide 3 : Plateformes métiers -->
+<div class="slide w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-16 relative z-10">
+<div>
+<h3 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Solution<br/><span class="font-serif italic text-secondary">Métier & SaaS</span></h3>
+<p class="font-body text-lg text-on-surface-variant mb-10 font-light leading-relaxed">Digitaliser et structurer vos opérations. Des outils robustes pour automatiser vos processus et piloter votre activité.</p>
+<ul class="space-y-5">
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Outils sur-mesure</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Automatisation des tâches</span></li>
+<li class="flex items-start gap-4"><span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 flex-shrink-0" style="box-shadow:0 0 8px #ac89ff"></span><span class="font-body text-on-surface font-light">Centralisation des données</span></li>
+</ul>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity"></div>
+<img class="w-full h-auto rounded-2xl shadow-2xl relative z-10 border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYWOZcq4830_p_rY90IRMi_Zox51xT-FlFZUxUbAobumjpyK18oLU0ANZxEVyG0vPJLp4rpbZTMxbtns7Xnf3VgZSm3PFA_DwVITSxm77fX994q1t9W87VQBYHhxkHWjnM6MyJhkEqY0yJD7se_bdvnjcYQe-jEyVYQlPUVAK_XLJb3f5S4E5OjexHsJ6ZB4ncCCDhmmHV8--z46fFS9vkD1K9mp211-Q5OHoLpoS_wyaA9-Y4YmGtPDXpT99eWfYbUyE77c2Ra4s" alt="Plateforme métier"/>
+</div>
+</div>
+
+</div><!-- end slider-track -->
+</div><!-- end slider-wrapper -->
+</div><!-- end glass-card -->
+</div>
+</section>
+
+<script>
+(function() {
+  const track = document.getElementById('slider-track');
+  const buttons = document.querySelectorAll('.tab-btn');
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function goTo(index) {
+    current = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    buttons.forEach((btn, i) => {
+      if (i === index) {
+        btn.classList.add('bg-primary', 'text-on-primary-fixed');
+        btn.classList.remove('bg-surface-container-high', 'border', 'border-outline-variant/30', 'text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-primary', 'text-on-primary-fixed');
+        btn.classList.add('bg-surface-container-high', 'border', 'border-outline-variant/30', 'text-on-surface-variant');
+      }
+    });
+  }
+
+  buttons.forEach((btn, i) => {
+    btn.addEventListener('click', () => goTo(parseInt(btn.getAttribute('data-tab'))));
+  });
+
+  // Init width on resize
+  function setWidth() {
+    const w = document.getElementById('slider-wrapper').offsetWidth;
+    slides.forEach(s => s.style.width = w + 'px');
+    track.style.transform = `translateX(-${current * w}px)`;
+  }
+  window.addEventListener('resize', setWidth);
+  setWidth();
+})();
+</script>
+
+<!-- Méthodologie -->
+<section class="bg-surface-container-low py-24 px-6 md:px-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-neural opacity-30 pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="text-center mb-16">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Méthodologie</span>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter">Une même logique pour<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">chaque projet.</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group glass-card p-10 rounded-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 animated-gradient-bg opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">visibility</span>
+</div>
+<h4 class="font-headline font-extrabold text-xl mb-4 leading-tight group-hover:text-primary transition-colors">Comprendre<br/>votre activité</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed font-light">Immersion totale dans vos processus métiers pour identifier les leviers de valeur réels.</p>
+</div>
+<!-- Card 2 -->
+<div class="group glass-card p-10 rounded-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 animated-gradient-bg opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:border-secondary/50 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">auto_fix_high</span>
+</div>
+<h4 class="font-headline font-extrabold text-xl mb-4 leading-tight group-hover:text-secondary transition-colors">Simplifier<br/>l'expérience</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed font-light">Réduction de la complexité pour créer des interfaces fluides et intuitives au quotidien.</p>
+</div>
+<!-- Card 3 -->
+<div class="group glass-card p-10 rounded-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 animated-gradient-bg opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h4 class="font-headline font-extrabold text-xl mb-4 leading-tight group-hover:text-primary transition-colors">Maximiser<br/>l'impact</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed font-light">Déploiement de solutions robustes conçues pour générer des résultats mesurables immédiatement.</p>
+</div>
+<!-- Card 4 -->
+<div class="group glass-card p-10 rounded-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute inset-0 animated-gradient-bg opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:border-secondary/50 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">query_stats</span>
+</div>
+<h4 class="font-headline font-extrabold text-xl mb-4 leading-tight group-hover:text-secondary transition-colors">Mesurer<br/>et optimiser</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed font-light">Analyse continue des données pour affiner les performances et assurer la pérennité.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Final -->
+<section class="py-24 px-8 text-center bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<div class="grid grid-cols-12 h-full w-full">
+<div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div><div class="border-r border-outline-variant"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-8">Votre projet commence ici</h2>
+<p class="font-body text-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Partagez votre vision et nous nous occupons du reste.</p>
+<button class="group relative px-12 py-5 bg-gradient-to-br from-primary to-secondary text-on-primary-fixed font-label text-sm tracking-[0.2em] uppercase rounded-full overflow-hidden transition-all duration-500 hover:glow-primary hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(143,245,255,0.2)]">
+<a href="/contact"><span class="relative z-10 font-bold italic">Démarrer mon projet</span></a>
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</button>
+</div>
+</section>
+</main>
+
+<!-- Footer identique au site -->
+<footer class="w-full border-t border-[#48474a]/15 bg-[#131316]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-12 gap-6 max-w-[1920px] mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<div class="flex items-center mb-4 h-16">
+<img alt="Synaptic Digital Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/>
+</div>
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-[#adaaad]">© 2026 AGENCE DIGITALE ORIENTÉE PERFORMANCE.</p>
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-[#adaaad] mt-1">Stratégie, Design et Technologie au service de votre croissance.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-[#adaaad] hover:text-[#ff60cd] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-[#adaaad] hover:text-[#ff60cd] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-[#adaaad] hover:text-[#ff60cd] transition-colors duration-300" href="#">Neural Network Status</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
