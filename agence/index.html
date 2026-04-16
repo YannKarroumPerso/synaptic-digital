@@ -143,18 +143,30 @@ function toggleMenu() {
 </script>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-screen flex flex-col justify-center px-6 md:px-8 max-w-7xl mx-auto overflow-hidden py-32">
+<section class="relative min-h-screen flex flex-col justify-center overflow-hidden py-32">
 
-<!-- Constellation Animation -->
-<canvas id="constellation-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
-<style>
-#constellation-canvas { display: block; }
-</style>
+<!-- Constellation right side only -->
+<canvas id="constellation-canvas" class="absolute right-0 top-0 h-full pointer-events-none hidden md:block" style="z-index:0; width:55%;"></canvas>
+
+<div class="relative z-10 px-6 md:px-16 max-w-2xl">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block">Intelligence Collaborative</span>
+<h1 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tighter leading-tight mb-8">
+    Des sites web pensés pour <span class="text-gradient-primary italic">générer du business.</span>
+</h1>
+<p class="text-[#adaaad] text-base md:text-xl font-light leading-relaxed mb-10">
+    Stratégie, design et performance réunis pour transformer votre site en véritable levier de croissance.
+</p>
+<a href="/contact"><button class="bg-primary text-[#003f43] px-8 py-4 rounded font-headline font-bold uppercase tracking-widest text-sm hover:glow-primary transition-all">
+    Démarrer mon projet
+</button></a>
+</div>
+
 <script>
 (function() {
   const canvas = document.getElementById('constellation-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let W, H, nodes = [], animId;
+  let W, H, nodes = [];
   const N = 120;
   const MAX_DIST = 150;
 
@@ -179,18 +191,14 @@ function toggleMenu() {
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-    const t = Date.now() * 0.001;
-
-    // Draw lines
     for (let i = 0; i < N; i++) {
       for (let j = i + 1; j < N; j++) {
         const dx = nodes[i].x - nodes[j].x;
         const dy = nodes[i].y - nodes[j].y;
         const d = Math.sqrt(dx*dx + dy*dy);
         if (d < MAX_DIST) {
-          const alpha = (1 - d / MAX_DIST) * 0.5;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(143, 245, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(143, 245, 255, ${(1 - d/MAX_DIST) * 0.5})`;
           ctx.lineWidth = 0.5;
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -198,59 +206,31 @@ function toggleMenu() {
         }
       }
     }
-
-    // Draw nodes
-    nodes.forEach((n, i) => {
+    nodes.forEach(n => {
       n.pulse += 0.02;
       const glow = 0.6 + 0.4 * Math.sin(n.pulse);
-      const r = n.r * glow;
-
-      // Glow effect
-      const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r * 4);
+      const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 4);
       grad.addColorStop(0, `rgba(143, 245, 255, ${0.8 * glow})`);
       grad.addColorStop(1, 'rgba(143, 245, 255, 0)');
       ctx.beginPath();
-      ctx.arc(n.x, n.y, r * 4, 0, Math.PI * 2);
+      ctx.arc(n.x, n.y, n.r * 4, 0, Math.PI * 2);
       ctx.fillStyle = grad;
       ctx.fill();
-
-      // Core dot
       ctx.beginPath();
-      ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(200, 250, 255, ${glow})`;
       ctx.fill();
-
-      // Move
-      n.x += n.vx;
-      n.y += n.vy;
+      n.x += n.vx; n.y += n.vy;
       if (n.x < 0 || n.x > W) n.vx *= -1;
       if (n.y < 0 || n.y > H) n.vy *= -1;
     });
-
-    animId = requestAnimationFrame(draw);
+    requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', () => { resize(); init(); });
-  resize();
-  init();
-  draw();
+  resize(); init(); draw();
 })();
 </script>
-
-<div class="relative z-10 max-w-xl">
-<span class="font-label text-primary tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block">Intelligence Collaborative</span>
-<h1 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-5xl lg:text-6xl tracking-tighter leading-tight mb-8">
-    Des sites web pensés pour <span class="text-gradient-primary italic">générer du business.</span>
-</h1>
-<p class="text-[#adaaad] text-base md:text-xl font-light leading-relaxed mb-10 max-w-2xl">
-    Stratégie, design et performance réunis pour transformer votre site en véritable levier de croissance.
-</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a href="/contact" class="w-full sm:w-auto"><button class="w-full sm:w-auto bg-primary text-[#003f43] px-8 py-4 rounded font-headline font-bold uppercase tracking-widest text-sm hover:glow-primary transition-all">
-    Démarrer mon projet
-</button></a>
-</div>
-</div>
 </section>
 
 
