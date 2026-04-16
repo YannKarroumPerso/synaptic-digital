@@ -144,21 +144,48 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-white/5">
 <nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
-<div class="flex items-center h-20">
-<img alt="Synaptic Digital Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/>
+<a href="/"><div class="flex items-center h-16"><img alt="Synaptic Digital" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujqS3XQWe572vuOdnEFPWcAn_z7K-rlqbsjHI2tl8pX64Zeu2ZvMtHmfmE4h71KDj11zBBxPXffsAiaB8hQraG7vE_lpilAqOhvXro2-5Q-lX67UwK7pDE-wEh6f_M89Ap2KRmQV0jGL8PgjGaPPqbEfgAZHYAnenAcosIRcP59-FneLmjmxNc3WIoZ63HXAuROOgXZOOg0GzcRrF1xIjTXqftvOctmJUaLgb5LApQzq2XEhPOYiloD1_L89r93oBi-4CnhXW1Ykg"/></div></a>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a>
 </div>
-<div class="hidden md:flex items-center space-x-10"><a class="font-['Manrope'] tracking-[0.05em] uppercase text-xs text-[#8ff5ff] font-bold border-b-2 border-[#8ff5ff] pb-1" href="#">L'Agence</a><a class="font-['Manrope'] tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a><a class="font-['Manrope'] tracking-[0.05em] uppercase text-xs text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a></div>
-<button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:glow-primary hover:scale-[1.02] transition-all active:scale-95 duration-200">
-            Start Project
-        </button>
+<div class="flex items-center gap-4">
+<a href="/contact"><button class="px-5 py-1.5 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded hover:scale-[1.02] transition-all active:scale-95 duration-200">Démarrer mon projet</button></a>
+<button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onclick="toggleMenu()">
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b1"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b2"></span>
+<span class="block w-6 h-0.5 bg-[#8ff5ff] transition-all duration-300" id="b3"></span>
+</button>
+</div>
 </nav>
+<div id="mobile-menu" class="hidden md:hidden bg-[#0e0e10] border-t border-white/5 px-8 py-6 flex flex-col gap-6">
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="/agence">L'Agence</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Vision</a>
+<a class="font-headline tracking-[0.05em] uppercase text-sm text-[#adaaad] hover:text-[#8ff5ff] transition-colors duration-300" href="#">Expertise</a>
+<a href="/contact"><button class="w-full px-5 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest rounded transition-all">Démarrer mon projet</button></a>
+</div>
 </header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const b1 = document.getElementById("b1");
+  const b2 = document.getElementById("b2");
+  const b3 = document.getElementById("b3");
+  menu.classList.toggle("hidden");
+  b1.classList.toggle("rotate-45");
+  b1.classList.toggle("translate-y-2");
+  b2.classList.toggle("opacity-0");
+  b3.classList.toggle("-rotate-45");
+  b3.classList.toggle("-translate-y-2");
+}
+</script>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden neural-bg pt-16">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden neural-bg pt-36 md:pt-24 pb-16">
 <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 <svg class="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
@@ -170,27 +197,20 @@
 </svg>
 </div>
 <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
-<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Technological Vanguard</span>
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block">Agence Digitale Orientée Performance</span>
 <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-none mb-6">
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Plus qu'un site. Un accélérateur de business.</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Plus qu'un site, un accélérateur de business.</span>
 </h1>
 <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
-                We engineer high-fidelity digital environments where data architecture meets visceral creativity.
-            </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-4">
-<button class="w-full md:w-auto px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold tracking-tight rounded-lg hover:glow-primary transition-all">
-                    Explore Environments
-                </button>
-<button class="w-full md:w-auto px-8 py-3 border border-outline-variant/30 text-on-surface font-bold tracking-tight rounded-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-primary">play_circle</span> Our DNA
-                </button>
+    Des expériences digitales pensées pour générer des leads, structurer votre acquisition et améliorer vos résultats.
+</p>
+<div class="flex items-center justify-center">
+<a href="/contact"><button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold tracking-tight rounded-lg hover:glow-primary transition-all">
+    Démarrer mon projet
+</button></a>
 </div>
 </div>
-<!-- Scroll Indicator -->
-<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface-variant">Initialize Scroll</span>
-<div class="w-[1px] h-8 bg-gradient-to-b from-primary to-transparent"></div>
-</div>
+
 </section>
 <!-- Agency DNA Section -->
 <section class="py-24 px-8 bg-background border-y border-outline-variant/10">
@@ -350,7 +370,7 @@
 <h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-8">Votre projet commence ici</h2>
 <p class="font-body text-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Nous acceptons actuellement des collaborations à fort impact pour fin 2024. Sécurisez votre place dans le réseau.</p>
 <button class="group relative px-12 py-5 bg-gradient-to-br from-primary to-secondary text-on-primary-fixed font-label text-sm tracking-[0.2em] uppercase rounded-full overflow-hidden transition-all duration-500 hover:glow-primary hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(143,245,255,0.2)]">
-<span class="relative z-10 font-bold italic">Démarrer un projet</span>
+<a href="/contact"><span class="relative z-10 font-bold italic">Démarrer mon projet</span></a>
 <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
 </button>
 </div>
