@@ -25,7 +25,7 @@ export function Nav() {
             </Link>
           ))}
         </div>
-        <Button href="/#contact" variant="primary" className="text-[13px] sm:text-[15px] py-2.5 px-4 sm:py-[14px] sm:px-6">
+        <Button href="/contact" variant="primary" className="text-[13px] sm:text-[15px] py-2.5 px-4 sm:py-[14px] sm:px-6">
           Démarrer mon projet
         </Button>
       </div>
