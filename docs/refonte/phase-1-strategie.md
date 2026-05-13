@@ -16,17 +16,22 @@
 | **Stack** | Next.js (App Router) + Tailwind |
 | **Workflow** | Branche longue durée `refonte/v2` |
 
-### Impact sur le sitemap retenu
+### Impact sur le sitemap retenu : structure HYBRIDE validée
 
 ```
-/                       (Accueil)
-├── /approche           (Notre approche + équipe 4 personnes)
-├── /realisations       (Cas clients)
-├── /contact
-└── /mentions-legales
+/                              (One-pager dense — 90% des visiteurs n'iront jamais ailleurs)
+├── /realisations              (Liste des cas clients)
+├── /realisations/[slug]       (Détail d'un cas client — page SEO forte)
+└── /mentions-legales          (Obligatoire)
 ```
 
-5 pages. Pas de page Tarifs dédiée mais une section fourchettes intégrée à l'Accueil.
+**Pourquoi hybride** :
+- One-pager pour l'accueil → simplicité maximale pour le prospect pressé, tout est sur une page navigable par ancres
+- Pages cas clients séparées → SEO multi-keywords (différents secteurs/métiers ciblés) + profondeur de contenu (600-1200 mots par cas)
+- Pas de pages /approche /contact distinctes → leur contenu vit en sections de la home avec ancres (#approche, #contact)
+- 3 URLs principales (+ mentions légales obligatoire)
+
+**Contenu du one-pager `/`** : hero / stats / services (4 cards) / piliers Design+Perf+SEO / méthode en 4 étapes / équipe (4 personnes avec avatars) / témoignages clients / teaser réalisations (3 cards qui pointent vers /realisations) / fourchettes / FAQ / formulaire contact.
 
 ### Implications pour la rédaction (Phase 3)
 

@@ -1,7 +1,8 @@
 # Phase 2 — Direction artistique
 
-> Référence visuelle validée : **bitstack-app.com**
-> Palette adaptée au brief Synaptic (chaleureux, accessible, abordable suggéré).
+> ✅ **Palette A retenue** : Bleu nuit `#1A2840` + Orange chaleur `#FF7B47` + Crème `#FAF7F2`
+> ✅ **Typo retenue** : Sora (titres) + Inter (body)
+> Référence visuelle : **bitstack-app.com**
 
 ---
 
@@ -35,7 +36,7 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 
 3 directions colorimétriques. À comparer visuellement dans le mockup interactif (voir §6).
 
-### Palette A — "Confiance & Chaleur" 🟠 (RECOMMANDÉE)
+### Palette A — "Confiance & Chaleur" 🟠 ✅ RETENUE (validée par Yann)
 
 | Rôle | Couleur | Hex | Usage |
 |---|---|---|---|
