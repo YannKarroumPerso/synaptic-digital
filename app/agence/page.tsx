@@ -42,7 +42,7 @@ const manifestoPoints = [
   },
 ];
 
-function ManifestoItem({
+function ManifestoCard({
   number,
   title,
   text,
@@ -52,19 +52,20 @@ function ManifestoItem({
   text: string;
 }) {
   return (
-    <div className="group grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 md:gap-12 py-10 lg:py-12 border-b border-border transition-colors hover:bg-bg-warm/40 -mx-6 px-6 md:-mx-8 md:px-8 rounded-2xl">
-      <div className="font-sora font-bold text-[44px] md:text-[56px] text-accent leading-none tracking-tight">
-        {number}
+    <article className="group bg-bg-card border border-border rounded-3xl p-8 transition-all duration-300 hover:shadow-md hover:border-accent hover:-translate-y-1 w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]">
+      <div className="flex items-baseline justify-between mb-5">
+        <div className="font-sora font-bold text-[44px] text-accent leading-none tracking-tight">
+          {number}
+        </div>
+        <div className="h-[2px] flex-1 ml-4 bg-border group-hover:bg-accent transition-colors" />
       </div>
-      <div>
-        <h3 className="text-primary font-sora font-bold text-[24px] md:text-[28px] leading-tight mb-3 transition-colors group-hover:text-accent">
-          {title}
-        </h3>
-        <p className="text-text-muted text-[17px] leading-relaxed max-w-[640px]">
-          {text}
-        </p>
-      </div>
-    </div>
+      <h3 className="text-primary font-sora font-bold text-[20px] leading-tight mb-3">
+        {title}
+      </h3>
+      <p className="text-text-muted text-[15px] leading-relaxed">
+        {text}
+      </p>
+    </article>
   );
 }
 
@@ -88,18 +89,19 @@ export default function AgencePage() {
       </section>
 
       {/* MANIFESTE */}
-      <Section className="bg-bg-card">
-        <Container narrow>
-          <div className="text-center mb-16">
+      <Section className="bg-bg-light">
+        <Container>
+          <div className="text-center mb-12 max-w-[640px] mx-auto">
             <span className="section-eyebrow">Manifeste</span>
             <h2 className="text-primary mb-4">Ce en quoi on croit</h2>
-            <p className="text-text-muted text-[18px] leading-relaxed max-w-[600px] mx-auto">
+            <p className="text-text-muted text-[18px] leading-relaxed">
               Cinq principes qui structurent chaque projet qu&apos;on accepte de prendre.
             </p>
           </div>
-          <div className="border-t border-border">
+          {/* flex-wrap justify-center → les 2 dernières cards se centrent automatiquement sur desktop */}
+          <div className="flex flex-wrap justify-center gap-5 max-w-[1100px] mx-auto">
             {manifestoPoints.map((point) => (
-              <ManifestoItem key={point.number} {...point} />
+              <ManifestoCard key={point.number} {...point} />
             ))}
           </div>
         </Container>
