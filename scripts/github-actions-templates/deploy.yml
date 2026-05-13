@@ -1,0 +1,50 @@
+name: Deploy production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permet de déclencher manuellement
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel production deployment
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: prj_oZ76vFjKtNRVMqQE6gTVtAbpWrhu
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "❌ Secret VERCEL_TOKEN manquant. À configurer dans Settings → Secrets and variables → Actions"
+            exit 1
+          fi
+
+          echo "Déclenchement du deploy Vercel pour le commit $GITHUB_SHA…"
+          RESPONSE=$(curl -s -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"name\": \"synaptic-digital\",
+              \"project\": \"$VERCEL_PROJECT_ID\",
+              \"target\": \"production\",
+              \"gitSource\": {
+                \"type\": \"github\",
+                \"ref\": \"main\",
+                \"sha\": \"$GITHUB_SHA\",
+                \"org\": \"YannKarroumPerso\",
+                \"repo\": \"synaptic-digital\"
+              }
+            }")
+
+          DEPLOY_URL=$(echo "$RESPONSE" | python3 -c "import sys,json; r=json.load(sys.stdin); print(r.get('url',''))")
+          DEPLOY_ID=$(echo "$RESPONSE" | python3 -c "import sys,json; r=json.load(sys.stdin); print(r.get('id',''))")
+
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "❌ Échec du déclenchement :"
+            echo "$RESPONSE" | python3 -m json.tool
+            exit 1
+          fi
+
+          echo "✅ Deploy lancé"
+          echo "   ID  : $DEPLOY_ID"
+          echo "   URL : https://$DEPLOY_URL"
