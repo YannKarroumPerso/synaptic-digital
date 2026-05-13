@@ -22,7 +22,7 @@ export function RealisationsTeaser() {
       setCanScrollLeft(scrollLeft > 8);
       setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 8);
       const firstCard = scroller.querySelector<HTMLElement>(":scope > article");
-      const cardWidth = firstCard?.offsetWidth ?? 400;
+      const cardWidth = firstCard?.offsetWidth ?? 460;
       const gap = 24;
       setActiveIndex(Math.min(Math.round(scrollLeft / (cardWidth + gap)), realisations.length - 1));
     };
@@ -40,7 +40,7 @@ export function RealisationsTeaser() {
     const scroller = scrollerRef.current;
     if (!scroller) return;
     const firstCard = scroller.querySelector<HTMLElement>(":scope > article");
-    const cardWidth = firstCard?.offsetWidth ?? 400;
+    const cardWidth = firstCard?.offsetWidth ?? 460;
     const gap = 24;
     scroller.scrollBy({
       left: direction === "left" ? -(cardWidth + gap) : cardWidth + gap,
@@ -107,42 +107,13 @@ export function RealisationsTeaser() {
 
 function RealisationCard({ real }: { real: Realisation }) {
   return (
-    <article className="group flex-shrink-0 w-[88%] sm:w-[460px] bg-bg-card border border-border rounded-3xl overflow-hidden snap-start transition-all duration-300 hover:shadow-lg hover:border-accent">
-      {/* Frame device : desktop + smartphone overlay */}
-      <div className="relative aspect-[16/10] bg-gradient-to-br from-bg-warm to-[#F2E8DC] border-b border-border overflow-hidden">
-        {/* === Desktop mockup === */}
-        {/* Mac-style top bar */}
-        <div className="absolute top-0 left-0 right-0 h-7 bg-gradient-to-b from-[#F3EFEA] to-[#EBE5DA] z-20 flex items-center px-3 gap-1.5 border-b border-border/50">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#E07A6B]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#E3B85F]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#7CB87B]" />
-        </div>
-        {/* Desktop image, offset to leave room for the bar */}
-        <div className="absolute inset-0 top-7">
-          <Image
-            src={real.image}
-            alt={`Capture desktop de ${real.name}`}
-            fill
-            sizes="(max-width: 640px) 88vw, 460px"
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-        </div>
-
-        {/* === Smartphone overlay (bottom-right) === */}
-        <div className="absolute bottom-3 right-4 w-[76px] z-30">
-          <div className="bg-[#1A1A1A] rounded-[16px] p-[3px] shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
-            <div className="relative aspect-[9/19.5] bg-white rounded-[13px] overflow-hidden">
-              {/* Dynamic island */}
-              <div className="absolute top-[4px] left-1/2 -translate-x-1/2 w-7 h-1.5 bg-black rounded-full z-10" />
-              <Image
-                src={real.imageMobile}
-                alt={`Capture mobile de ${real.name}`}
-                fill
-                sizes="76px"
-                className="object-cover object-top"
-              />
-            </div>
-          </div>
+    <article className="group flex-shrink-0 w-[88%] sm:w-[480px] bg-bg-card border border-border rounded-3xl overflow-hidden snap-start transition-all duration-300 hover:shadow-lg hover:border-accent">
+      {/* Visual zone */}
+      <div className="relative bg-gradient-to-br from-bg-warm to-[#F2E8DC] border-b border-border px-7 pt-8 pb-5 overflow-hidden">
+        <LaptopMockup imageSrc={real.image} alt={`Capture desktop de ${real.name}`} />
+        {/* Smartphone overlay : flottant en bas-droite, partiellement dans la zone laptop */}
+        <div className="absolute bottom-2 right-5 z-30">
+          <PhoneMockup imageSrc={real.imageMobile} alt={`Capture mobile de ${real.name}`} />
         </div>
       </div>
 
@@ -155,6 +126,62 @@ function RealisationCard({ real }: { real: Realisation }) {
         <p className="text-sm text-text-muted leading-relaxed">{real.description}</p>
       </div>
     </article>
+  );
+}
+
+/* === Mockup laptop en CSS pur (bezel + notch + base/socle) === */
+function LaptopMockup({ imageSrc, alt }: { imageSrc: string; alt: string }) {
+  return (
+    <div className="relative w-full">
+      {/* Bezel = corps noir avec border-radius en haut, en bas presque droit */}
+      <div className="relative bg-[#161616] rounded-t-[12px] rounded-b-[6px] p-[6px] pb-[8px] shadow-[0_8px_24px_rgba(0,0,0,0.25)]">
+        {/* Notch */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[48px] h-[10px] bg-[#161616] rounded-b-[6px] z-10" />
+        {/* Screen */}
+        <div className="relative aspect-[16/10] bg-white rounded-[5px] overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={alt}
+            fill
+            sizes="(max-width: 640px) 88vw, 480px"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+        </div>
+      </div>
+      {/* Base / socle */}
+      <div className="relative">
+        {/* Trait charnière */}
+        <div className="h-[2px] bg-gradient-to-b from-[#161616] to-[#444]" />
+        {/* Trapèze base (clip-path pour effet perspective) */}
+        <div
+          className="h-[12px] bg-gradient-to-b from-[#D4D7DC] via-[#B0B5BD] to-[#8B9099]"
+          style={{ clipPath: "polygon(2% 0, 98% 0, 95% 100%, 5% 100%)" }}
+        >
+          {/* Petite encoche centrale du touchpad (visible quand on regarde le laptop ouvert) */}
+          <div className="mx-auto mt-0 w-[40px] h-[3px] bg-[#666] opacity-30 rounded-b-md" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* === Mockup smartphone en CSS pur (bezel + dynamic island) === */
+function PhoneMockup({ imageSrc, alt }: { imageSrc: string; alt: string }) {
+  return (
+    <div className="w-[72px]">
+      <div className="bg-[#1A1A1A] rounded-[14px] p-[3px] shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+        <div className="relative aspect-[9/19.5] bg-white rounded-[11px] overflow-hidden">
+          <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-6 h-[5px] bg-black rounded-full z-10" />
+          <Image
+            src={imageSrc}
+            alt={alt}
+            fill
+            sizes="72px"
+            className="object-cover object-top"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
