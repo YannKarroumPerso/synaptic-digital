@@ -28,7 +28,7 @@ export const services: Service[] = [
     title: "Site vitrine",
     tagline: "Présentez votre activité, gagnez en visibilité.",
     description:
-      "Présentez votre activité avec un site clair, rapide et trouvé sur Google. 4 à 6 pages, livré en 3 semaines.",
+      "Présentez votre activité avec un site clair, rapide et trouvé sur Google. À partir d'un site one-page jusqu'à 6 pages, livré en 2-3 semaines.",
     longDescription: [
       "Un site vitrine, c'est votre carte de visite digitale — mais en mieux. C'est la première chose que vos prospects voient avant de vous appeler, c'est ce qui les rassure, et c'est ce qui les fait passer à l'action.",
       "On conçoit votre site pour qu'il parle à votre cible précise : votre offre claire en haut de page, vos preuves sociales en milieu de page, et un parcours de contact sans friction en bas. Pas du remplissage : chaque page sert un objectif.",
@@ -45,9 +45,9 @@ export const services: Service[] = [
     ],
     idealFor:
       "TPE et petites PME qui veulent une présence digitale propre et professionnelle, sans pour autant avoir besoin d'une boutique en ligne ou d'outils métier.",
-    duration: "Livré en 3 semaines",
-    price: "3 000 €",
-    priceRange: "3 000 € – 4 500 €",
+    duration: "Livré en 2 à 3 semaines",
+    price: "1 500 €",
+    priceRange: "1 500 € – 4 500 €",
   },
   {
     slug: "e-commerce",
@@ -255,10 +255,10 @@ export const testimonials = [
 export const pricing = [
   {
     title: "Site vitrine",
-    range: "3 000 € – 4 500 €",
-    duration: "Livré en 3 semaines",
+    range: "1 500 € – 4 500 €",
+    duration: "Livré en 2 à 3 semaines",
     features: [
-      "4 à 6 pages",
+      "One-page ou jusqu'à 6 pages",
       "Design sur-mesure",
       "SEO de base",
       "Formulaire de contact",
