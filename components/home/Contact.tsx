@@ -84,6 +84,15 @@ export function Contact() {
                 />
               </label>
             </div>
+            {/* Honeypot anti-spam — champ caché, les humains ne le verront pas */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              className="absolute left-[-9999px] opacity-0"
+              aria-hidden="true"
+            />
             <SubmitButton />
             {state.error && (
               <p className="mt-3 text-sm text-red-300 text-center">{state.error}</p>
