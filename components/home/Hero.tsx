@@ -29,7 +29,7 @@ export function Hero() {
               <Button href="#contact" variant="primary" arrow>
                 Démarrer mon projet
               </Button>
-              <Button href="/realisations" variant="secondary">
+              <Button href="/#realisations" variant="secondary">
                 Voir nos réalisations
               </Button>
             </div>
