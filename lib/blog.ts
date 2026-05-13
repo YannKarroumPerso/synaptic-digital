@@ -54,26 +54,32 @@ export function getAllPosts(): PostMeta[] {
  * Récupère un post complet par son slug (avec contenu HTML rendu).
  */
 export function getPostBySlug(slug: string): Post | null {
-  const filePath = path.join(BLOG_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
+  if (!fs.existsSync(BLOG_DIR)) return null;
+  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"));
 
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(raw);
-  const contentHtml = marked.parse(content, { async: false }) as string;
-
-  return {
-    slug: data.slug ?? slug,
-    title: data.title ?? "Sans titre",
-    date: data.date ?? new Date().toISOString().split("T")[0],
-    type: (data.type ?? "article") as PostType,
-    theme: data.theme ?? "",
-    excerpt: data.excerpt ?? "",
-    metaDescription: data.metaDescription,
-    keywords: data.keywords ?? [],
-    readingTime: estimateReadingTime(content),
-    contentHtml,
-    contentRaw: content,
-  };
+  // Trouver le fichier dont le slug (frontmatter OU nom de fichier sans .md) correspond
+  for (const file of files) {
+    const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
+    const { data, content } = matter(raw);
+    const fileSlug = data.slug ?? file.replace(/\.md$/, "");
+    if (fileSlug === slug) {
+      const contentHtml = marked.parse(content, { async: false }) as string;
+      return {
+        slug: fileSlug,
+        title: data.title ?? "Sans titre",
+        date: data.date ?? new Date().toISOString().split("T")[0],
+        type: (data.type ?? "article") as PostType,
+        theme: data.theme ?? "",
+        excerpt: data.excerpt ?? "",
+        metaDescription: data.metaDescription,
+        keywords: data.keywords ?? [],
+        readingTime: estimateReadingTime(content),
+        contentHtml,
+        contentRaw: content,
+      };
+    }
+  }
+  return null;
 }
 
 function estimateReadingTime(text: string): number {
