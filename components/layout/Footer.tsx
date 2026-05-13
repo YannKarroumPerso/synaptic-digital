@@ -33,10 +33,10 @@ export function Footer() {
           <FooterColumn
             title="Services"
             links={[
-              { label: "Site vitrine", href: "/#services" },
-              { label: "E-commerce", href: "/#services" },
-              { label: "Refonte", href: "/#services" },
-              { label: "SEO & performance", href: "/#services" },
+              { label: "Site vitrine", href: "/services#site-vitrine" },
+              { label: "E-commerce", href: "/services#e-commerce" },
+              { label: "Refonte", href: "/services#refonte" },
+              { label: "SEO & performance", href: "/services#seo-performance" },
             ]}
           />
           <FooterColumn

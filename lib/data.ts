@@ -7,34 +7,129 @@ export const stats = [
   { value: "48", unit: "h", label: "Premier retour sur votre projet" },
 ];
 
-export const services = [
+export type Service = {
+  slug: string;
+  icon: typeof LayoutGrid;
+  title: string;
+  tagline: string;
+  description: string;
+  longDescription: string[];
+  includes: string[];
+  idealFor: string;
+  duration: string;
+  price: string;
+  priceRange: string;
+};
+
+export const services: Service[] = [
   {
+    slug: "site-vitrine",
     icon: LayoutGrid,
     title: "Site vitrine",
+    tagline: "Présentez votre activité, gagnez en visibilité.",
     description:
       "Présentez votre activité avec un site clair, rapide et trouvé sur Google. 4 à 6 pages, livré en 3 semaines.",
+    longDescription: [
+      "Un site vitrine, c'est votre carte de visite digitale — mais en mieux. C'est la première chose que vos prospects voient avant de vous appeler, c'est ce qui les rassure, et c'est ce qui les fait passer à l'action.",
+      "On conçoit votre site pour qu'il parle à votre cible précise : votre offre claire en haut de page, vos preuves sociales en milieu de page, et un parcours de contact sans friction en bas. Pas du remplissage : chaque page sert un objectif.",
+    ],
+    includes: [
+      "4 à 6 pages sur-mesure (accueil, services, à propos, contact, mentions légales)",
+      "Design unique, adapté à votre identité de marque",
+      "Optimisations SEO de base (balises, structure sémantique, vitesse)",
+      "Formulaire de contact avec envoi par email",
+      "Responsive parfait sur mobile, tablette, desktop",
+      "Hébergement Vercel (rapide, sécurisé) inclus la première année",
+      "Formation à la modification du contenu courant",
+      "30 jours de suivi après mise en ligne",
+    ],
+    idealFor:
+      "TPE et petites PME qui veulent une présence digitale propre et professionnelle, sans pour autant avoir besoin d'une boutique en ligne ou d'outils métier.",
+    duration: "Livré en 3 semaines",
     price: "3 000 €",
+    priceRange: "3 000 € – 4 500 €",
   },
   {
+    slug: "e-commerce",
     icon: ShoppingCart,
     title: "E-commerce",
+    tagline: "Une boutique qui convertit, pas un catalogue.",
     description:
       "Une boutique en ligne fluide, sécurisée, optimisée pour convertir. Catalogue, paiement, gestion intuitive.",
+    longDescription: [
+      "Beaucoup de boutiques en ligne sont juste des catalogues mal foutus avec un bouton « ajouter au panier ». Nous, on conçoit votre e-commerce comme un parcours d'achat optimisé : 3 clics maximum pour acheter, taux d'abandon minimal, paiement sécurisé sans friction.",
+      "On part sur Shopify ou WooCommerce selon votre besoin, avec un thème entièrement custom qui ressemble à votre marque (pas à un site générique). Intégrations paiement, livraison, stock — tout est pré-configuré.",
+    ],
+    includes: [
+      "Boutique sur Shopify ou WooCommerce, thème custom",
+      "Jusqu'à 30 produits configurés au lancement (extensible ensuite)",
+      "Paiement Stripe, PayPal, Apple/Google Pay",
+      "Livraison Mondial Relay + Colissimo + retrait magasin",
+      "Tunnel d'achat optimisé (1 page checkout)",
+      "Gestion stocks centralisée, alertes rupture",
+      "Analytics e-commerce (taux conversion, panier moyen, etc.)",
+      "Hébergement + plateforme inclus la première année",
+      "Formation complète sur la gestion produits/commandes",
+    ],
+    idealFor:
+      "Commerçants qui passent au digital, marques artisanales qui veulent toucher au-delà de leur région, professionnels qui vendent produits ou prestations en ligne.",
+    duration: "Livré en 4 semaines",
     price: "6 500 €",
+    priceRange: "6 500 € – 12 000 €",
   },
   {
+    slug: "refonte",
     icon: RefreshCw,
     title: "Refonte de site",
+    tagline: "Reprendre ce qui marche, jeter le reste.",
     description:
       "Votre site existant est lent, daté ou peu lisible ? On reprend tout, en gardant ce qui marche. Bascule sans coupure.",
+    longDescription: [
+      "Refaire un site, ce n'est pas tout jeter. C'est garder le bon (vos contenus qui performent, vos URLs qui rankent sur Google, votre identité) et reconstruire le reste pour que le site redevienne un outil business — pas une vitrine fatiguée.",
+      "On audite d'abord l'existant : ce qui marche en SEO, ce qui convertit, ce qui freine. Puis on conçoit un nouveau site qui préserve l'acquis et corrige les points bloquants. Bascule en une nuit, redirections 301 propres, zéro perte de trafic.",
+    ],
+    includes: [
+      "Audit complet du site existant (SEO, perf, UX, contenus)",
+      "Récupération et nettoyage des contenus à conserver",
+      "Plan de redirection 301 pour préserver le SEO acquis",
+      "Refonte design + structure + technique en parallèle",
+      "Migration sans interruption de service (bascule en une nuit)",
+      "Optimisations performance et SEO renforcées",
+      "Comparatif avant/après : Lighthouse, trafic, conversion",
+      "30 jours de suivi pour ajuster post-bascule",
+    ],
+    idealFor:
+      "Entreprises avec un site existant qui sous-performe (lent, daté, peu mobile-friendly, faible SEO) et qui veulent reprendre la main sans tout recommencer de zéro.",
+    duration: "Livrée en 3 à 4 semaines",
     price: "3 500 €",
+    priceRange: "3 500 € – 8 000 €",
   },
   {
+    slug: "seo-performance",
     icon: Search,
     title: "SEO & Performance",
+    tagline: "Être trouvé sur Google, charger en moins de 2 sec.",
     description:
       "Audit, optimisations techniques, structure de contenu. Pour être trouvé par vos prospects sur Google.",
+    longDescription: [
+      "Vous avez un site, mais il rame ? Il n'apparaît jamais sur Google ? Ce n'est pas une fatalité — la plupart des sites peuvent gagner 20-40 points de score Lighthouse et plusieurs positions sur Google en quelques jours de travail bien ciblé.",
+      "On audite, on identifie les 20% d'actions qui produisent 80% du résultat, on les exécute, et on mesure. Travail ponctuel ou accompagnement long terme selon votre besoin.",
+    ],
+    includes: [
+      "Audit technique SEO complet (Search Console, structure, balises, Core Web Vitals)",
+      "Audit performance (Lighthouse, GTmetrix, real user metrics)",
+      "Plan d'action priorisé avec impact estimé pour chaque optimisation",
+      "Implémentation des optimisations techniques (images, CSS, JS, fonts)",
+      "Optimisation des contenus existants (titres, méta, sémantique)",
+      "Mise en place du tracking analytics avancé",
+      "Rapport final avec avant/après mesurable",
+      "Possibilité d'accompagnement mensuel (rédaction, suivi positions)",
+    ],
+    idealFor:
+      "Sites existants qui ne convertissent pas faute d'être trouvés sur Google, ou trop lents pour retenir les visiteurs. Audits ponctuels ou accompagnement continu.",
+    duration: "1 à 2 semaines pour un audit + chantier d'optimisation",
     price: "1 500 €",
+    priceRange: "1 500 € – 4 500 €",
   },
 ];
 

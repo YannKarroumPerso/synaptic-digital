@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -39,6 +40,15 @@ export function Services() {
               </div>
             );
           })}
+        </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-accent font-semibold hover:underline group"
+          >
+            Voir le détail de chaque service
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
         </div>
       </Container>
     </Section>
