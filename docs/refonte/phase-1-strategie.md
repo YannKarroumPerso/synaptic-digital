@@ -1,7 +1,42 @@
 # Phase 1 — Stratégie & Sitemap
 
 > Document de travail pour la refonte du site Synaptic Digital.
-> À valider / amender par Yann avant de passer à la Phase 2 (direction artistique).
+> Décisions arrêtées avec Yann (mai 2026). Le détail du raisonnement est conservé plus bas.
+
+---
+
+## 🟢 Décisions finales (validées par Yann)
+
+| Sujet | Décision |
+|---|---|
+| **Tagline** | Direction **A** — *"Des sites beaux, rapides, trouvés sur Google. Livrés en 3 semaines."* |
+| **Page Tarifs** | ❌ Pas de page Tarifs dédiée. ✅ **Fourchettes indicatives** affichées sur la home/approche pour ne pas figer la grille tarifaire |
+| **Équipe** | **4 personnes** présentées sur la page Notre approche, avec avatars |
+| **Direction artistique** | Référence : **bitstack-app.com** (structure, modernité, ton consumer accessible) — couleurs adaptées au brief Synaptic (chaleureux, abordable suggéré, pas tech-financier) |
+| **Stack** | Next.js (App Router) + Tailwind |
+| **Workflow** | Branche longue durée `refonte/v2` |
+
+### Impact sur le sitemap retenu
+
+```
+/                       (Accueil)
+├── /approche           (Notre approche + équipe 4 personnes)
+├── /realisations       (Cas clients)
+├── /contact
+└── /mentions-legales
+```
+
+5 pages. Pas de page Tarifs dédiée mais une section fourchettes intégrée à l'Accueil.
+
+### Implications pour la rédaction (Phase 3)
+
+- Affichage des fourchettes : sur la home, dans une section "Combien ça coûte ?" avec 3 lignes type :
+  - *Site vitrine 4-6 pages : entre 3 000 € et 4 500 €*
+  - *Site vitrine étoffé / e-commerce simple : entre 4 500 € et 7 500 €*
+  - *Plus complexe (plateforme, e-commerce avancé) : sur devis*
+  - Avec mention "Pas figé, dépend de votre projet" pour préserver la flexibilité commerciale
+- Équipe 4 personnes : je rédigerai 4 profils types (rôles : Fondateur / Direction artistique / Développement / SEO & growth) que Yann remplira avec les vrais noms/photos plus tard
+- Tagline : *"Des sites beaux, rapides, trouvés sur Google. Livrés en 3 semaines."* devient le H1 du hero de l'accueil
 
 ---
 
