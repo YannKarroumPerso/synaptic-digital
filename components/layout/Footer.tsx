@@ -44,7 +44,7 @@ export function Footer() {
             links={[
               { label: "Notre approche", href: "/#approche" },
               { label: "L'équipe", href: "/#equipe" },
-              { label: "Réalisations", href: "/realisations" },
+              { label: "Réalisations", href: "/#realisations" },
               { label: "Contact", href: "/#contact" },
             ]}
           />
