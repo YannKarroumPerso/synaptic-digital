@@ -1,16 +1,9 @@
-"use client";
-
-import { useFormState, useFormStatus } from "react-dom";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { submitContactForm, ContactFormState } from "@/app/actions";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { Clock, Phone, FileText } from "lucide-react";
 
-const initialState: ContactFormState = {};
-
 export function Contact() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
-
   return (
     <Section id="contact" className="relative overflow-hidden bg-bg-dark text-text-light">
       <div className="absolute -top-36 -left-24 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(255,123,71,0.1)_0%,transparent_70%)] z-0" />
@@ -40,119 +33,10 @@ export function Contact() {
               />
             </div>
           </div>
-          <form
-            action={formAction}
-            className="bg-white/[0.04] border border-white/10 rounded-3xl p-8 backdrop-blur-sm"
-          >
-            <FormField label="Nom" name="name" required type="text" placeholder="Votre nom" />
-            <FormField
-              label="Email professionnel"
-              name="email"
-              required
-              type="email"
-              placeholder="vous@entreprise.fr"
-            />
-            <div className="mb-4">
-              <label className="block">
-                <span className="block text-[13px] font-semibold text-text-light mb-2">
-                  Type de projet
-                </span>
-                <select
-                  name="projectType"
-                  className="w-full px-4 py-3 font-inter text-[15px] bg-white/[0.06] border border-white/15 rounded-[10px] text-text-light focus:outline-none focus:border-accent focus:bg-white/[0.08] transition-all"
-                >
-                  <option value="">— Choisir —</option>
-                  <option value="Site vitrine">Site vitrine</option>
-                  <option value="E-commerce">E-commerce</option>
-                  <option value="Refonte de site existant">Refonte de site existant</option>
-                  <option value="SEO et performance">SEO &amp; performance</option>
-                  <option value="Autre">Autre / je ne sais pas encore</option>
-                </select>
-              </label>
-            </div>
-            <div className="mb-4">
-              <label className="block">
-                <span className="block text-[13px] font-semibold text-text-light mb-2">
-                  Parlez-nous de votre projet <span className="text-accent">*</span>
-                </span>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Quelques lignes suffisent — vos objectifs, votre activité, vos délais, ce qui vous bloque aujourd'hui."
-                  className="w-full px-4 py-3 font-inter text-[15px] bg-white/[0.06] border border-white/15 rounded-[10px] text-text-light placeholder:text-text-light/40 focus:outline-none focus:border-accent focus:bg-white/[0.08] transition-all resize-none"
-                />
-              </label>
-            </div>
-            {/* Honeypot anti-spam — champ caché, les humains ne le verront pas */}
-            <input
-              type="text"
-              name="website"
-              tabIndex={-1}
-              autoComplete="off"
-              className="absolute left-[-9999px] opacity-0"
-              aria-hidden="true"
-            />
-            <SubmitButton />
-            {state.error && (
-              <p className="mt-3 text-sm text-red-300 text-center">{state.error}</p>
-            )}
-            {state.success && (
-              <p className="mt-3 text-sm text-green-300 text-center font-semibold">
-                ✓ {state.message}
-              </p>
-            )}
-            <p className="mt-3.5 text-xs text-text-light/50 text-center leading-relaxed">
-              En envoyant ce formulaire, vous acceptez d&apos;être recontacté par email. Vos données ne sont pas partagées avec des tiers.
-            </p>
-          </form>
+          <ContactForm variant="dark" />
         </div>
       </Container>
     </Section>
-  );
-}
-
-function FormField({
-  label,
-  name,
-  required,
-  type,
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  required?: boolean;
-  type: string;
-  placeholder?: string;
-}) {
-  return (
-    <div className="mb-4">
-      <label className="block">
-        <span className="block text-[13px] font-semibold text-text-light mb-2">
-          {label} {required && <span className="text-accent">*</span>}
-        </span>
-        <input
-          type={type}
-          name={name}
-          required={required}
-          placeholder={placeholder}
-          className="w-full px-4 py-3 font-inter text-[15px] bg-white/[0.06] border border-white/15 rounded-[10px] text-text-light placeholder:text-text-light/40 focus:outline-none focus:border-accent focus:bg-white/[0.08] transition-all"
-        />
-      </label>
-    </div>
-  );
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="btn btn-primary w-full justify-center py-4 text-base mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
-    >
-      {pending ? "Envoi en cours…" : "Envoyer ma demande →"}
-    </button>
   );
 }
 
