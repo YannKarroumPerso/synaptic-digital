@@ -21,7 +21,7 @@ export function SectionHeader({
     <div
       className={`${
         align === "center" ? "text-center mx-auto" : ""
-      } ${wide ? "max-w-[860px]" : "max-w-[720px]"} mb-16`}
+      } ${wide ? "max-w-[860px]" : "max-w-[720px]"} mb-12`}
     >
       {eyebrow && (
         <span className="section-eyebrow">
