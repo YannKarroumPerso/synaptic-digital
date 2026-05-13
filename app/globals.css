@@ -36,6 +36,14 @@
 }
 
 @layer components {
+  .scroll-no-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-no-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   .container-page {
     @apply max-w-[1240px] mx-auto px-6;
   }
