@@ -233,7 +233,8 @@ export type Realisation = {
   name: string;
   category: string;
   description: string;
-  image: string; // chemin local /public
+  image: string; // chemin local /public, desktop
+  imageMobile: string; // chemin local /public, version mobile
 };
 
 export const realisations: Realisation[] = [
@@ -242,29 +243,34 @@ export const realisations: Realisation[] = [
     category: "Média éditorial",
     description: "Média d'actualités trail running : courses, ultra-trail, entraînement, nutrition.",
     image: "/realisations/altitude-trail.png",
+    imageMobile: "/realisations/altitude-trail-mobile.png",
   },
   {
     name: "Plumestack",
     category: "Plateforme SaaS",
     description: "Plateforme tout-en-un pour lancer un média rentable sur sa niche en 10 minutes.",
     image: "/realisations/plumestack.png",
+    imageMobile: "/realisations/plumestack-mobile.png",
   },
   {
     name: "Allure",
     category: "SaaS · IA générative",
     description: "Plateforme qui transforme un trail en site événementiel professionnel via IA, en 7 minutes.",
     image: "/realisations/allure.png",
+    imageMobile: "/realisations/allure-mobile.png",
   },
   {
     name: "Saveurs",
     category: "Site éditorial · Cuisine",
     description: "Site de recettes saisonnières — design éditorial chaleureux, photo dominante.",
     image: "/realisations/plumestack-recette.png",
+    imageMobile: "/realisations/plumestack-recette-mobile.png",
   },
   {
     name: "Carnet de voyage",
     category: "Site éditorial · Voyage",
     description: "Carnet de voyage : récits longs, guides utiles, bons plans testés sur le terrain.",
     image: "/realisations/plumestack-voyage.png",
+    imageMobile: "/realisations/plumestack-voyage-mobile.png",
   },
 ];
