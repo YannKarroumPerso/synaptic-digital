@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boulangerie Martin — Cas client | Synaptic Digital</title>
+<meta name="description" content="Refonte complète et SEO local pour une boulangerie artisanale parisienne. Résultat : +340% de demandes en 2 mois.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* Hero du cas */
+.case-hero {
+  padding: 60px 0 80px;
+  background: var(--bg-light);
+  position: relative; overflow: hidden;
+}
+.case-hero::before {
+  content: ''; position: absolute;
+  top: 0; right: 0;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,123,71,0.08) 0%, transparent 70%);
+  border-radius: 50%; z-index: 0;
+}
+.case-hero .container { position: relative; z-index: 1; }
+.case-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500; color: var(--text-muted);
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.case-back:hover { color: var(--accent); }
+.case-back::before { content: '←'; transition: transform 0.2s; }
+.case-back:hover::before { transform: translateX(-3px); }
+
+.case-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 60px; align-items: center;
+}
+@media (max-width: 900px) { .case-grid { grid-template-columns: 1fr; gap: 40px; } }
+.case-eyebrow {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.case-hero h1 {
+  color: var(--primary); margin-bottom: 16px;
+}
+.case-hero p.intro {
+  font-size: 20px; color: var(--text-muted); line-height: 1.55;
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+.case-meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.case-meta-item {
+  font-size: 13px;
+}
+.case-meta-label {
+  display: block;
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.case-meta-value {
+  font-family: 'Sora', sans-serif; font-weight: 600;
+  color: var(--primary);
+}
+.case-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; color: var(--accent); font-weight: 600;
+  margin-top: 16px;
+}
+.case-link:hover { text-decoration: underline; }
+
+/* Mockup visuel grand */
+.case-mockup {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+}
+.case-mockup .real-mockup {
+  aspect-ratio: 4/3;
+}
+
+/* Résultats clés */
+.results-banner {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 60px 0;
+}
+.results-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  text-align: center;
+}
+@media (max-width: 768px) { .results-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.result-value {
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  font-size: clamp(36px, 4vw, 52px);
+  color: var(--accent);
+  line-height: 1; margin-bottom: 10px;
+  letter-spacing: -0.04em;
+}
+.result-label {
+  font-size: 13px; color: rgba(245,242,236,0.7); font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* Contenu du cas */
+.case-content {
+  padding: 100px 0;
+}
+.case-block {
+  max-width: 780px; margin: 0 auto;
+}
+.case-block + .case-block {
+  margin-top: 64px;
+}
+.case-block h2 {
+  color: var(--primary);
+  margin-bottom: 24px;
+  font-size: clamp(28px, 3.4vw, 36px);
+}
+.case-block p {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+.case-block p strong { color: var(--primary); }
+
+/* Cards en sous-section */
+.case-subcards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  margin-top: 32px;
+}
+@media (max-width: 700px) { .case-subcards { grid-template-columns: 1fr; } }
+.case-subcard {
+  background: var(--bg-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+}
+.case-subcard h4 {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.case-subcard p {
+  font-size: 15px; margin: 0; line-height: 1.55;
+}
+
+/* Citation client */
+.case-testimonial {
+  margin: 80px 0;
+  background: var(--bg-warm);
+  border-radius: 32px;
+  padding: 48px 56px;
+  position: relative;
+}
+@media (max-width: 700px) { .case-testimonial { padding: 32px; } }
+.case-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 32px;
+  font-family: 'Sora', serif; font-size: 140px;
+  color: var(--accent);
+  line-height: 1; opacity: 0.3;
+}
+.case-testimonial blockquote {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 24px;
+  position: relative; z-index: 1;
+}
+.case-testimonial .author {
+  display: flex; align-items: center; gap: 14px;
+}
+.case-testimonial .author-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF7B47, #FF9670);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 16px;
+}
+.case-testimonial .author-name {
+  font-size: 16px; font-weight: 600; color: var(--primary);
+}
+.case-testimonial .author-role {
+  font-size: 13px; color: var(--text-muted);
+}
+
+/* Gallery */
+.case-gallery {
+  display: grid; grid-template-columns: 2fr 1fr; gap: 20px;
+  max-width: 1100px; margin: 64px auto 0;
+}
+@media (max-width: 700px) { .case-gallery { grid-template-columns: 1fr; } }
+.gallery-col {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.gallery-img {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 16/10;
+}
+.gallery-img.tall { aspect-ratio: 4/5; }
+.gallery-img .real-mockup { height: 100%; aspect-ratio: auto; }
+
+/* Bloc CTA bas */
+.case-cta {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 80px 0;
+  text-align: center;
+}
+.case-cta h2 { color: var(--text-light); margin-bottom: 14px; }
+.case-cta p { color: rgba(245,242,236,0.7); font-size: 18px; margin-bottom: 28px; }
+.case-cta .links {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="home.html" class="logo">Synaptic<span>.</span></a>
+    <div class="nav-links">
+      <a href="home.html#services">Services</a>
+      <a href="home.html#approche">Notre approche</a>
+      <a href="realisations.html" style="color: var(--accent);">Réalisations</a>
+      <a href="home.html#equipe">L'équipe</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+    <a href="home.html#contact" class="btn btn-primary nav-cta">Démarrer mon projet</a>
+  </div>
+</nav>
+
+<!-- HERO du cas -->
+<section class="case-hero">
+  <div class="container">
+    <a href="realisations.html" class="case-back">Voir toutes les réalisations</a>
+    <div class="case-grid">
+      <div>
+        <div class="case-eyebrow">Cas client · Commerce local</div>
+        <h1>Boulangerie Martin</h1>
+        <p class="intro">Refonte complète et SEO local pour une boulangerie artisanale du 18ᵉ arrondissement de Paris. De la vitrine "carte de visite" au site qui amène vraiment du monde.</p>
+        <div class="case-meta">
+          <div class="case-meta-item">
+            <span class="case-meta-label">Type de projet</span>
+            <span class="case-meta-value">Site vitrine + SEO local</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Délai de livraison</span>
+            <span class="case-meta-value">19 jours</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Année</span>
+            <span class="case-meta-value">2025</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Site en ligne</span>
+            <a href="#" class="case-link">boulangerie-martin.fr →</a>
+          </div>
+        </div>
+      </div>
+      <div class="case-mockup">
+        <div class="real-mockup" style="aspect-ratio: 4/3;">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-boulangerie" style="padding: 24px;">
+            <div class="rm-h1" style="font-size: 22px;">Boulangerie Martin</div>
+            <div class="rm-tag" style="font-size: 13px;">Pain au levain · Pâtisserie maison · Paris 18ᵉ</div>
+            <div class="rm-btn" style="font-size: 12px; padding: 8px 16px; margin-top: 8px;">Commander en ligne</div>
+            <div class="rm-products" style="margin-top: auto; gap: 10px;">
+              <div class="rm-prod" style="height: 50px;"></div>
+              <div class="rm-prod" style="height: 50px;"></div>
+              <div class="rm-prod" style="height: 50px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTATS -->
+<section class="results-banner">
+  <div class="container">
+    <div class="results-grid">
+      <div>
+        <div class="result-value">+340%</div>
+        <div class="result-label">Demandes de devis (2 mois)</div>
+      </div>
+      <div>
+        <div class="result-value">98<span style="color: rgba(255,255,255,0.3); font-size: 0.5em;">/100</span></div>
+        <div class="result-label">Score Lighthouse</div>
+      </div>
+      <div>
+        <div class="result-value">Top&nbsp;3</div>
+        <div class="result-label">Google "boulangerie 18ᵉ"</div>
+      </div>
+      <div>
+        <div class="result-value">19<span style="color: rgba(255,255,255,0.5); font-size: 0.5em;"> jours</span></div>
+        <div class="result-label">De brief à mise en ligne</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENU DU CAS -->
+<section class="case-content">
+  <div class="container">
+
+    <div class="case-block">
+      <h2>Le contexte</h2>
+      <p><strong>Boulangerie Martin</strong>, c'est trois générations de boulangers dans le 18ᵉ, une farine 100% bio, et un savoir-faire reconnu de quartier. Mais leur site web ne reflétait rien de tout ça : une page WordPress vieille de 8 ans, lente, illisible sur mobile, et complètement invisible sur Google.</p>
+      <p>Quand Sophie Martin, la dirigeante, nous a contactés, elle avait un problème simple : ses prospects ne la trouvaient pas. Pourtant les habitants du quartier la recommandaient. Mais les nouveaux arrivants tapaient "boulangerie 18e" sur Google et tombaient sur les chaînes. Pas sur elle.</p>
+      <p>L'objectif fixé en début de projet : <strong>doubler les demandes de devis (mariages, événements, gros volumes) en 6 mois</strong>. Avec un budget contraint et un délai court : Sophie voulait son site avant la rentrée de septembre.</p>
+    </div>
+
+    <div class="case-block">
+      <h2>Ce qu'on a fait</h2>
+      <p>On a tout repris. Pas un lifting, une vraie refonte de bout en bout. En 19 jours, du brief à la mise en ligne.</p>
+      <div class="case-subcards">
+        <div class="case-subcard">
+          <h4>Stratégie</h4>
+          <p>Repositionner le site autour de 2 audiences : les habitants du quartier (vitrine) et les pros qui cherchent un fournisseur événementiel (formulaire devis dédié).</p>
+        </div>
+        <div class="case-subcard">
+          <h4>Design</h4>
+          <p>Identité chaleureuse, photo dominante (le pain, le levain), typo Cormorant pour le côté artisan. Pas de fioritures, juste ce qui donne envie.</p>
+        </div>
+        <div class="case-subcard">
+          <h4>Performance</h4>
+          <p>Build statique, images optimisées AVIF, lazy loading, fonts pré-chargées. Le site charge en 1,2 seconde sur mobile en 4G.</p>
+        </div>
+        <div class="case-subcard">
+          <h4>SEO local</h4>
+          <p>Mots-clés "boulangerie [quartier]" intégrés naturellement, schema.org LocalBusiness, fiche Google Business optimisée, backlinks locaux.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h2>Les résultats, 2 mois après</h2>
+      <p>Le pari a été tenu, et même dépassé. <strong>+340% de demandes de devis pros</strong> entre la mise en ligne et la fin du deuxième mois, vs la moyenne des 6 mois précédents.</p>
+      <p>Sur Google, la boulangerie est passée de la page 7 à la 3ᵉ position sur la requête "boulangerie 18ᵉ", et apparaît désormais dans le pack local sur la requête "boulangerie artisanale Paris". Le trafic organique a été multiplié par 5,8.</p>
+      <p>Au-delà des chiffres : Sophie nous a dit que c'est le retour qualitatif qui l'a le plus surprise. <strong>Les nouveaux clients qui poussent la porte mentionnent le site</strong>. Le ROI sur le projet est rentabilisé en moins de 3 mois.</p>
+    </div>
+
+    <!-- Citation client -->
+    <div class="case-testimonial">
+      <blockquote>En 19 jours on avait un site neuf, et 2 mois après on a multiplié par 3 les demandes de devis. On regrette de ne pas l'avoir fait plus tôt.</blockquote>
+      <div class="author">
+        <div class="author-avatar">SM</div>
+        <div>
+          <div class="author-name">Sophie Martin</div>
+          <div class="author-role">Gérante · Boulangerie Martin</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galerie -->
+    <div class="case-block" style="max-width: 1100px;">
+      <h2>Captures du projet</h2>
+      <div class="case-gallery">
+        <div class="gallery-img">
+          <div class="real-mockup" style="aspect-ratio: auto;">
+            <div class="rm-bar"><span></span><span></span><span></span></div>
+            <div class="rm-content rm-boulangerie" style="padding: 24px;">
+              <div class="rm-h1" style="font-size: 22px;">Boulangerie Martin</div>
+              <div class="rm-tag" style="font-size: 13px;">Pain au levain · Pâtisserie</div>
+              <div class="rm-btn">Commander</div>
+              <div class="rm-products"><div class="rm-prod" style="height: 50px;"></div><div class="rm-prod" style="height: 50px;"></div><div class="rm-prod" style="height: 50px;"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="gallery-img tall">
+            <div class="real-mockup" style="aspect-ratio: auto;">
+              <div class="rm-bar"><span></span><span></span><span></span></div>
+              <div class="rm-content rm-boulangerie">
+                <div class="rm-h1">Mariages</div>
+                <div class="rm-tag">Gâteaux sur-mesure</div>
+                <div class="rm-products" style="margin-top: 16px;"><div class="rm-prod"></div><div class="rm-prod"></div><div class="rm-prod"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-img tall">
+            <div class="real-mockup" style="aspect-ratio: auto;">
+              <div class="rm-bar"><span></span><span></span><span></span></div>
+              <div class="rm-content rm-boulangerie">
+                <div class="rm-h1">Contact</div>
+                <div class="rm-tag">Devis sous 24h</div>
+                <div class="rm-btn">Demander un devis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="case-cta">
+  <div class="container">
+    <h2>Un projet similaire en tête ?</h2>
+    <p>3 semaines pour un site qui vous ressemble. Devis sous 48h, sans engagement.</p>
+    <div class="links">
+      <a href="home.html#contact" class="btn btn-primary btn-arrow">Discuter de votre projet</a>
+      <a href="realisations.html" class="btn btn-secondary btn-back">Voir toutes les réalisations</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color: var(--text-light); margin-bottom: 16px;">Synaptic<span>.</span></div>
+        <p class="footer-tagline">L'agence digitale qui livre aux petites PME. Beau, rapide, trouvé sur Google. En 3 semaines.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="home.html#services">Site vitrine</a></li>
+          <li><a href="home.html#services">E-commerce</a></li>
+          <li><a href="home.html#services">Refonte</a></li>
+          <li><a href="home.html#services">SEO &amp; performance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Agence</h5>
+        <ul>
+          <li><a href="home.html#approche">Notre approche</a></li>
+          <li><a href="home.html#equipe">L'équipe</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="home.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@synaptic-digital.fr">contact@synaptic-digital.fr</a></li>
+          <li><a href="home.html#contact">Réserver un appel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Synaptic Digital EURL. Tous droits réservés.</span>
+      <span class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="#">Données personnelles</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réalisations — Sites web livrés par Synaptic Digital</title>
+<meta name="description" content="Découvrez les sites web que nous avons conçus et livrés pour des PME en France. Cas clients détaillés avec résultats mesurables.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* Hero page réalisations */
+.page-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+  background: var(--bg-light);
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute;
+  top: 20%; right: 5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,123,71,0.07) 0%, transparent 70%);
+  border-radius: 50%; z-index: 0;
+}
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero h1 { color: var(--primary); margin-bottom: 20px; }
+.page-hero p { color: var(--text-muted); font-size: 19px; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+/* Filtres */
+.filters {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active {
+  background: var(--primary); color: white; border-color: var(--primary);
+}
+
+/* Grille réalisations */
+.reals-list {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+@media (max-width: 1024px) { .reals-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .reals-list { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+
+.real-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.real-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.real-meta {
+  padding: 24px 28px;
+}
+.real-sector {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+.real-meta h4 {
+  font-size: 19px; color: var(--primary); margin-bottom: 8px;
+}
+.real-meta .real-desc {
+  font-size: 14px; color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+.real-result {
+  font-size: 14px; color: var(--text-dark); font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 16px; border-top: 1px solid var(--border);
+}
+.real-result-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(22, 163, 74, 0.1); color: var(--success);
+  padding: 4px 10px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+}
+
+/* CTA bottom */
+.cta-section {
+  background: var(--bg-dark); color: var(--text-light);
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-section h2 { color: var(--text-light); margin-bottom: 16px; }
+.cta-section p { color: rgba(245,242,236,0.7); font-size: 18px; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="home.html" class="logo">Synaptic<span>.</span></a>
+    <div class="nav-links">
+      <a href="home.html#services">Services</a>
+      <a href="home.html#approche">Notre approche</a>
+      <a href="realisations.html" style="color: var(--accent);">Réalisations</a>
+      <a href="home.html#equipe">L'équipe</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+    <a href="home.html#contact" class="btn btn-primary nav-cta">Démarrer mon projet</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow">Réalisations</span>
+    <h1>Nos réalisations</h1>
+    <p>Des projets livrés à des PME comme la vôtre. Sans Photoshop, sans habillage, sans esbroufe — des sites en ligne, avec des résultats mesurables.</p>
+  </div>
+</section>
+
+<!-- CONTENU -->
+<section class="section tight">
+  <div class="container">
+    <!-- Filtres (visuels uniquement pour le mockup) -->
+    <div class="filters">
+      <button class="filter-btn active">Tous</button>
+      <button class="filter-btn">Commerce local</button>
+      <button class="filter-btn">Services BtoB</button>
+      <button class="filter-btn">E-commerce</button>
+      <button class="filter-btn">Industrie</button>
+    </div>
+
+    <!-- Grille des cas -->
+    <div class="reals-list">
+
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-boulangerie">
+            <div class="rm-h1">Boulangerie Martin</div>
+            <div class="rm-tag">Artisan depuis 1987</div>
+            <div class="rm-btn">Commander en ligne</div>
+            <div class="rm-products">
+              <div class="rm-prod"></div><div class="rm-prod"></div><div class="rm-prod"></div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">Commerce local · Site vitrine + SEO</div>
+          <h4>Boulangerie Martin</h4>
+          <p class="real-desc">Refonte complète + SEO local pour une boulangerie artisanale parisienne.</p>
+          <div class="real-result">
+            <span class="real-result-tag">+340% demandes de devis</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-conseil">
+            <div class="rm-h1">Laurent &amp; Associés</div>
+            <div class="rm-tag">Cabinet conseil en stratégie</div>
+            <div class="rm-stats">
+              <div><strong>15</strong>ans</div>
+              <div><strong>200+</strong>missions</div>
+              <div><strong>96%</strong>fidélité</div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">Services BtoB · Site vitrine</div>
+          <h4>Laurent &amp; Associés</h4>
+          <p class="real-desc">Site vitrine premium pour un cabinet de conseil en stratégie d'entreprise.</p>
+          <div class="real-result">
+            <span class="real-result-tag">Top 3 Google "cabinet conseil Bordeaux"</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-boutique">
+            <div class="rm-h1">Bohème</div>
+            <div class="rm-tag">Mode artisanale</div>
+            <div class="rm-grid-prod">
+              <div class="rm-prod-card"></div><div class="rm-prod-card"></div>
+              <div class="rm-prod-card"></div><div class="rm-prod-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">E-commerce · Boutique en ligne</div>
+          <h4>Boutique Bohème</h4>
+          <p class="real-desc">Lancement d'une boutique en ligne de mode artisanale française.</p>
+          <div class="real-result">
+            <span class="real-result-tag">38 ventes en 1ère semaine</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Emplacements pour futurs cas (placeholder pour montrer l'extensibilité) -->
+      <div class="real-card" style="opacity: 0.5; pointer-events: none; cursor: default;">
+        <div class="real-mockup" style="display: flex; align-items: center; justify-content: center; background: var(--bg-warm); color: var(--text-muted);">
+          <div style="text-align: center;">
+            <div style="font-size: 32px; margin-bottom: 6px;">+</div>
+            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Bientôt</div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">Industrie · Refonte de site</div>
+          <h4>Nouveau cas client</h4>
+          <p class="real-desc">Emplacement extensible pour les prochains projets livrés.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA bas -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Votre projet pourrait être le prochain</h2>
+    <p>3 semaines pour un site qui vous ressemble, qui se charge vite et qui vous trouve sur Google. Devis sous 48h.</p>
+    <a href="home.html#contact" class="btn btn-primary btn-arrow">Démarrer mon projet</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color: var(--text-light); margin-bottom: 16px;">Synaptic<span>.</span></div>
+        <p class="footer-tagline">L'agence digitale qui livre aux petites PME. Beau, rapide, trouvé sur Google. En 3 semaines.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="home.html#services">Site vitrine</a></li>
+          <li><a href="home.html#services">E-commerce</a></li>
+          <li><a href="home.html#services">Refonte</a></li>
+          <li><a href="home.html#services">SEO &amp; performance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Agence</h5>
+        <ul>
+          <li><a href="home.html#approche">Notre approche</a></li>
+          <li><a href="home.html#equipe">L'équipe</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="home.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@synaptic-digital.fr">contact@synaptic-digital.fr</a></li>
+          <li><a href="home.html#contact">Réserver un appel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Synaptic Digital EURL. Tous droits réservés.</span>
+      <span class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="#">Données personnelles</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

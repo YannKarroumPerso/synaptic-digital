@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sora: 'Sora', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter text-text-dark bg-bg-light antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-sora tracking-tight;
+  }
+
+  h1 {
+    font-size: clamp(40px, 6vw, 78px);
+    @apply font-bold leading-[1.05];
+  }
+
+  h2 {
+    font-size: clamp(32px, 4.2vw, 52px);
+    @apply font-bold leading-[1.1];
+  }
+
+  h3 {
+    @apply text-[22px] font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .scroll-no-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-no-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .container-page {
+    @apply max-w-[1240px] mx-auto px-6;
+  }
+  .container-narrow {
+    @apply max-w-[980px] mx-auto px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 px-[26px] py-[15px] rounded-xl font-inter font-semibold text-[15px] cursor-pointer transition-all duration-200 whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply bg-accent text-white shadow-accent hover:bg-accent-soft hover:-translate-y-0.5 hover:shadow-accent-hover;
+  }
+  .btn-secondary {
+    @apply bg-transparent text-primary border-[1.5px] border-primary hover:bg-primary hover:text-white;
+  }
+  .btn-arrow::after {
+    content: '→';
+    @apply transition-transform duration-200;
+  }
+  .btn-arrow:hover::after {
+    @apply translate-x-1;
+  }
+
+  .section-eyebrow {
+    @apply inline-block text-[13px] font-semibold text-accent uppercase tracking-[0.1em] mb-4;
+  }
+}
+
+/* Animation pulse pour le badge "Devis sous 48h" */
+@keyframes ping-soft {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}

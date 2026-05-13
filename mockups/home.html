@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synaptic Digital — Mockup home complète (Phase 4)</title>
+<meta name="description" content="Sites vitrine, e-commerce et refontes pour petites PME. Design soigné, performance technique, SEO intégré. Livré en 3 semaines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   PALETTE A — Confiance & Chaleur (RETENUE)
+   ============================================ */
+:root {
+  --primary: #1A2840;
+  --primary-soft: #2A3A55;
+  --primary-light: #3B4A66;
+  --accent: #FF7B47;
+  --accent-soft: #FF9670;
+  --accent-light: #FFB698;
+  --bg-light: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --bg-dark: #0F1828;
+  --bg-warm: #FDF4ED;
+  --text-dark: #1F1F1F;
+  --text-light: #F5F2EC;
+  --text-muted: #6B7280;
+  --text-soft: #9CA3AF;
+  --border: #E8E3DA;
+  --border-dark: rgba(255,255,255,0.1);
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --shadow-sm: 0 2px 8px rgba(15, 24, 40, 0.04);
+  --shadow-md: 0 8px 32px rgba(15, 24, 40, 0.08);
+  --shadow-lg: 0 24px 64px rgba(15, 24, 40, 0.12);
+  --shadow-xl: 0 32px 96px rgba(15, 24, 40, 0.16);
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: 'Sora', sans-serif; letter-spacing: -0.02em; }
+h1 { font-size: clamp(40px, 6vw, 78px); font-weight: 700; line-height: 1.05; }
+h2 { font-size: clamp(32px, 4.2vw, 52px); font-weight: 700; line-height: 1.1; }
+h3 { font-size: 22px; font-weight: 600; line-height: 1.3; }
+h4 { font-size: 18px; font-weight: 600; }
+a { color: inherit; text-decoration: none; transition: color 0.2s; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+/* Hide scrollbar utility */
+.scroll-no-bar::-webkit-scrollbar { display: none; }
+.scroll-no-bar { scrollbar-width: none; }
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 15px 26px; border-radius: 12px;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px;
+  border: 0; cursor: pointer; text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--accent); color: white;
+  box-shadow: 0 4px 16px rgba(255, 123, 71, 0.25);
+}
+.btn-primary:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 123, 71, 0.35);
+}
+.btn-secondary {
+  background: transparent; color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+.btn-secondary:hover { background: var(--primary); color: white; }
+.btn-dark {
+  background: var(--primary); color: white;
+}
+.btn-dark:hover {
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+.btn-arrow::after {
+  content: '→'; transition: transform 0.2s;
+}
+.btn-arrow:hover::after { transform: translateX(4px); }
+.btn-small { padding: 10px 18px; font-size: 14px; }
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1240px; margin: 0 auto;
+}
+.logo {
+  font-family: 'Sora', sans-serif; font-weight: 800; font-size: 22px;
+  color: var(--primary); letter-spacing: -0.03em;
+}
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 15px; color: var(--text-dark); font-weight: 500;
+}
+.nav-links a:hover { color: var(--accent); }
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-cta { font-size: 13px; padding: 10px 18px; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(255, 123, 71, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -150px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(26, 40, 64, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  padding: 10px 16px; border-radius: 100px;
+  font-size: 13px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.hero-badge .dot {
+  width: 8px; height: 8px; border-radius: 100px;
+  background: var(--success);
+  position: relative;
+}
+.hero-badge .dot::after {
+  content: ''; position: absolute; inset: -4px;
+  border-radius: 100px;
+  background: var(--success);
+  opacity: 0.3;
+  animation: ping 2s infinite;
+}
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.hero h1 {
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+.hero h1 .highlight {
+  color: var(--accent);
+  position: relative;
+  display: inline-block;
+}
+.hero h1 .highlight::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 8px;
+  background: var(--accent-light);
+  opacity: 0.3;
+  border-radius: 4px;
+  z-index: -1;
+}
+.hero p.subtitle {
+  font-size: 19px; color: var(--text-muted);
+  margin-bottom: 36px; line-height: 1.55;
+  max-width: 540px;
+}
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 32px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 16px;
+  font-size: 13px; color: var(--text-muted);
+}
+.hero-trust .stars { color: var(--accent); font-size: 14px; letter-spacing: 2px; }
+
+/* Mockup site illustré (étoffé) */
+.mockup-wrapper {
+  position: relative;
+  perspective: 1200px;
+}
+.mockup-screen {
+  background: var(--bg-card);
+  border-radius: 18px;
+  box-shadow: var(--shadow-xl), 0 0 0 1px var(--border);
+  overflow: hidden;
+  transform: rotateY(-6deg) rotateX(3deg);
+  transition: transform 0.5s ease;
+  position: relative;
+}
+.mockup-wrapper:hover .mockup-screen { transform: rotateY(-2deg) rotateX(1deg); }
+
+.mockup-bar {
+  background: linear-gradient(to bottom, #F3EFEA, var(--bg-light));
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.mockup-bar .dot {
+  width: 11px; height: 11px; border-radius: 100px; background: #D9D5CC;
+}
+.mockup-bar .dot:nth-child(1) { background: #E07A6B; }
+.mockup-bar .dot:nth-child(2) { background: #E3B85F; }
+.mockup-bar .dot:nth-child(3) { background: #7CB87B; }
+.mockup-bar .url {
+  margin-left: 14px; font-size: 12px; color: var(--text-muted);
+  background: white; padding: 5px 14px; border-radius: 100px; flex: 1;
+  font-family: 'Inter', monospace;
+  display: flex; align-items: center; gap: 6px;
+}
+.mockup-bar .url::before {
+  content: '🔒'; font-size: 10px;
+}
+
+.mockup-content {
+  padding: 32px;
+  min-height: 380px;
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--bg-warm) 100%);
+}
+.mockup-content .mock-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 32px;
+}
+.mockup-content .mock-logo {
+  font-family: 'Sora', sans-serif; font-weight: 800; font-size: 16px;
+  color: var(--primary);
+}
+.mockup-content .mock-nav-links { display: flex; gap: 12px; }
+.mockup-content .mock-nav-link {
+  width: 50px; height: 8px; background: var(--border); border-radius: 4px;
+}
+.mockup-content .mock-h1 {
+  height: 24px; background: var(--primary); border-radius: 6px;
+  width: 80%; margin-bottom: 10px;
+}
+.mockup-content .mock-h1.short {
+  width: 55%; background: var(--accent);
+}
+.mockup-content .mock-text {
+  height: 10px; background: rgba(107, 114, 128, 0.3); border-radius: 4px;
+  margin-bottom: 7px;
+}
+.mockup-content .mock-text.w-90 { width: 90%; }
+.mockup-content .mock-text.w-70 { width: 70%; }
+.mockup-content .mock-text.w-85 { width: 85%; }
+.mockup-content .mock-cta {
+  height: 36px; background: var(--accent); border-radius: 8px;
+  width: 150px; margin-top: 22px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 600; font-size: 11px;
+  box-shadow: 0 4px 12px rgba(255, 123, 71, 0.3);
+}
+.mockup-content .mock-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 32px;
+}
+.mockup-content .mock-card {
+  background: white; border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px;
+}
+.mockup-content .mock-card .icon-box {
+  width: 28px; height: 28px; background: rgba(255, 123, 71, 0.12);
+  border-radius: 8px; margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
+.mockup-content .mock-card .icon-box svg { width: 16px; height: 16px; }
+.mockup-content .mock-card .card-title {
+  height: 10px; background: var(--primary); border-radius: 4px;
+  margin-bottom: 8px;
+  width: 65%;
+}
+.mockup-content .mock-card .card-line {
+  height: 7px; background: var(--border); border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* Floating badge décoratif sur le mockup */
+.floating-badge {
+  position: absolute;
+  background: white;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-lg);
+  display: flex; align-items: center; gap: 12px;
+  z-index: 10;
+  font-size: 13px;
+  border: 1px solid var(--border);
+}
+.floating-badge.top-right {
+  top: 16%; right: -8%;
+  animation: floatY 3s ease-in-out infinite;
+}
+.floating-badge.bottom-left {
+  bottom: 12%; left: -10%;
+  animation: floatY 3.5s ease-in-out infinite 0.5s;
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.floating-badge .badge-icon {
+  width: 36px; height: 36px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700;
+}
+.floating-badge .badge-icon.green { background: var(--success); }
+.floating-badge .badge-icon.orange { background: var(--accent); }
+.floating-badge .badge-label {
+  font-weight: 600; color: var(--primary); font-size: 13px;
+  white-space: nowrap;
+}
+.floating-badge .badge-value {
+  font-family: 'Sora', sans-serif; font-weight: 700; color: var(--primary);
+  font-size: 18px;
+  white-space: nowrap;
+}
+.floating-badge .badge-sub {
+  font-size: 11px; color: var(--text-muted);
+}
+@media (max-width: 980px) {
+  .floating-badge.top-right { right: 0; top: 0; }
+  .floating-badge.bottom-left { left: 0; bottom: 0; }
+}
+
+/* ============================================
+   STATS BANDEAU
+   ============================================ */
+.stats {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  text-align: center;
+}
+@media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.stat-value {
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  font-size: clamp(40px, 4.5vw, 60px);
+  color: var(--primary);
+  line-height: 1; margin-bottom: 10px;
+  letter-spacing: -0.04em;
+}
+.stat-value .unit {
+  color: var(--accent); font-size: 0.55em;
+  font-weight: 600;
+}
+.stat-label {
+  font-size: 13px; color: var(--text-muted); font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* Section générique */
+.section {
+  padding: 110px 0;
+}
+.section.tight { padding: 80px 0; }
+.section-header {
+  text-align: center; max-width: 720px; margin: 0 auto 64px;
+}
+.section-header.wide { max-width: 860px; }
+.section-eyebrow {
+  display: inline-block;
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.section-header h2 { color: var(--primary); margin-bottom: 16px; }
+.section-header p {
+  color: var(--text-muted); font-size: 18px; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">Synaptic<span>.</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approche">Notre approche</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#equipe">L'équipe</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn btn-primary nav-cta">Démarrer mon projet</a>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Devis sous 48h, sans engagement
+        </div>
+        <h1>
+          Des sites <span class="highlight">beaux</span>, <span class="highlight">rapides</span>,
+          trouvés sur Google.
+          <br>Livrés en 3 semaines.
+        </h1>
+        <p class="subtitle">
+          On conçoit, développe et lance le site qui fera décoller votre PME.
+          Design soigné, performance technique, SEO intégré dès le départ — sans le délai habituel de 3 mois.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary btn-arrow">Démarrer mon projet</a>
+          <a href="#realisations" class="btn btn-secondary">Voir nos réalisations</a>
+        </div>
+        <div class="hero-trust">
+          <span class="stars">★★★★★</span>
+          <span>4.9/5 sur les avis clients</span>
+          <span style="opacity: 0.3;">•</span>
+          <span><strong>50+</strong> projets livrés</span>
+        </div>
+      </div>
+      <div class="mockup-wrapper">
+        <div class="mockup-screen">
+          <div class="mockup-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="url">votreentreprise.fr</span>
+          </div>
+          <div class="mockup-content">
+            <div class="mock-nav">
+              <div class="mock-logo">VotreEntreprise<span style="color: var(--accent);">.</span></div>
+              <div class="mock-nav-links">
+                <div class="mock-nav-link"></div>
+                <div class="mock-nav-link"></div>
+                <div class="mock-nav-link"></div>
+              </div>
+            </div>
+            <div class="mock-h1"></div>
+            <div class="mock-h1 short"></div>
+            <div class="mock-text w-90"></div>
+            <div class="mock-text w-85"></div>
+            <div class="mock-text w-70"></div>
+            <div class="mock-cta">Découvrir →</div>
+            <div class="mock-cards">
+              <div class="mock-card">
+                <div class="icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <div class="card-title"></div>
+                <div class="card-line"></div>
+                <div class="card-line" style="width: 60%"></div>
+              </div>
+              <div class="mock-card">
+                <div class="icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div class="card-title"></div>
+                <div class="card-line"></div>
+                <div class="card-line" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Floating decorative badges -->
+        <div class="floating-badge top-right">
+          <div class="badge-icon green">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="badge-label">Score Lighthouse</div>
+            <div class="badge-value">98/100</div>
+          </div>
+        </div>
+        <div class="floating-badge bottom-left">
+          <div class="badge-icon orange">⚡</div>
+          <div>
+            <div class="badge-label">Mis en ligne</div>
+            <div class="badge-sub">en 19 jours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STATS
+     ============================================ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-value">3<span class="unit">&nbsp;sem.</span></div>
+        <div class="stat-label">Délai moyen de livraison</div>
+      </div>
+      <div>
+        <div class="stat-value">100<span class="unit">%</span></div>
+        <div class="stat-label">Mis en ligne dans les délais</div>
+      </div>
+      <div>
+        <div class="stat-value">95<span class="unit">+</span></div>
+        <div class="stat-label">Score Lighthouse moyen</div>
+      </div>
+      <div>
+        <div class="stat-value">48<span class="unit">h</span></div>
+        <div class="stat-label">Premier retour sur votre projet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES (4 cards)
+     ============================================ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Ce qu'on fait</span>
+      <h2>Le bon site, pour le bon projet</h2>
+      <p>4 formats principaux, calibrés pour les petites PME qui veulent un site sérieux sans y passer 6 mois.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+        </div>
+        <h3>Site vitrine</h3>
+        <p>Présentez votre activité avec un site clair, rapide et trouvé sur Google. 4 à 6 pages, livré en 3 semaines.</p>
+        <div class="service-price">À partir de <strong>3 000 €</strong></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        </div>
+        <h3>E-commerce</h3>
+        <p>Une boutique en ligne fluide, sécurisée, optimisée pour convertir. Catalogue, paiement, gestion intuitive.</p>
+        <div class="service-price">À partir de <strong>6 500 €</strong></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M2.5 22v-6h6"/><path d="M2 11.5A10 10 0 0 1 18.8 7l2.7 2.7"/><path d="M22 12.5A10 10 0 0 1 5.2 17l-2.7-2.7"/></svg>
+        </div>
+        <h3>Refonte de site</h3>
+        <p>Votre site existant est lent, daté ou peu lisible ? On reprend tout, en gardant ce qui marche. Bascule sans coupure.</p>
+        <div class="service-price">À partir de <strong>3 500 €</strong></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>SEO &amp; Performance</h3>
+        <p>Audit, optimisations techniques, structure de contenu. Pour être trouvé par vos prospects sur Google.</p>
+        <div class="service-price">À partir de <strong>1 500 €</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+@media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 36px 28px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,123,71,0.04) 100%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  width: 56px; height: 56px;
+  background: var(--bg-warm); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+.service-card h3 {
+  color: var(--primary); margin-bottom: 12px;
+  position: relative; z-index: 1;
+}
+.service-card p {
+  color: var(--text-muted); font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative; z-index: 1;
+}
+.service-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; color: var(--text-muted);
+  padding-top: 16px; border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.service-price strong {
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  color: var(--accent); font-size: 17px;
+}
+</style>
+
+<!-- ============================================
+     PILIERS (Notre différence)
+     ============================================ -->
+<section class="section pillars-section" id="approche">
+  <div class="container">
+    <div class="section-header wide" style="margin-bottom: 80px;">
+      <span class="section-eyebrow" style="color: var(--accent);">Notre différence</span>
+      <h2 style="color: var(--text-light);">Beau, rapide, trouvé sur Google.<br>Et livré quand promis.</h2>
+      <p style="color: rgba(245,242,236,0.7);">La plupart des agences arbitrent entre design, performance et SEO. On refuse l'arbitrage : les trois sont possibles ensemble, à condition d'être méthodique.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-number">01</div>
+        <h3>Design qui sert le business</h3>
+        <p>Pas un site joli pour être joli. Un design pensé pour guider votre visiteur vers la conversion, sans le perdre dans le décor.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-number">02</div>
+        <h3>Performance technique réelle</h3>
+        <p>Score Lighthouse 95+ par défaut. Site qui charge en moins de 2 secondes. Le visiteur ne part pas pendant qu'il attend.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-number">03</div>
+        <h3>SEO dès la première ligne</h3>
+        <p>Structure sémantique, contenu optimisé, vitesse — les fondamentaux du SEO sont intégrés dès la conception, pas rajoutés après.</p>
+      </div>
+    </div>
+    <div class="delay-banner">
+      <div class="delay-icon">⚡</div>
+      <div class="delay-content">
+        <h3>Le tout, livré en 3 à 4 semaines.</h3>
+        <p>Pas 3 mois. Pas 6 mois. On a industrialisé la méthode pour livrer vite sans bâcler — et vous avez votre site quand vous en avez besoin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.pillars-section {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+.pillars-section::before {
+  content: ''; position: absolute;
+  top: -200px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255, 123, 71, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.pillars-section .container { position: relative; z-index: 1; }
+.pillars-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+@media (max-width: 900px) { .pillars-grid { grid-template-columns: 1fr; } }
+.pillar {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 40px 32px;
+  transition: all 0.3s ease;
+}
+.pillar:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--accent);
+  transform: translateY(-6px);
+}
+.pillar-number {
+  font-family: 'Sora', sans-serif; font-weight: 800;
+  font-size: 56px; color: var(--accent);
+  line-height: 1; margin-bottom: 20px;
+  letter-spacing: -0.04em;
+}
+.pillar h3 { color: var(--text-light); margin-bottom: 12px; }
+.pillar p { color: rgba(245,242,236,0.7); font-size: 15px; line-height: 1.65; }
+
+.delay-banner {
+  margin-top: 80px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+  border-radius: 32px;
+  padding: 48px;
+  display: flex; align-items: center; gap: 32px;
+  color: white;
+  box-shadow: 0 24px 64px rgba(255, 123, 71, 0.25);
+}
+@media (max-width: 768px) { .delay-banner { flex-direction: column; text-align: center; gap: 20px; } }
+.delay-icon {
+  font-size: 56px;
+  flex-shrink: 0;
+  width: 96px; height: 96px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 24px;
+  display: flex; align-items: center; justify-content: center;
+}
+.delay-content h3 {
+  font-size: clamp(24px, 2.6vw, 32px); font-weight: 700;
+  color: white; margin-bottom: 8px;
+}
+.delay-content p {
+  font-size: 17px; color: rgba(255,255,255,0.9); line-height: 1.5;
+}
+</style>
+
+<!-- ============================================
+     MÉTHODE (4 étapes)
+     ============================================ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Comment ça se passe</span>
+      <h2>4 étapes claires, zéro zone d'ombre</h2>
+      <p>Une méthode rodée pour aller vite sans rien laisser au hasard. Vous savez à chaque étape où on en est et ce qui vient ensuite.</p>
+    </div>
+    <div class="method-timeline">
+      <div class="method-step">
+        <div class="step-marker">01</div>
+        <div class="step-content">
+          <div class="step-meta">2 à 3 jours</div>
+          <h3>Comprendre</h3>
+          <p>On prend le temps de cerner votre activité, vos objectifs et vos contraintes. Un échange initial structuré pour partir sur les bonnes bases.</p>
+          <div class="step-deliverables">
+            <div class="deliv-row">
+              <span class="deliv-label">Vous fournissez</span>
+              <span class="deliv-value">30 min d'échange + accès à votre univers</span>
+            </div>
+            <div class="deliv-row">
+              <span class="deliv-label">On livre</span>
+              <span class="deliv-value">Un brief écrit que vous validez</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-marker">02</div>
+        <div class="step-content">
+          <div class="step-meta">5 à 7 jours</div>
+          <h3>Concevoir</h3>
+          <p>Design des maquettes principales, structure du site, choix techniques. On itère vite, vous validez à chaque jalon.</p>
+          <div class="step-deliverables">
+            <div class="deliv-row">
+              <span class="deliv-label">Vous fournissez</span>
+              <span class="deliv-value">Retours sur les maquettes</span>
+            </div>
+            <div class="deliv-row">
+              <span class="deliv-label">On livre</span>
+              <span class="deliv-value">Maquettes desktop + mobile, prêtes à coder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-marker">03</div>
+        <div class="step-content">
+          <div class="step-meta">8 à 12 jours</div>
+          <h3>Construire</h3>
+          <p>Développement intégral, intégration des contenus, optimisations performance et SEO. Pas de bâclage : tests sur tous les navigateurs, mobile compris.</p>
+          <div class="step-deliverables">
+            <div class="deliv-row">
+              <span class="deliv-label">Vous fournissez</span>
+              <span class="deliv-value">Vos textes et visuels finaux</span>
+            </div>
+            <div class="deliv-row">
+              <span class="deliv-label">On livre</span>
+              <span class="deliv-value">Le site en preview, accessible à votre équipe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-marker">04</div>
+        <div class="step-content">
+          <div class="step-meta">1 à 2 jours + suivi</div>
+          <h3>Lancer &amp; accompagner</h3>
+          <p>Mise en ligne sur votre domaine, configuration analytics, formation rapide pour que vous puissiez gérer le contenu courant. Suivi 30 jours offert.</p>
+          <div class="step-deliverables">
+            <div class="deliv-row">
+              <span class="deliv-label">Vous fournissez</span>
+              <span class="deliv-value">Votre OK final</span>
+            </div>
+            <div class="deliv-row">
+              <span class="deliv-label">On livre</span>
+              <span class="deliv-value">Un site qui tourne + un manuel simple</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.method-timeline {
+  max-width: 880px; margin: 0 auto;
+  position: relative;
+}
+.method-timeline::before {
+  content: ''; position: absolute;
+  left: 35px; top: 30px; bottom: 30px;
+  width: 2px; background: var(--border);
+  z-index: 0;
+}
+@media (max-width: 600px) { .method-timeline::before { left: 30px; } }
+.method-step {
+  display: flex; gap: 28px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+.method-step:last-child { margin-bottom: 0; }
+.step-marker {
+  width: 72px; height: 72px;
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 22px;
+  color: var(--accent);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 600px) { .step-marker { width: 60px; height: 60px; font-size: 18px; } }
+.step-content {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-top: 4px;
+  box-shadow: var(--shadow-sm);
+}
+.step-meta {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.step-content h3 {
+  color: var(--primary); font-size: 24px; margin-bottom: 10px;
+}
+.step-content p {
+  color: var(--text-muted); font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px;
+}
+.step-deliverables {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.deliv-row {
+  display: flex; gap: 12px; align-items: baseline;
+  font-size: 14px;
+}
+@media (max-width: 600px) { .deliv-row { flex-direction: column; gap: 2px; } }
+.deliv-label {
+  flex-shrink: 0;
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  min-width: 110px;
+}
+.deliv-value {
+  color: var(--text-dark);
+}
+</style>
+
+<!-- ============================================
+     ÉQUIPE (4 personnes avec avatars DiceBear)
+     ============================================ -->
+<section class="section team-section" id="equipe">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">L'équipe</span>
+      <h2>4 personnes, 4 expertises</h2>
+      <p>Pas une usine à sites avec 50 chefs de projet. Une équipe resserrée où chacun a un rôle clair, et où vous savez à qui parler.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="https://api.dicebear.com/7.x/personas/svg?seed=Marc&backgroundColor=fde2cd&size=280" alt="Avatar Marc">
+        </div>
+        <h4>Marc Dupont</h4>
+        <div class="team-role">Fondateur &amp; stratégie</div>
+        <p>Pilote chaque projet de bout en bout. Veille à ce que le site serve un vrai objectif business, pas juste à exister.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="https://api.dicebear.com/7.x/personas/svg?seed=Sarah&backgroundColor=fbcca9&size=280" alt="Avatar Sarah">
+        </div>
+        <h4>Sarah Lefèvre</h4>
+        <div class="team-role">Direction artistique &amp; UX</div>
+        <p>Conçoit l'identité visuelle et l'expérience de chaque site. Convaincue qu'un beau design qui ne convertit pas n'est pas un bon design.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="https://api.dicebear.com/7.x/personas/svg?seed=Karim&backgroundColor=fde2cd&size=280" alt="Avatar Karim">
+        </div>
+        <h4>Karim Benyahia</h4>
+        <div class="team-role">Développement &amp; performance</div>
+        <p>Construit des sites rapides, sécurisés et maintenables. Obsessionnel des scores Lighthouse à 95+.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="https://api.dicebear.com/7.x/personas/svg?seed=Lea&backgroundColor=fbcca9&size=280" alt="Avatar Léa">
+        </div>
+        <h4>Léa Moreau</h4>
+        <div class="team-role">SEO &amp; croissance</div>
+        <p>Intègre le SEO dès la conception. Suit les performances après la mise en ligne pour que le site continue de progresser.</p>
+      </div>
+    </div>
+    <p class="team-note">
+      💡 <em>Avatars placeholder — Yann remplira avec les vraies photos et bios de son équipe.</em>
+    </p>
+  </div>
+</section>
+
+<style>
+.team-section {
+  background: var(--bg-warm);
+}
+.team-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+@media (max-width: 1024px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .team-grid { grid-template-columns: 1fr; } }
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.team-avatar {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background: var(--bg-warm);
+  border: 3px solid var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+.team-avatar img { width: 100%; height: 100%; }
+.team-card h4 {
+  font-size: 18px; color: var(--primary); margin-bottom: 4px;
+}
+.team-role {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.team-card p {
+  font-size: 14px; color: var(--text-muted); line-height: 1.55;
+}
+.team-note {
+  text-align: center; margin-top: 40px;
+  font-size: 13px; color: var(--text-muted);
+}
+
+/* ============================================
+   TÉMOIGNAGES
+   ============================================ */
+.testimonials-section { background: var(--bg-light); }
+</style>
+
+<!-- ============================================
+     TÉMOIGNAGES
+     ============================================ -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Ils en parlent</span>
+      <h2>Ce que disent nos clients</h2>
+      <p>Pas des verbatim générés ou écrits par nous. Voici ce que nos clients PME disent vraiment du travail livré.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"En 19 jours on avait un site neuf, et 2 mois après on a multiplié par 3 les demandes de devis. On regrette de ne pas l'avoir fait plus tôt."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #FF7B47, #FF9670);">SM</div>
+          <div>
+            <div class="author-name">Sophie Martin</div>
+            <div class="author-role">Gérante · Boulangerie Martin</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Très clair du début à la fin. On savait toujours où on en était. Le résultat est exactement ce qu'on voulait, livré dans les délais."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #1A2840, #3B4A66);">PL</div>
+          <div>
+            <div class="author-name">Pierre Laurent</div>
+            <div class="author-role">Dirigeant · Cabinet Laurent &amp; Associés</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"On nous avait promis 4 mois ailleurs. Synaptic a livré en 3 semaines, et le site est mieux. Score Google 99 sur la home."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #16A34A, #5BCE5B);">ER</div>
+          <div>
+            <div class="author-name">Émilie Rousseau</div>
+            <div class="author-role">Co-fondatrice · Boutique Bohème</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="team-note">
+      💡 <em>Témoignages placeholder — à remplacer par les vrais avec accord d'utilisation.</em>
+    </p>
+  </div>
+</section>
+
+<style>
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+@media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; } }
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 28px;
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card .stars {
+  color: var(--accent); font-size: 18px; letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-text {
+  font-size: 17px; line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  flex: 1;
+}
+.testimonial-author {
+  display: flex; align-items: center; gap: 14px;
+  padding-top: 20px; border-top: 1px solid var(--border);
+}
+.author-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 15px;
+  flex-shrink: 0;
+}
+.author-name {
+  font-size: 15px; font-weight: 600; color: var(--primary);
+}
+.author-role {
+  font-size: 13px; color: var(--text-muted);
+}
+</style>
+
+<!-- ============================================
+     TEASER RÉALISATIONS
+     ============================================ -->
+<section class="section realisations-teaser" id="realisations">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Réalisations</span>
+      <h2>Quelques projets récents</h2>
+      <p>Des sites livrés pour des PME comme la vôtre. Pas de captures Photoshopées : des projets en ligne, avec des résultats concrets.</p>
+    </div>
+    <div class="reals-grid">
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup" data-style="boulangerie">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-boulangerie">
+            <div class="rm-hero">
+              <div class="rm-h1">Boulangerie Martin</div>
+              <div class="rm-tag">Artisan depuis 1987</div>
+              <div class="rm-btn">Commander en ligne</div>
+            </div>
+            <div class="rm-products">
+              <div class="rm-prod"></div>
+              <div class="rm-prod"></div>
+              <div class="rm-prod"></div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">Commerce local · Site vitrine + SEO</div>
+          <h4>Boulangerie Martin</h4>
+          <div class="real-result">+340% de demandes de devis en 2 mois</div>
+        </div>
+      </a>
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup" data-style="conseil">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-conseil">
+            <div class="rm-hero">
+              <div class="rm-h1">Laurent &amp; Associés</div>
+              <div class="rm-tag">Cabinet conseil en stratégie</div>
+              <div class="rm-stats">
+                <div><strong>15</strong>ans</div>
+                <div><strong>200+</strong>missions</div>
+                <div><strong>96%</strong>fidélité</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">Services BtoB · Site vitrine</div>
+          <h4>Laurent &amp; Associés</h4>
+          <div class="real-result">Top 3 Google sur "cabinet conseil Bordeaux"</div>
+        </div>
+      </a>
+      <a href="realisation-detail.html" class="real-card">
+        <div class="real-mockup" data-style="boutique">
+          <div class="rm-bar"><span></span><span></span><span></span></div>
+          <div class="rm-content rm-boutique">
+            <div class="rm-hero">
+              <div class="rm-h1">Bohème</div>
+              <div class="rm-tag">Mode artisanale</div>
+            </div>
+            <div class="rm-grid-prod">
+              <div class="rm-prod-card"></div>
+              <div class="rm-prod-card"></div>
+              <div class="rm-prod-card"></div>
+              <div class="rm-prod-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="real-meta">
+          <div class="real-sector">E-commerce · Boutique en ligne</div>
+          <h4>Boutique Bohème</h4>
+          <div class="real-result">38 ventes en ligne dès la première semaine</div>
+        </div>
+      </a>
+    </div>
+    <div class="reals-cta">
+      <a href="realisations.html" class="btn btn-secondary btn-arrow">Voir toutes les réalisations</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.realisations-teaser { background: var(--bg-light); }
+.reals-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin-bottom: 48px;
+}
+@media (max-width: 900px) { .reals-grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto 48px; } }
+.real-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.real-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.real-mockup {
+  aspect-ratio: 16/10;
+  background: var(--bg-warm);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+}
+.rm-bar {
+  background: var(--bg-light);
+  padding: 8px 12px;
+  display: flex; gap: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.rm-bar span {
+  width: 8px; height: 8px; border-radius: 50%; background: #D9D5CC;
+}
+.rm-content {
+  padding: 16px;
+  height: 100%;
+  display: flex; flex-direction: column;
+}
+/* Boulangerie style */
+.rm-boulangerie {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FAEAD9 100%);
+  color: #5B3A1F;
+}
+.rm-boulangerie .rm-h1 {
+  font-family: 'Sora', serif; font-weight: 700; font-size: 14px;
+  margin-bottom: 4px;
+}
+.rm-boulangerie .rm-tag {
+  font-size: 9px; color: #8B5A2B; font-style: italic;
+  margin-bottom: 8px;
+}
+.rm-boulangerie .rm-btn {
+  display: inline-block;
+  background: #8B5A2B; color: white;
+  font-size: 9px; padding: 4px 10px; border-radius: 100px;
+  align-self: flex-start;
+}
+.rm-products {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  margin-top: auto;
+}
+.rm-products .rm-prod {
+  height: 24px;
+  background: rgba(139, 90, 43, 0.15);
+  border-radius: 4px;
+}
+/* Cabinet conseil style */
+.rm-conseil {
+  background: linear-gradient(135deg, #F4F5F8 0%, #E5E9F2 100%);
+  color: #14213D;
+}
+.rm-conseil .rm-h1 {
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px;
+  margin-bottom: 4px;
+}
+.rm-conseil .rm-tag {
+  font-size: 9px; color: #4B5563;
+  margin-bottom: 12px;
+}
+.rm-conseil .rm-stats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  margin-top: auto;
+  text-align: center;
+}
+.rm-conseil .rm-stats div {
+  background: white; padding: 6px 4px; border-radius: 6px;
+  font-size: 9px; color: #6B7280;
+  display: flex; flex-direction: column; align-items: center;
+  border: 1px solid #E5E7EB;
+}
+.rm-conseil .rm-stats strong {
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12px;
+  color: #14213D; margin-bottom: 1px;
+}
+/* Boutique style */
+.rm-boutique {
+  background: linear-gradient(135deg, #FAF0F0 0%, #F3E0E0 100%);
+  color: #6B2A2A;
+}
+.rm-boutique .rm-h1 {
+  font-family: 'Sora', serif; font-weight: 700; font-size: 14px;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+.rm-boutique .rm-tag {
+  font-size: 9px; color: #8B4444;
+  margin-bottom: 10px;
+}
+.rm-boutique .rm-grid-prod {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
+  margin-top: auto;
+}
+.rm-boutique .rm-prod-card {
+  height: 28px;
+  background: rgba(139, 68, 68, 0.15);
+  border-radius: 4px;
+}
+
+.real-meta {
+  padding: 24px 28px;
+}
+.real-sector {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+.real-meta h4 {
+  font-size: 19px; color: var(--primary); margin-bottom: 8px;
+}
+.real-result {
+  font-size: 14px; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.real-result::before {
+  content: '→'; color: var(--accent); font-weight: bold;
+}
+.reals-cta { text-align: center; }
+
+/* ============================================
+   FOURCHETTES
+   ============================================ */
+.pricing-section { background: var(--bg-card); }
+</style>
+
+<!-- ============================================
+     FOURCHETTES
+     ============================================ -->
+<section class="section pricing-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Combien ça coûte ?</span>
+      <h2>Des fourchettes claires, pas figées</h2>
+      <p>Le bon prix dépend de votre projet. Voici des ordres de grandeur pour vous repérer.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h4>Site vitrine</h4>
+        <div class="range">3 000 € – 4 500 €</div>
+        <div class="pricing-duration">Livré en 3 semaines</div>
+        <ul class="pricing-features">
+          <li>4 à 6 pages</li>
+          <li>Design sur-mesure</li>
+          <li>SEO de base</li>
+          <li>Formulaire de contact</li>
+          <li>Hébergement Vercel 1 an inclus</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="featured-badge">Le plus demandé</div>
+        <h4>Site étoffé / E-commerce simple</h4>
+        <div class="range">4 500 € – 7 500 €</div>
+        <div class="pricing-duration">Livré en 3 à 4 semaines</div>
+        <ul class="pricing-features">
+          <li>6 à 10 pages</li>
+          <li>SEO renforcé</li>
+          <li>Intégration analytics</li>
+          <li>Formulaires avancés ou boutique de base</li>
+          <li>Hébergement Vercel 1 an inclus</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <h4>Projet plus complexe</h4>
+        <div class="range">Sur devis</div>
+        <div class="pricing-duration">Délai à définir ensemble</div>
+        <ul class="pricing-features">
+          <li>Plateforme métier</li>
+          <li>E-commerce avancé</li>
+          <li>Multi-langues</li>
+          <li>Intégrations sur-mesure</li>
+          <li>Accompagnement long terme</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-disclaimer">
+      Pas figé — chaque projet est calibré selon votre besoin. Devis détaillé sous 48h.
+    </p>
+  </div>
+</section>
+
+<style>
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  max-width: 1100px; margin: 0 auto;
+}
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; } }
+.pricing-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 36px 32px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.pricing-card.featured {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  border-width: 2px;
+  box-shadow: 0 16px 48px rgba(255, 123, 71, 0.15);
+}
+.featured-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: white;
+  font-size: 12px; font-weight: 600;
+  padding: 6px 16px; border-radius: 100px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.pricing-card h4 {
+  font-size: 18px; color: var(--primary);
+  margin-bottom: 12px;
+}
+.pricing-card .range {
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  font-size: 32px; color: var(--accent);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.pricing-duration {
+  font-size: 13px; color: var(--text-muted);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.pricing-features {
+  list-style: none; padding: 0;
+}
+.pricing-features li {
+  position: relative; padding-left: 24px;
+  font-size: 14px; color: var(--text-dark);
+  margin-bottom: 10px; line-height: 1.45;
+}
+.pricing-features li::before {
+  content: '';
+  position: absolute; left: 0; top: 6px;
+  width: 14px; height: 14px;
+  background: var(--success);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") no-repeat center / contain;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") no-repeat center / contain;
+}
+.pricing-disclaimer {
+  text-align: center; margin-top: 40px;
+  font-size: 14px; color: var(--text-muted); font-style: italic;
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq-section { background: var(--bg-light); }
+</style>
+
+<!-- ============================================
+     FAQ accordéon
+     ============================================ -->
+<section class="section faq-section">
+  <div class="container-narrow">
+    <div class="section-header">
+      <span class="section-eyebrow">FAQ</span>
+      <h2>Vos questions, nos réponses</h2>
+      <p>Les réponses aux questions qu'on nous pose le plus souvent. Une autre question ? <a href="#contact" style="color: var(--accent); font-weight: 600;">Écrivez-nous</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>
+          <span>Pourquoi livrer en 3 semaines, c'est pas trop court ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          On a structuré la méthode pour aller vite sans bâcler : composants design réutilisables, process clair, équipe rodée. Le délai court vient de l'absence de zones grises dans le projet — pas d'une qualité moindre.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Que se passe-t-il si je veux modifier le site après livraison ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          On vous forme à modifier le contenu courant (textes, images, articles). Pour les évolutions plus structurelles, on peut intervenir à la demande sur un format ponctuel ou un forfait mensuel d'évolution.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Vous hébergez le site ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          Le site est hébergé sur Vercel (ou OVH, à votre choix). Hébergement performant inclus la première année. Ensuite, environ 20 €/mois selon l'option.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Est-ce que je suis propriétaire du site ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          Oui, intégralement. Code source, contenu, design — tout vous appartient. On vous transmet l'accès complet à la mise en ligne.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Travaillez-vous avec des entreprises hors France ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          On travaille principalement avec des PME françaises, mais on accompagne aussi des clients en Belgique, Suisse, Luxembourg. La langue de travail est le français.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Vous faites du référencement après la livraison ?</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          Le SEO est intégré dès la conception (structure, contenu, vitesse). Pour un travail SEO continu (création de contenus, netlinking…), on propose un accompagnement séparé.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-list {
+  display: flex; flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: 0; }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 17px;
+  color: var(--primary);
+  transition: background 0.2s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { background: var(--bg-warm); }
+.faq-arrow {
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+.faq-item[open] .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  padding: 0 28px 24px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-section {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+</style>
+
+<!-- ============================================
+     CONTACT (formulaire)
+     ============================================ -->
+<section class="section contact-section" id="contact">
+  <div class="container-narrow">
+    <div class="contact-grid">
+      <div>
+        <span class="section-eyebrow" style="color: var(--accent);">Démarrer mon projet</span>
+        <h2 style="color: var(--text-light); margin-top: 16px; margin-bottom: 20px;">Parlons-en concrètement</h2>
+        <p style="color: rgba(245,242,236,0.7); font-size: 17px; line-height: 1.65; margin-bottom: 32px;">
+          Premier échange gratuit, sans engagement. On vous répond sous 48h, on cale 30 minutes ensemble pour comprendre votre projet, et si on est d'accord, on vous envoie une proposition détaillée sous 5 jours.
+        </p>
+        <div class="contact-steps">
+          <div class="contact-step">
+            <div class="cs-icon">⏱</div>
+            <div>
+              <div class="cs-title">Sous 48h</div>
+              <div class="cs-desc">Vous recevez un email de réponse</div>
+            </div>
+          </div>
+          <div class="contact-step">
+            <div class="cs-icon">📞</div>
+            <div>
+              <div class="cs-title">30 minutes</div>
+              <div class="cs-desc">Un échange pour cadrer votre projet</div>
+            </div>
+          </div>
+          <div class="contact-step">
+            <div class="cs-icon">📋</div>
+            <div>
+              <div class="cs-title">Sous 5 jours</div>
+              <div class="cs-desc">Proposition détaillée si on avance ensemble</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-row">
+          <label>
+            <span class="form-label">Nom <span class="req">*</span></span>
+            <input type="text" placeholder="Votre nom" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span class="form-label">Email professionnel <span class="req">*</span></span>
+            <input type="email" placeholder="vous@entreprise.fr" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span class="form-label">Type de projet</span>
+            <select>
+              <option>— Choisir —</option>
+              <option>Site vitrine</option>
+              <option>E-commerce</option>
+              <option>Refonte de site existant</option>
+              <option>SEO &amp; performance</option>
+              <option>Autre / je ne sais pas encore</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span class="form-label">Parlez-nous de votre projet <span class="req">*</span></span>
+            <textarea rows="5" placeholder="Quelques lignes suffisent — vos objectifs, votre activité, vos délais, ce qui vous bloque aujourd'hui." required></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-arrow form-submit">Envoyer ma demande</button>
+        <p class="form-legal">
+          En envoyant ce formulaire, vous acceptez d'être recontacté par email. Vos données ne sont pas partagées avec des tiers.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-section::before {
+  content: ''; position: absolute;
+  top: -150px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255, 123, 71, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.contact-section .container-narrow { position: relative; z-index: 1; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: start;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 50px; } }
+.contact-steps {
+  display: flex; flex-direction: column; gap: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 28px;
+}
+.contact-step {
+  display: flex; align-items: center; gap: 16px;
+}
+.cs-icon {
+  font-size: 26px;
+  width: 52px; height: 52px;
+  background: rgba(255, 123, 71, 0.12);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cs-title {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 17px;
+  color: var(--text-light); margin-bottom: 2px;
+}
+.cs-desc {
+  font-size: 14px; color: rgba(245,242,236,0.6);
+}
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+}
+.form-row { margin-bottom: 18px; }
+.form-row label { display: block; }
+.form-label {
+  display: block;
+  font-size: 13px; font-weight: 600; color: var(--text-light);
+  margin-bottom: 8px;
+}
+.req { color: var(--accent); }
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif; font-size: 15px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: var(--text-light);
+  transition: all 0.2s ease;
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: rgba(245,242,236,0.4);
+}
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.08);
+}
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+}
+.form-legal {
+  font-size: 12px; color: rgba(245,242,236,0.5);
+  margin-top: 14px; text-align: center; line-height: 1.5;
+}
+</style>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color: var(--text-light); margin-bottom: 16px;">Synaptic<span>.</span></div>
+        <p class="footer-tagline">L'agence digitale qui livre aux petites PME. Beau, rapide, trouvé sur Google. En 3 semaines.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Site vitrine</a></li>
+          <li><a href="#services">E-commerce</a></li>
+          <li><a href="#services">Refonte</a></li>
+          <li><a href="#services">SEO &amp; performance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Agence</h5>
+        <ul>
+          <li><a href="#approche">Notre approche</a></li>
+          <li><a href="#equipe">L'équipe</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@synaptic-digital.fr">contact@synaptic-digital.fr</a></li>
+          <li><a href="#contact">Réserver un appel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Synaptic Digital EURL. Tous droits réservés.</span>
+      <span class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="#">Données personnelles</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: var(--bg-dark); color: var(--text-light);
+  padding: 80px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px;
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer h5 {
+  font-family: 'Sora', sans-serif; font-weight: 600;
+  font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--accent); margin-bottom: 18px;
+}
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 10px; }
+.footer a {
+  color: rgba(245,242,236,0.7); font-size: 14px;
+}
+.footer a:hover { color: var(--text-light); }
+.footer-tagline {
+  color: rgba(245,242,236,0.7); font-size: 14px;
+  margin-bottom: 24px; max-width: 320px; line-height: 1.55;
+}
+.footer-social { display: flex; gap: 12px; }
+.footer-social a {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(245,242,236,0.8);
+  transition: all 0.2s ease;
+}
+.footer-social a:hover {
+  background: var(--accent); color: white;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: rgba(245,242,236,0.5);
+}
+@media (max-width: 600px) { .footer-bottom { flex-direction: column; gap: 14px; text-align: center; } }
+.footer-legal a { margin-left: 16px; }
+.footer-legal a:first-child { margin-left: 0; }
+</style>
+
+<script>
+// Smooth scroll already handled by CSS scroll-behavior
+
+// Animation au scroll (intersection observer)
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, observerOptions);
+document.querySelectorAll('.service-card, .pillar, .team-card, .testimonial-card, .real-card, .pricing-card, .method-step').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+document.head.insertAdjacentHTML('beforeend', `<style>.in-view { opacity: 1 !important; transform: translateY(0) !important; }</style>`);
+</script>
+
+</body>
+</html>
