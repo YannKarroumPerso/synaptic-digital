@@ -14,6 +14,60 @@ export const metadata: Metadata = {
     "Synaptic Digital est une équipe resserrée qui livre aux petites PME des sites beaux, rapides et bien référencés en 3 à 4 semaines. Découvrez notre méthode, nos convictions et l'équipe derrière vos projets.",
 };
 
+const manifestoPoints = [
+  {
+    number: "01",
+    title: "Un site est un outil, pas une décoration.",
+    text: "Sa job, c'est de transformer des visiteurs en clients, ou de positionner votre marque sur Google. Un site qui ne fait ni l'un ni l'autre, c'est une carte de visite chère.",
+  },
+  {
+    number: "02",
+    title: "Le délai compte autant que la qualité.",
+    text: "Un site livré en 6 mois est un site qui rate sa fenêtre. On a industrialisé une méthode pour livrer en 3-4 semaines, sans bâcler — c'est notre vraie différence.",
+  },
+  {
+    number: "03",
+    title: "Design, performance et SEO vont ensemble.",
+    text: "La plupart des agences arbitrent : soit c'est beau, soit c'est rapide, soit c'est bien référencé. On refuse l'arbitrage. Si vous payez pour les trois, vous repartez avec les trois.",
+  },
+  {
+    number: "04",
+    title: "Pas de jargon, pas de blabla.",
+    text: "Vous parlez votre métier, on parle le nôtre, et on se comprend. On ne vous facturera jamais des heures à expliquer ce qu'est une « synergie d'activation digitale ».",
+  },
+  {
+    number: "05",
+    title: "On reste petits volontairement.",
+    text: "Une équipe à taille humaine, où vous savez à qui parler, où chaque projet a un propriétaire. Pas une usine à sites avec 50 chefs de projet et un brief qui se dilue à chaque mail.",
+  },
+];
+
+function ManifestoItem({
+  number,
+  title,
+  text,
+}: {
+  number: string;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="group grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 md:gap-12 py-10 lg:py-12 border-b border-border transition-colors hover:bg-bg-warm/40 -mx-6 px-6 md:-mx-8 md:px-8 rounded-2xl">
+      <div className="font-sora font-bold text-[44px] md:text-[56px] text-accent leading-none tracking-tight">
+        {number}
+      </div>
+      <div>
+        <h3 className="text-primary font-sora font-bold text-[24px] md:text-[28px] leading-tight mb-3 transition-colors group-hover:text-accent">
+          {title}
+        </h3>
+        <p className="text-text-muted text-[17px] leading-relaxed max-w-[640px]">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function AgencePage() {
   return (
     <>
@@ -35,29 +89,18 @@ export default function AgencePage() {
 
       {/* MANIFESTE */}
       <Section className="bg-bg-card">
-        <Container>
-          <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 items-start max-w-[1100px] mx-auto">
-            <div className="md:sticky md:top-24">
-              <span className="section-eyebrow">Manifeste</span>
-              <h2 className="text-primary">Ce en quoi on croit</h2>
-            </div>
-            <div className="space-y-6 text-[17px] leading-relaxed text-text-dark">
-              <p>
-                <strong className="text-primary">Un site est un outil, pas une décoration.</strong> Sa job, c&apos;est de transformer des visiteurs en clients, ou de positionner votre marque sur Google. Un site qui ne fait ni l&apos;un ni l&apos;autre, c&apos;est une carte de visite chère.
-              </p>
-              <p>
-                <strong className="text-primary">Le délai compte autant que la qualité.</strong> Un site livré en 6 mois est un site qui rate sa fenêtre. On a industrialisé une méthode pour livrer en 3-4 semaines, sans bâcler — c&apos;est notre vraie différence.
-              </p>
-              <p>
-                <strong className="text-primary">Design, performance et SEO vont ensemble.</strong> La plupart des agences arbitrent : soit c&apos;est beau, soit c&apos;est rapide, soit c&apos;est bien référencé. On refuse l&apos;arbitrage. Si vous payez pour les trois, vous repartez avec les trois.
-              </p>
-              <p>
-                <strong className="text-primary">Pas de jargon, pas de blabla.</strong> Vous parlez votre métier, on parle le nôtre, et on se comprend. On ne vous facturera jamais des heures à expliquer ce qu&apos;est une &laquo;&nbsp;synergie d&apos;activation digitale&nbsp;&raquo;.
-              </p>
-              <p>
-                <strong className="text-primary">On reste petits volontairement.</strong> Une équipe à taille humaine, où vous savez à qui parler, où chaque projet a un propriétaire. Pas une usine à sites avec 50 chefs de projet et un brief qui se dilue à chaque mail.
-              </p>
-            </div>
+        <Container narrow>
+          <div className="text-center mb-16">
+            <span className="section-eyebrow">Manifeste</span>
+            <h2 className="text-primary mb-4">Ce en quoi on croit</h2>
+            <p className="text-text-muted text-[18px] leading-relaxed max-w-[600px] mx-auto">
+              Cinq principes qui structurent chaque projet qu&apos;on accepte de prendre.
+            </p>
+          </div>
+          <div className="border-t border-border">
+            {manifestoPoints.map((point) => (
+              <ManifestoItem key={point.number} {...point} />
+            ))}
           </div>
         </Container>
       </Section>
