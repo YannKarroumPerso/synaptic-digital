@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { getAllPosts, POST_TYPE_LABELS, formatDate, type PostMeta } from "@/lib/blog";
 import { Clock, FileText, BookOpen, BarChart3 } from "lucide-react";
@@ -76,9 +77,21 @@ function PostCard({ post }: { post: PostMeta }) {
       href={`/blog/${post.slug}`}
       className="group flex flex-col bg-bg-card border border-border rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-accent"
     >
-      <div className="aspect-[16/9] bg-gradient-to-br from-bg-warm via-[#F2E8DC] to-accent-light/40 relative flex items-center justify-center">
-        <Icon size={48} className="text-accent/40 group-hover:text-accent transition-colors" strokeWidth={1.5} />
-        <div className="absolute top-4 left-4 bg-bg-card border border-border rounded-full px-3 py-1 text-[11px] font-semibold text-primary uppercase tracking-wider">
+      <div className="aspect-[16/9] bg-gradient-to-br from-bg-warm via-[#F2E8DC] to-accent-light/40 relative overflow-hidden">
+        {post.cover ? (
+          <Image
+            src={post.cover}
+            alt={post.coverAlt || post.title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Icon size={48} className="text-accent/40 group-hover:text-accent transition-colors" strokeWidth={1.5} />
+          </div>
+        )}
+        <div className="absolute top-4 left-4 z-10 bg-bg-card/95 backdrop-blur border border-border rounded-full px-3 py-1 text-[11px] font-semibold text-primary uppercase tracking-wider shadow-sm">
           {POST_TYPE_LABELS[post.type]}
         </div>
       </div>

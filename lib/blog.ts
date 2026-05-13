@@ -17,6 +17,8 @@ export type Post = {
   metaDescription?: string;
   keywords?: string[];
   readingTime: number; // en minutes
+  cover?: string; // URL image de couverture (Unsplash ou chemin local /blog/X.jpg)
+  coverAlt?: string;
   contentHtml: string;
   contentRaw: string;
 };
@@ -44,6 +46,8 @@ export function getAllPosts(): PostMeta[] {
       metaDescription: data.metaDescription,
       keywords: data.keywords ?? [],
       readingTime: estimateReadingTime(content),
+      cover: data.cover,
+      coverAlt: data.coverAlt,
     };
   });
 
@@ -74,6 +78,8 @@ export function getPostBySlug(slug: string): Post | null {
         metaDescription: data.metaDescription,
         keywords: data.keywords ?? [],
         readingTime: estimateReadingTime(content),
+        cover: data.cover,
+        coverAlt: data.coverAlt,
         contentHtml,
         contentRaw: content,
       };

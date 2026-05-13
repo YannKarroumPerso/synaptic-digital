@@ -1,4 +1,6 @@
 ---
+cover: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&q=85&auto=format&fit=crop"
+coverAlt: "Intelligence artificielle, écran avec graphiques"
 title: "L'IA arrive (vraiment) dans les PME charentaises : par quoi commencer ?"
 slug: "ia-pme-charente"
 date: "2026-05-06"

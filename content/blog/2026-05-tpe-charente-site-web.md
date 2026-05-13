@@ -1,4 +1,6 @@
 ---
+cover: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=85&auto=format&fit=crop"
+coverAlt: "Petite boutique locale, vitrine artisanale"
 title: "Étude : 6 TPE charentaises sur 10 n'ont pas de site web mobile-friendly"
 slug: "tpe-charente-site-web"
 date: "2026-05-13"
