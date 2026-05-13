@@ -19,18 +19,18 @@ export function Services() {
             return (
               <div
                 key={service.title}
-                className="group relative bg-bg-card border border-border rounded-3xl p-9 px-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-accent overflow-hidden w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] xl:w-[calc(20%-16px)]"
+                className="group relative bg-bg-card border border-border rounded-3xl p-9 px-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-accent overflow-hidden w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] xl:w-[calc(20%-16px)] flex flex-col"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-accent/[0.04] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   <div className="w-14 h-14 bg-bg-warm rounded-2xl flex items-center justify-center mb-6 text-accent">
                     <Icon size={24} strokeWidth={2} />
                   </div>
                   <h3 className="text-primary mb-3">{service.title}</h3>
-                  <p className="text-text-muted text-[15px] leading-relaxed mb-5">
+                  <p className="text-text-muted text-[15px] leading-relaxed mb-5 flex-1">
                     {service.description}
                   </p>
-                  <div className="pt-4 border-t border-border text-sm text-text-muted">
+                  <div className="pt-4 border-t border-border text-sm text-text-muted mt-auto">
                     À partir de{" "}
                     <strong className="font-sora font-bold text-accent text-[17px]">
                       {service.price}
