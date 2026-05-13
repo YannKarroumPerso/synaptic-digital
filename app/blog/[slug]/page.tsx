@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import {
   getAllPosts,
@@ -86,6 +87,24 @@ export default function BlogPost({ params }: PageProps) {
         </Container>
       </section>
 
+      {/* HERO IMAGE (si cover disponible) */}
+      {post.cover && (
+        <section className="bg-bg-light pb-8 lg:pb-12">
+          <Container narrow>
+            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-lg border border-border">
+              <Image
+                src={post.cover}
+                alt={post.coverAlt || post.title}
+                fill
+                priority
+                sizes="(max-width: 980px) 100vw, 980px"
+                className="object-cover"
+              />
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* CONTENU ARTICLE */}
       <section className="py-12 lg:py-16 bg-bg-card">
         <Container narrow>
@@ -120,16 +139,29 @@ export default function BlogPost({ params }: PageProps) {
                   <Link
                     key={p.slug}
                     href={`/blog/${p.slug}`}
-                    className="group bg-bg-card border border-border rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-accent"
+                    className="group flex gap-5 bg-bg-card border border-border rounded-3xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-accent"
                   >
-                    <div className="flex items-center gap-2 text-[12px] font-semibold text-accent uppercase tracking-wider mb-3">
-                      <RIcon size={13} />
-                      {POST_TYPE_LABELS[p.type]}
+                    {p.cover && (
+                      <div className="relative w-[120px] h-[120px] rounded-2xl overflow-hidden shrink-0 bg-bg-warm">
+                        <Image
+                          src={p.cover}
+                          alt={p.coverAlt || p.title}
+                          fill
+                          sizes="120px"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 text-[12px] font-semibold text-accent uppercase tracking-wider mb-2">
+                        <RIcon size={13} />
+                        {POST_TYPE_LABELS[p.type]}
+                      </div>
+                      <h3 className="text-primary text-[16px] mb-2 leading-tight group-hover:text-accent transition-colors">
+                        {p.title}
+                      </h3>
+                      <p className="text-sm text-text-muted leading-relaxed line-clamp-2">{p.excerpt}</p>
                     </div>
-                    <h3 className="text-primary text-[17px] mb-2 leading-tight group-hover:text-accent transition-colors">
-                      {p.title}
-                    </h3>
-                    <p className="text-sm text-text-muted leading-relaxed line-clamp-2">{p.excerpt}</p>
                   </Link>
                 );
               })}
