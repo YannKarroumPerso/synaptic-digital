@@ -13,13 +13,13 @@ export function Services() {
           title="Le bon site, pour le bon projet"
           description="4 formats principaux, calibrés pour les petites PME qui veulent un site sérieux sans y passer 6 mois."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="flex flex-wrap justify-center gap-5 max-w-[1100px] mx-auto">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className="group relative bg-bg-card border border-border rounded-3xl p-9 px-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-accent overflow-hidden"
+                className="group relative bg-bg-card border border-border rounded-3xl p-9 px-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-accent overflow-hidden w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] xl:w-[calc(20%-16px)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-accent/[0.04] opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative z-10">

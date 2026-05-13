@@ -1,4 +1,4 @@
-import { LayoutGrid, ShoppingCart, RefreshCw, Search } from "lucide-react";
+import { LayoutGrid, ShoppingCart, RefreshCw, Search, Megaphone } from "lucide-react";
 
 export const stats = [
   { value: "3", unit: " sem.", label: "Délai moyen de livraison" },
@@ -74,8 +74,8 @@ export const services: Service[] = [
     idealFor:
       "Commerçants qui passent au digital, marques artisanales qui veulent toucher au-delà de leur région, professionnels qui vendent produits ou prestations en ligne.",
     duration: "Livré en 4 semaines",
-    price: "6 500 €",
-    priceRange: "6 500 € – 12 000 €",
+    price: "4 900 €",
+    priceRange: "4 900 € – 12 000 €",
   },
   {
     slug: "refonte",
@@ -101,8 +101,8 @@ export const services: Service[] = [
     idealFor:
       "Entreprises avec un site existant qui sous-performe (lent, daté, peu mobile-friendly, faible SEO) et qui veulent reprendre la main sans tout recommencer de zéro.",
     duration: "Livrée en 3 à 4 semaines",
-    price: "3 500 €",
-    priceRange: "3 500 € – 8 000 €",
+    price: "2 900 €",
+    priceRange: "2 900 € – 8 000 €",
   },
   {
     slug: "seo-performance",
@@ -130,6 +130,33 @@ export const services: Service[] = [
     duration: "1 à 2 semaines pour un audit + chantier d'optimisation",
     price: "1 500 €",
     priceRange: "1 500 € – 4 500 €",
+  },
+  {
+    slug: "social-media",
+    icon: Megaphone,
+    title: "Communication social média",
+    tagline: "Une présence en ligne qui travaille pour vous, chaque semaine.",
+    description:
+      "Stratégie éditoriale, création des posts, animation de communauté. Pour que vos réseaux génèrent du business, pas seulement des likes.",
+    longDescription: [
+      "Avoir un site bien fait, c'est une fondation. Avoir une présence sociale active, c'est ce qui amène les visiteurs jusqu'à ce site, mois après mois. On conçoit une stratégie social média pensée pour votre cible, pas pour faire du volume.",
+      "Calendrier éditorial, création des visuels, rédaction des posts, animation de la communauté, reporting mensuel des performances. On s'occupe de tout, vous validez chaque mois.",
+    ],
+    includes: [
+      "Audit de votre présence actuelle + cibles concurrents",
+      "Stratégie éditoriale sur-mesure (ligne, formats, fréquence)",
+      "Calendrier de publication mensuel validé en amont",
+      "Création des visuels (Canva ou Figma) selon votre charte",
+      "Rédaction des posts adaptés à chaque plateforme",
+      "Animation de la communauté (réponses, modération basique)",
+      "Reporting mensuel : portée, engagement, conversions",
+      "Recommandations d'ajustement chaque mois",
+    ],
+    idealFor:
+      "PME qui veulent une présence sociale régulière et qualitative sans embaucher en interne. Idéal pour générer du trafic récurrent vers votre site et entretenir votre marque.",
+    duration: "Setup en 1-2 semaines, puis accompagnement mensuel",
+    price: "900 € / mois",
+    priceRange: "900 € – 2 500 € / mois",
   },
 ];
 
@@ -268,7 +295,7 @@ export const pricing = [
   },
   {
     title: "Site étoffé / E-commerce simple",
-    range: "4 500 € – 7 500 €",
+    range: "4 900 € – 7 500 €",
     duration: "Livré en 3 à 4 semaines",
     features: [
       "6 à 10 pages",

@@ -14,6 +14,10 @@ import {
   Search,
   BarChart3,
   ShoppingBag,
+  Heart,
+  MessageCircle,
+  Share2,
+  Calendar,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -58,6 +62,7 @@ export default function ServicesPage() {
       <ServiceSplitMockup service={services[1]} />
       <ServiceBeforeAfter service={services[2]} />
       <ServiceStats service={services[3]} />
+      <ServiceSocialFeed service={services[4]} />
 
       {/* CTA final */}
       <section className="bg-bg-dark text-text-light py-16 lg:py-20 text-center">
@@ -391,6 +396,149 @@ function StatBlock({
 }
 
 /* ─────────────────────────────────────────────────
+   UNIVERS 5 — SOCIAL FEED (Communication social média)
+   Mockups de posts type Instagram/LinkedIn en grille avec engagement metrics
+   ───────────────────────────────────────────────── */
+function ServiceSocialFeed({ service }: { service: Service }) {
+  const Icon = service.icon;
+  return (
+    <section id={service.slug} className="py-16 lg:py-24 bg-bg-warm relative overflow-hidden">
+      <div className="absolute top-20 left-10 w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(255,123,71,0.08)_0%,transparent_70%)]" />
+      <Container className="relative">
+        <div className="max-w-[820px] mx-auto mb-12">
+          <div className="flex items-center gap-3 mb-6 text-text-muted text-sm">
+            <span className="font-sora font-semibold text-accent text-base">05</span>
+            <span className="h-px w-12 bg-border" />
+            <Icon size={16} />
+            <span className="uppercase tracking-wider font-medium">{service.title}</span>
+          </div>
+          <h2 className="text-primary mb-4">{service.title}</h2>
+          <p className="text-accent font-medium text-[18px] mb-6">{service.tagline}</p>
+          <div className="space-y-4 text-[17px] text-text-dark leading-relaxed">
+            {service.longDescription.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
+        </div>
+
+        {/* Mock feed posts en grille — illustre la création régulière */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[920px] mx-auto mb-12">
+          <SocialPost
+            gradient="from-[#FF7B47] via-[#FF9670] to-[#FFB698]"
+            title="Comment on a livré ce site en 19 jours"
+            likes={142}
+            comments={18}
+            shares={9}
+            badge="Étude de cas"
+          />
+          <SocialPost
+            gradient="from-[#1A2840] via-[#2A3A55] to-[#3B4A66]"
+            title="3 erreurs à éviter sur sa home"
+            likes={89}
+            comments={24}
+            shares={5}
+            badge="Conseil"
+          />
+          <SocialPost
+            gradient="from-[#16A34A] via-[#4ADE80] to-[#86EFAC]"
+            title="Score Lighthouse passé de 38 à 98"
+            likes={234}
+            comments={31}
+            shares={18}
+            badge="Résultat"
+            featured
+          />
+          <SocialPost
+            gradient="from-[#FDBA74] via-[#FB923C] to-[#F97316]"
+            title="Coulisses : nouvelle réa en cours"
+            likes={67}
+            comments={12}
+            shares={3}
+            badge="BTS"
+          />
+          <SocialPost
+            gradient="from-[#1A2840] via-[#1F4435] to-[#142E22]"
+            title="Pourquoi le SEO doit être pensé dès le design"
+            likes={156}
+            comments={42}
+            shares={28}
+            badge="Tribune"
+          />
+          <SocialPost
+            gradient="from-[#FAF7F2] via-[#F2E8DC] to-[#FDF4ED]"
+            title="Nouveau format : la story live"
+            likes={45}
+            comments={8}
+            shares={2}
+            badge="Annonce"
+            light
+          />
+        </div>
+
+        <div className="max-w-[820px] mx-auto">
+          <div className="flex items-start gap-3 mb-10 text-[15px] text-text-muted">
+            <Target size={18} className="text-accent shrink-0 mt-1" />
+            <p><span className="font-semibold text-primary">Idéal pour</span> · {service.idealFor}</p>
+          </div>
+          <ServiceFooter service={service} />
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function SocialPost({
+  gradient,
+  title,
+  likes,
+  comments,
+  shares,
+  badge,
+  featured = false,
+  light = false,
+}: {
+  gradient: string;
+  title: string;
+  likes: number;
+  comments: number;
+  shares: number;
+  badge: string;
+  featured?: boolean;
+  light?: boolean;
+}) {
+  return (
+    <article className={`bg-bg-card border ${featured ? "border-accent shadow-md" : "border-border"} rounded-2xl overflow-hidden transition-all hover:shadow-md hover:-translate-y-1`}>
+      {/* Visual area */}
+      <div className={`aspect-square bg-gradient-to-br ${gradient} relative flex items-end p-4`}>
+        <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full ${light ? "bg-primary text-white" : "bg-white/95 text-primary"} uppercase tracking-wider`}>
+          {badge}
+        </span>
+      </div>
+      {/* Caption */}
+      <div className="p-4">
+        <h4 className="text-primary text-[14px] font-semibold leading-snug mb-3 line-clamp-2">
+          {title}
+        </h4>
+        <div className="flex items-center gap-4 text-[12px] text-text-muted">
+          <span className="flex items-center gap-1.5">
+            <Heart size={12} className="text-accent" />
+            {likes}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <MessageCircle size={12} />
+            {comments}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Share2 size={12} />
+            {shares}
+          </span>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/* ─────────────────────────────────────────────────
    Footer commun — accordéon inclus + CTA (sans tarif chiffré, en attente Yann)
    ───────────────────────────────────────────────── */
 function ServiceFooter({ service, inverted = false }: { service: Service; inverted?: boolean }) {
@@ -434,7 +582,8 @@ function ServiceFooter({ service, inverted = false }: { service: Service; invert
               Tarif
             </div>
             <div className={`text-[15px] font-medium ${textClass}`}>
-              Sur devis · sous 48h
+              <span className="text-text-muted text-[12px]">À partir de</span>{" "}
+              <span className="text-accent font-bold">{service.price}</span>
             </div>
           </div>
         </div>
