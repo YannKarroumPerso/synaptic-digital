@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { PageSchemas } from "@/components/seo/StructuredData";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { getVilleBySlug, getActiveVilles, type ProfilProspect } from "@/lib/villes-data";

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { PageSchemas } from "@/components/seo/StructuredData";
+import { articleSchema } from "@/lib/schema";
 import {
   getAllPosts,
   getPostBySlug,
@@ -52,8 +54,18 @@ export default function BlogPost({ params }: PageProps) {
     .filter((p) => p.slug !== post.slug)
     .slice(0, 2);
 
+  const url = `https://synaptic-digital.fr/blog/${post.slug}`;
+
   return (
     <>
+      <PageSchemas
+        breadcrumb={[
+          { name: "Accueil", url: "https://synaptic-digital.fr" },
+          { name: "Ressources", url: "https://synaptic-digital.fr/blog" },
+          { name: post.title },
+        ]}
+        additional={[articleSchema(post, url)]}
+      />
       {/* HEADER ARTICLE */}
       <section className="relative overflow-hidden pt-12 pb-8 lg:pt-16 lg:pb-12 bg-bg-light">
         <div className="absolute -top-40 -left-32 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(255,123,71,0.06)_0%,transparent_70%)] z-0" />

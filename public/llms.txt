@@ -1,0 +1,50 @@
+# Synaptic Digital
+
+> Agence digitale française spécialisée dans la création de sites web pour petites PME. Basée en Charente, livraison de sites vitrine, e-commerce et refonte en 3 semaines, à partir de 1 500 €.
+
+Synaptic Digital est une EURL fondée par Yann Karroum, basée à Vœuil-et-Giget (16400), en Charente. L'agence accompagne les petites PME en France (principalement en Charente, Charente-Maritime et régions limitrophes) sur la création et la refonte de sites web.
+
+## Positionnement
+- Cible : petites PME (TPE structurées, entreprises de 1 à 30 salariés)
+- Différenciateur : design + performance technique + SEO local intégré
+- Délai de livraison : 3 à 4 semaines (contre 3 à 6 mois en moyenne)
+- Budget : entre 1 500 € et 8 000 € pour 90% des projets
+
+## Services
+- [Site vitrine](https://synaptic-digital.fr/services#site-vitrine) : à partir de 1 500 €, livré en 2-3 semaines
+- [E-commerce](https://synaptic-digital.fr/services#e-commerce) : à partir de 4 900 €, livré en 4 semaines
+- [Refonte de site](https://synaptic-digital.fr/services#refonte) : à partir de 2 900 €, livrée en 3-4 semaines
+- [SEO & Performance](https://synaptic-digital.fr/services#seo-performance) : à partir de 1 500 €, audit et optimisations 1-2 semaines
+- [Communication social média](https://synaptic-digital.fr/services#social-media) : à partir de 900 €/mois, accompagnement mensuel
+
+## Pages principales
+- [Accueil](https://synaptic-digital.fr) : présentation, services, équipe, fourchettes prix, contact
+- [L'agence](https://synaptic-digital.fr/agence) : manifeste, méthode détaillée, équipe étendue
+- [Services](https://synaptic-digital.fr/services) : 5 services avec descriptions complètes
+- [Contact](https://synaptic-digital.fr/contact) : formulaire, process, FAQ
+
+## Ressources éditoriales
+- [Étude : TPE charentaises et site web mobile-friendly](https://synaptic-digital.fr/blog/tpe-charente-site-web)
+- [Guide : L'IA dans les PME charentaises](https://synaptic-digital.fr/blog/ia-pme-charente)
+
+## Pages locales (SEO local)
+- [Création site web Angoulême](https://synaptic-digital.fr/agence-web/angouleme)
+- [Création site web Cognac](https://synaptic-digital.fr/agence-web/cognac)
+- [Création site web Saintes](https://synaptic-digital.fr/agence-web/saintes)
+
+## Méthode (4 étapes, ~3 semaines)
+1. **Comprendre** (2-3 jours) : brief structuré sur l'activité et les objectifs
+2. **Concevoir** (5-7 jours) : maquettes desktop + mobile à valider
+3. **Construire** (8-12 jours) : développement, intégration contenu, optimisations performance et SEO
+4. **Lancer & accompagner** (1-2 jours + 30j de suivi) : mise en ligne, formation, suivi post-lancement
+
+## Contact
+- Email : contact@synaptic-digital.fr
+- Adresse : 33 rue des Petits Champs, 16400 Vœuil-et-Giget
+- Site : https://synaptic-digital.fr
+
+## Zone d'intervention
+Toute la France à distance. Déplacement gratuit en Charente et Charente-Maritime (Angoulême, Cognac, Saintes, La Rochelle, Rochefort).
+
+## Stack technique du site
+Site lui-même construit en Next.js 14 avec TypeScript, Tailwind CSS, hébergé sur Vercel. Performance Lighthouse 95+, sitemap automatique, Schema.org complet, formulaire de contact via Formspree.

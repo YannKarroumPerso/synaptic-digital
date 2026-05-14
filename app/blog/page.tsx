@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { PageSchemas } from "@/components/seo/StructuredData";
 import { getAllPosts, POST_TYPE_LABELS, formatDate, type PostMeta } from "@/lib/blog";
 import { Clock, FileText, BookOpen, BarChart3 } from "lucide-react";
 

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { PageSchemas } from "@/components/seo/StructuredData";
+import { serviceSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/Button";
 import { services, type Service } from "@/lib/data";
 import {

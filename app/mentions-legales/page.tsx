@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
+import { PageSchemas } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
@@ -8,7 +9,14 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <section className="py-20 lg:py-28">
+    <>
+      <PageSchemas
+        breadcrumb={[
+          { name: "Accueil", url: "https://synaptic-digital.fr" },
+          { name: "Mentions légales" },
+        ]}
+      />
+      <section className="py-20 lg:py-28">
       <Container narrow>
         <div className="text-center mb-14">
           <span className="section-eyebrow">Informations légales</span>
@@ -90,6 +98,7 @@ export default function MentionsLegales() {
         </div>
       </Container>
     </section>
+    </>
   );
 }
 
