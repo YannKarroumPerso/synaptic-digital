@@ -7,65 +7,65 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+ subsets: ["latin"],
+ variable: "--font-inter",
+ display: "swap",
 });
 
 const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
+ subsets: ["latin"],
+ variable: "--font-sora",
+ weight: ["400", "500", "600", "700", "800"],
+ display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://synaptic-digital.fr"),
-  title: {
-    default: "Synaptic Digital — Agence web PME, sites livrés en 3 semaines",
-    template: "%s | Synaptic Digital",
-  },
-  description:
-    "Sites vitrine, e-commerce et refontes pour petites PME. Design soigné, performance technique, SEO intégré. Livré en 3 semaines, à partir de 3 000 €.",
-  keywords: [
-    "agence web PME",
-    "création site internet",
-    "agence digitale",
-    "site vitrine",
-    "e-commerce",
-    "SEO",
-  ],
-  authors: [{ name: "Synaptic Digital EURL" }],
-  openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    url: "https://synaptic-digital.fr",
-    siteName: "Synaptic Digital",
-    title: "Synaptic Digital — Agence web PME",
-    description:
-      "Sites vitrine, e-commerce et refontes pour petites PME. Livré en 3 semaines.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Synaptic Digital",
-    description: "Agence web pour PME — sites livrés en 3 semaines.",
-  },
+ metadataBase: new URL("https://synaptic-digital.fr"),
+ title: {
+ default: "Synaptic Digital, Agence web PME, sites livrés en 3 semaines",
+ template: "%s | Synaptic Digital",
+ },
+ description:
+ "Sites vitrine, e-commerce et refontes pour petites PME. Design soigné, performance technique, SEO intégré. Livré en 3 semaines, à partir de 3 000 €.",
+ keywords: [
+ "agence web PME",
+ "création site internet",
+ "agence digitale",
+ "site vitrine",
+ "e-commerce",
+ "SEO",
+ ],
+ authors: [{ name: "Synaptic Digital EURL" }],
+ openGraph: {
+ type: "website",
+ locale: "fr_FR",
+ url: "https://synaptic-digital.fr",
+ siteName: "Synaptic Digital",
+ title: "Synaptic Digital, Agence web PME",
+ description:
+ "Sites vitrine, e-commerce et refontes pour petites PME. Livré en 3 semaines.",
+ },
+ twitter: {
+ card: "summary_large_image",
+ title: "Synaptic Digital",
+ description: "Agence web pour PME, sites livrés en 3 semaines.",
+ },
 };
 
 export default function RootLayout({
-  children,
+ children,
 }: {
-  children: React.ReactNode;
+ children: React.ReactNode;
 }) {
-  return (
-    <html lang="fr" className={`${inter.variable} ${sora.variable}`}>
-      <body>
-        <StructuredData />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-        <Analytics />
-      </body>
-    </html>
-  );
+ return (
+ <html lang="fr" className={`${inter.variable} ${sora.variable}`}>
+ <body>
+ <StructuredData />
+ <Nav />
+ <main>{children}</main>
+ <Footer />
+ <Analytics />
+ </body>
+ </html>
+ );
 }
