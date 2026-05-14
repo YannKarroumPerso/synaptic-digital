@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-bg-dark text-text-light pt-20 pb-8">
       <div className="container-page">
-        <div className="grid grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 pb-10 mb-12 border-b border-white/10">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 pb-10 mb-12 border-b border-white/10">
           <div>
             <div className="font-sora font-extrabold text-[22px] text-text-light mb-4">
               Synaptic<span className="text-accent">.</span>
@@ -46,6 +46,14 @@ export function Footer() {
               { label: "Ressources", href: "/blog" },
               { label: "Réalisations", href: "/#realisations" },
               { label: "Contact", href: "/contact" },
+            ]}
+          />
+          <FooterColumn
+            title="Villes"
+            links={[
+              { label: "Agence web Angoulême", href: "/agence-web/angouleme" },
+              { label: "Agence web Cognac", href: "/agence-web/cognac" },
+              { label: "Agence web Saintes", href: "/agence-web/saintes" },
             ]}
           />
           <FooterColumn
