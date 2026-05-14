@@ -12,15 +12,15 @@ const navLinks = [
 export function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-bg-light/85 backdrop-blur-xl border-b border-border">
-      <div className="container-page flex items-center justify-between py-4">
+      <div className="container-page flex items-center justify-between py-3 sm:py-4 gap-3">
         <Link
           href="/"
-          className="font-sora font-extrabold text-[22px] text-primary tracking-tight"
+          className="font-sora font-extrabold text-[20px] sm:text-[22px] text-primary tracking-tight shrink-0"
         >
           Synaptic<span className="text-accent">.</span>
         </Link>
 
-        {/* Liens desktop */}
+        {/* Liens desktop (cachés sous lg) */}
         <div className="hidden lg:flex gap-8">
           {navLinks.map((link) => (
             <Link
@@ -33,16 +33,15 @@ export function Nav() {
           ))}
         </div>
 
-        {/* CTA + burger */}
-        <div className="flex items-center gap-2.5">
-          <Button
+        {/* CTA toujours visible + burger sous lg */}
+        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <Link
             href="/contact"
-            variant="primary"
-            className="hidden sm:inline-flex text-[13px] sm:text-[15px] py-2.5 px-4 sm:py-[14px] sm:px-6"
+            className="btn btn-primary whitespace-nowrap text-[12px] sm:text-[15px] py-2 px-3 sm:py-[14px] sm:px-6"
           >
-            Démarrer mon projet
-          </Button>
-          {/* Menu burger (mobile + tablette) */}
+            <span className="sm:hidden">Démarrer</span>
+            <span className="hidden sm:inline">Démarrer mon projet</span>
+          </Link>
           <MobileMenu links={navLinks} />
         </div>
       </div>

@@ -36,11 +36,11 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-border bg-bg-card text-primary hover:bg-primary hover:text-white hover:border-primary transition-all"
+        className="lg:hidden w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl border border-border bg-bg-card text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shrink-0"
         aria-label="Ouvrir le menu"
         aria-expanded={isOpen}
       >
-        <Menu size={22} strokeWidth={2} />
+        <Menu size={20} strokeWidth={2} className="sm:hidden" /><Menu size={22} strokeWidth={2} className="hidden sm:block" />
       </button>
 
       {/* Overlay backdrop */}
@@ -97,16 +97,9 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
           ))}
         </nav>
 
-        {/* Footer du drawer : CTA + contact direct */}
-        <div className="px-6 py-6 border-t border-border space-y-4">
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className="btn btn-primary w-full justify-center"
-          >
-            Démarrer mon projet →
-          </Link>
-          <div className="flex flex-col gap-2 text-sm">
+        {/* Footer du drawer : contact direct (le CTA principal reste dans la nav sticky) */}
+        <div className="px-6 py-6 border-t border-border">
+          <div className="flex flex-col gap-2.5 text-sm">
             <a
               href="mailto:contact@synaptic-digital.fr"
               className="flex items-center gap-2.5 text-text-muted hover:text-accent transition-colors"
