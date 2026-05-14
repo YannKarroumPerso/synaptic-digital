@@ -8,11 +8,6 @@ export const metadata: Metadata = {
   title: "Devis site web PME, livré en 3 semaines, à partir de 1 500 €",
   description:
     "Demandez votre devis gratuit pour un site web professionnel. Sites vitrine, e-commerce, refonte. Devis détaillé sous 48h. Sans engagement.",
-  robots: {
-    // Pas d'indexation : c'est une LP Google Ads, on ne veut pas qu'elle ranke en organique
-    index: false,
-    follow: false,
-  },
 };
 
 const benefits = [

@@ -45,7 +45,7 @@ export function Footer() {
               { label: "L'agence", href: "/agence" },
               { label: "Ressources", href: "/blog" },
               { label: "Réalisations", href: "/#realisations" },
-              { label: "Contact", href: "/contact" },
+              { label: "Contact", href: "/devis" },
             ]}
           />
           <FooterColumn
@@ -59,7 +59,7 @@ export function Footer() {
           <FooterColumn
             title="Contact"
             links={[
-              { label: "Page contact", href: "/contact" },
+              { label: "Page contact", href: "/devis" },
               { label: "contact@synaptic-digital.fr", href: "mailto:contact@synaptic-digital.fr" },
             ]}
           />

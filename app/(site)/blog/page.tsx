@@ -62,7 +62,7 @@ export default function BlogIndex() {
  <p className="text-text-light/70 text-[18px] max-w-[600px] mx-auto mb-8">
  On échange 30 minutes pour cerner votre besoin, puis on vous envoie un devis détaillé sous 48h.
  </p>
- <Link href="/contact" className="btn btn-primary btn-arrow">
+ <Link href="/devis" className="btn btn-primary btn-arrow">
  Démarrer mon projet
  </Link>
  </Container>
@@ -123,7 +123,7 @@ function EmptyState() {
  <h3 className="text-primary mb-3">Les premières ressources arrivent bientôt</h3>
  <p className="text-text-muted leading-relaxed">
  On prépare actuellement les premières études et articles. Revenez dans quelques jours, ou{" "}
- <Link href="/contact" className="text-accent font-semibold hover:underline">
+ <Link href="/devis" className="text-accent font-semibold hover:underline">
  contactez-nous
  </Link>{" "}
  si vous voulez être notifié à la publication.

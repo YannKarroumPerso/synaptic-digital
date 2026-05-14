@@ -263,7 +263,7 @@ export default function AgencePage() {
  Premier échange gratuit, sans engagement. Devis détaillé sous 48h.
  </p>
  <div className="flex flex-wrap justify-center gap-4">
- <Button href="/contact" variant="primary" arrow>
+ <Button href="/devis" variant="primary" arrow>
  Démarrer mon projet
  </Button>
  <Link

@@ -5,7 +5,6 @@ const navLinks = [
   { href: "/agence", label: "L'agence" },
   { href: "/services", label: "Services" },
   { href: "/blog", label: "Ressources" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -26,7 +25,7 @@ export function Nav() {
           </Link>
           <div className="flex-1 flex justify-end">
             <Link
-              href="/contact"
+              href="/devis"
               className="btn btn-primary whitespace-nowrap text-[12px] sm:text-[14px] py-2 px-3 sm:py-2.5 sm:px-4"
             >
               <span className="sm:hidden">Démarrer</span>
@@ -56,7 +55,7 @@ export function Nav() {
             ))}
           </div>
           <Link
-            href="/contact"
+            href="/devis"
             className="btn btn-primary whitespace-nowrap text-[15px] py-[14px] px-6"
           >
             Démarrer mon projet

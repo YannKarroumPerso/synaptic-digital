@@ -74,7 +74,7 @@ export default function ServicesPage() {
  On échange 30 minutes pour cerner votre besoin, puis on vous envoie un devis détaillé sous 48h.
  </p>
  <div className="flex flex-wrap justify-center gap-4">
- <Button href="/contact" variant="primary" arrow>
+ <Button href="/devis" variant="primary" arrow>
  Démarrer mon projet
  </Button>
  <Link
@@ -589,7 +589,7 @@ function ServiceFooter({ service, inverted = false }: { service: Service; invert
  </div>
  </div>
  </div>
- <Link href="/contact" className="btn btn-primary text-sm">
+ <Link href="/devis" className="btn btn-primary text-sm">
  Discuter
  <ArrowRight size={14} />
  </Link>
