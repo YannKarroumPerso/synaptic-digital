@@ -9,14 +9,14 @@ theme: "creation-site-web"
 excerpt: "Premier baromètre digital des TPE de Charente : pourquoi 60% des sites locaux freinent encore leur croissance."
 metaDescription: "Baromètre digital 2026 des TPE en Charente. Diagnostic des sites web locaux : mobile, vitesse, SEO. Données exclusives Synaptic Digital."
 keywords:
-  - "TPE Charente site web"
-  - "création site internet Angoulême"
-  - "agence digitale Charente"
+ - "TPE Charente site web"
+ - "création site internet Angoulême"
+ - "agence digitale Charente"
 ---
 
 # Étude : 6 TPE charentaises sur 10 n'ont pas de site web mobile-friendly
 
-*Par Synaptic Digital — 13 mai 2026*
+*Par Synaptic Digital, 13 mai 2026*
 
 ## Résumé exécutif
 
@@ -36,7 +36,7 @@ Trois chiffres qui résument la même réalité : le digital local a pris du ret
 La majorité des sites analysés sont conçus pour le desktop et adaptés tant bien que mal en responsive. Résultat : boutons trop petits, formulaires illisibles, parcours d'achat impossible sur smartphone. **Or 73 % des recherches locales se font désormais sur mobile** (source : Google Insights 2025).
 
 ### Vitesse : un quart des sites met plus de 5 secondes à charger
-Sur Cognac et Saintes, les sites sont en moyenne plus lents qu'à Angoulême — probablement à cause d'hébergeurs moins performants. **Chaque seconde de chargement supplémentaire fait perdre 7 % de conversions** (source : Akamai).
+Sur Cognac et Saintes, les sites sont en moyenne plus lents qu'à Angoulême, probablement à cause d'hébergeurs moins performants. **Chaque seconde de chargement supplémentaire fait perdre 7 % de conversions** (source : Akamai).
 
 ### SEO local : la moitié des artisans invisibles
 Quand on tape "[métier] [ville en Charente]" sur Google, seul un site sur deux apparaît dans les 10 premiers résultats. Les autres laissent la place aux annuaires (PagesJaunes, Yelp) ou aux concurrents bordelais et niortais.
@@ -55,4 +55,4 @@ Le retard digital n'est pas une fatalité. C'est même paradoxalement une opport
 
 ---
 
-*Étude réalisée par Synaptic Digital — agence de création de sites web en Charente et Charente-Maritime. Angoulême · Cognac · Saintes.*
+*Étude réalisée par Synaptic Digital, agence de création de sites web en Charente et Charente-Maritime. Angoulême · Cognac · Saintes.*

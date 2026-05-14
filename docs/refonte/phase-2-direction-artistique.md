@@ -1,4 +1,4 @@
-# Phase 2 — Direction artistique
+# Phase 2, Direction artistique
 
 > ✅ **Palette A retenue** : Bleu nuit `#1A2840` + Orange chaleur `#FF7B47` + Crème `#FAF7F2`
 > ✅ **Typo retenue** : Sora (titres) + Inter (body)
@@ -25,10 +25,10 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 
 ## 2. Ce qu'on n'imite PAS
 
-- ❌ Le **palette financière bleu nuit + orange Bitcoin** — trop fintech, pas notre cible
-- ❌ Les **mockups iPhone omniprésents** — on est une agence web, pas une app mobile
-- ❌ Le ton **investissement / DCA / volatilité** — on est business pragmatique
-- ❌ Les **logos partenaires institutionnels** (AMF, ACPR) — on n'a pas ce besoin de réassurance régulatoire
+- ❌ Le **palette financière bleu nuit + orange Bitcoin**, trop fintech, pas notre cible
+- ❌ Les **mockups iPhone omniprésents**, on est une agence web, pas une app mobile
+- ❌ Le ton **investissement / DCA / volatilité**, on est business pragmatique
+- ❌ Les **logos partenaires institutionnels** (AMF, ACPR), on n'a pas ce besoin de réassurance régulatoire
 
 ---
 
@@ -36,7 +36,7 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 
 3 directions colorimétriques. À comparer visuellement dans le mockup interactif (voir §6).
 
-### Palette A — "Confiance & Chaleur" 🟠 ✅ RETENUE (validée par Yann)
+### Palette A, "Confiance & Chaleur" 🟠 ✅ RETENUE (validée par Yann)
 
 | Rôle | Couleur | Hex | Usage |
 |---|---|---|---|
@@ -49,9 +49,9 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 | Gris UI | Gris doux | `#6B7280` | Texte secondaire, bordures |
 | Succès | Vert | `#16A34A` | États positifs |
 
-**Pourquoi A est recommandée** : le mix bleu + orange est éprouvé pour signaler "sérieux mais chaleureux". L'orange `#FF7B47` est plus terreux/chaleureux qu'orange vif — il évoque l'accessibilité et l'humain. Le fond crème adoucit considérablement l'ensemble par rapport à un blanc froid — c'est le signal "pas une grosse agence intimidante" sans le dire.
+**Pourquoi A est recommandée** : le mix bleu + orange est éprouvé pour signaler "sérieux mais chaleureux". L'orange `#FF7B47` est plus terreux/chaleureux qu'orange vif, il évoque l'accessibilité et l'humain. Le fond crème adoucit considérablement l'ensemble par rapport à un blanc froid, c'est le signal "pas une grosse agence intimidante" sans le dire.
 
-### Palette B — "Vert & Lumière" 🟢
+### Palette B, "Vert & Lumière" 🟢
 
 | Rôle | Couleur | Hex |
 |---|---|---|
@@ -63,7 +63,7 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 
 **Caractère** : croissance + lumière. Distinctif, sort des palettes "agence digitale" classiques. Signal subliminal "growth + confiance". Risque : un peu moins consensuel, peut paraître "écolo" pour certains.
 
-### Palette C — "Bleu doux & Corail" 🔵
+### Palette C, "Bleu doux & Corail" 🔵
 
 | Rôle | Couleur | Hex |
 |---|---|---|
@@ -81,8 +81,8 @@ Codes visuels et structurels du site de référence qu'on transpose à Synaptic 
 
 ### Recommandation
 
-- **Titres (H1, H2, H3)** : **Sora** (Google Fonts) — sans-serif géométrique moderne, beaucoup de personnalité dans les graisses lourdes, lisible en gros caractères
-- **Body** : **Inter** (Google Fonts) — référence absolue pour lisibilité écran, neutre, hyper-optimisé
+- **Titres (H1, H2, H3)** : **Sora** (Google Fonts), sans-serif géométrique moderne, beaucoup de personnalité dans les graisses lourdes, lisible en gros caractères
+- **Body** : **Inter** (Google Fonts), référence absolue pour lisibilité écran, neutre, hyper-optimisé
 - **Code/Mono (rare)** : **JetBrains Mono** si besoin
 
 ### Échelle typographique

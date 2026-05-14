@@ -1,4 +1,4 @@
-# Phase 3 — Rédaction des contenus
+# Phase 3, Rédaction des contenus
 
 > Tous les textes du site, prêts à intégrer en Phase 6.
 > Ton retenu : direct, clair, "on" plutôt que "nous", phrases courtes, zéro jargon, zéro superlatif creux.
@@ -12,7 +12,7 @@
 3. [Template `/realisations/[cas-client]`](#template-cas)
 4. [Page `/mentions-legales`](#mentions-legales)
 5. [Microcopy & messages système](#microcopy)
-6. [SEO — title & meta description par page](#seo)
+6. [SEO, title & meta description par page](#seo)
 
 ---
 
@@ -21,7 +21,7 @@
 
 ### 1.1 Navigation (header)
 
-- Logo : `Synaptic.` (le point en orange accent — déjà dans le mockup)
+- Logo : `Synaptic.` (le point en orange accent, déjà dans le mockup)
 - Liens nav : `Services` · `Notre approche` · `Réalisations` · `Contact`
 - CTA header : **Démarrer mon projet**
 
@@ -37,7 +37,7 @@
 *(« beaux » et « rapides » en accent orange)*
 
 **Sous-titre**
-> On conçoit, développe et lance le site qui fera décoller votre PME. Design soigné, performance technique, SEO intégré dès le départ — sans le délai habituel de 3 mois.
+> On conçoit, développe et lance le site qui fera décoller votre PME. Design soigné, performance technique, SEO intégré dès le départ, sans le délai habituel de 3 mois.
 
 **CTA primaire** : `Démarrer mon projet →`
 **CTA secondaire** : `Voir nos réalisations`
@@ -53,28 +53,28 @@
 
 > ⚠️ Les chiffres "100%" et "95+" doivent être tenables. Si Synaptic ne peut pas les promettre, ajuster (ex : "Score Lighthouse ≥ 90" ou retirer).
 
-### 1.4 Section Services — "Ce qu'on fait"
+### 1.4 Section Services, "Ce qu'on fait"
 
 **Eyebrow** : `Ce qu'on fait`
 **H2** : Le bon site, pour le bon projet
 **Intro** : 4 formats principaux, calibrés pour les petites PME qui veulent un site sérieux sans y passer 6 mois.
 
-#### Card 1 — Site vitrine
+#### Card 1, Site vitrine
 - **Titre** : Site vitrine
 - **Description** : Présentez votre activité avec un site clair, rapide et trouvé sur Google. 4 à 6 pages, livré en 3 semaines.
 - **Prix** : À partir de 3 000 €
 
-#### Card 2 — E-commerce
+#### Card 2, E-commerce
 - **Titre** : E-commerce
 - **Description** : Une boutique en ligne fluide, sécurisée, optimisée pour convertir. Catalogue, paiement, gestion intuitive.
 - **Prix** : À partir de 6 500 €
 
-#### Card 3 — Refonte de site
+#### Card 3, Refonte de site
 - **Titre** : Refonte de site
 - **Description** : Votre site existant est lent, daté ou peu lisible ? On reprend tout, en gardant ce qui marche. Bascule sans coupure.
 - **Prix** : À partir de 3 500 €
 
-#### Card 4 — SEO & Performance
+#### Card 4, SEO & Performance
 - **Titre** : SEO & Performance
 - **Description** : Audit, optimisations techniques, structure de contenu. Pour être trouvé par vos prospects sur Google.
 - **Prix** : À partir de 1 500 €
@@ -85,46 +85,46 @@
 **H2** : Beau, rapide, trouvé sur Google. Et livré quand promis.
 **Intro** : La plupart des agences arbitrent entre design, performance et SEO. On refuse l'arbitrage : les trois sont possibles ensemble, à condition d'être méthodique.
 
-#### Pilier 01 — Design qui sert le business
+#### Pilier 01, Design qui sert le business
 > Pas un site joli pour être joli. Un design pensé pour guider votre visiteur vers la conversion, sans le perdre dans le décor.
 
-#### Pilier 02 — Performance technique réelle
+#### Pilier 02, Performance technique réelle
 > Score Lighthouse 95+ par défaut. Site qui charge en moins de 2 secondes. Le visiteur ne part pas pendant qu'il attend.
 
-#### Pilier 03 — SEO dès la première ligne
-> Structure sémantique, contenu optimisé, vitesse — les fondamentaux du SEO sont intégrés dès la conception, pas rajoutés après.
+#### Pilier 03, SEO dès la première ligne
+> Structure sémantique, contenu optimisé, vitesse, les fondamentaux du SEO sont intégrés dès la conception, pas rajoutés après.
 
 #### Bannière délai (en fin de section, fond accent orange)
 **Titre** : Le tout, livré en 3 à 4 semaines.
-**Sous-titre** : Pas 3 mois. Pas 6 mois. On a industrialisé la méthode pour livrer vite sans bâcler — et vous avez votre site quand vous en avez besoin.
+**Sous-titre** : Pas 3 mois. Pas 6 mois. On a industrialisé la méthode pour livrer vite sans bâcler, et vous avez votre site quand vous en avez besoin.
 
-### 1.6 Section Méthode — "Comment ça se passe"
+### 1.6 Section Méthode, "Comment ça se passe"
 
 **Eyebrow** : `Comment ça se passe`
 **H2** : 4 étapes claires, zéro zone d'ombre
 **Intro** : Une méthode rodée pour aller vite sans rien laisser au hasard. Vous savez à chaque étape où on en est et ce qui vient ensuite.
 
-#### Étape 01 — Comprendre *(durée : 2 à 3 jours)*
+#### Étape 01, Comprendre *(durée : 2 à 3 jours)*
 On prend le temps de cerner votre activité, vos objectifs et vos contraintes. Un échange initial structuré pour partir sur les bonnes bases.
 **Ce que vous nous donnez** : 30 min d'échange + accès à votre univers (site actuel s'il existe, vos contenus existants).
 **Ce qu'on livre** : un brief écrit que vous validez.
 
-#### Étape 02 — Concevoir *(durée : 5 à 7 jours)*
+#### Étape 02, Concevoir *(durée : 5 à 7 jours)*
 Design des maquettes principales, structure du site, choix techniques. On itère vite, vous validez à chaque jalon.
 **Ce que vous nous donnez** : retours sur les maquettes.
 **Ce qu'on livre** : maquettes desktop + mobile, prêtes à coder.
 
-#### Étape 03 — Construire *(durée : 8 à 12 jours)*
+#### Étape 03, Construire *(durée : 8 à 12 jours)*
 Développement intégral, intégration des contenus, optimisations performance et SEO. Pas de bâclage : tests sur tous les navigateurs, mobile compris.
 **Ce que vous nous donnez** : vos textes et visuels finaux.
 **Ce qu'on livre** : le site en preview, accessible à vous et à votre équipe.
 
-#### Étape 04 — Lancer & accompagner *(durée : 1 à 2 jours + suivi)*
+#### Étape 04, Lancer & accompagner *(durée : 1 à 2 jours + suivi)*
 Mise en ligne sur votre domaine, configuration analytics, formation rapide pour que vous puissiez gérer le contenu courant. Suivi 30 jours offert.
 **Ce que vous nous donnez** : votre OK final.
 **Ce qu'on livre** : un site qui tourne + un manuel d'utilisation simple.
 
-### 1.7 Section Équipe — "Les visages derrière votre projet"
+### 1.7 Section Équipe, "Les visages derrière votre projet"
 
 **Eyebrow** : `L'équipe`
 **H2** : 4 personnes, 4 expertises
@@ -132,27 +132,27 @@ Mise en ligne sur votre domaine, configuration analytics, formation rapide pour 
 
 > 💡 Yann : ces 4 profils sont des **gabarits**. Tu me donneras les vrais noms, photos et 1-phrase de bio quand tu les auras. Pour l'instant je propose les rôles et descriptions.
 
-#### Personne 1 — Direction & stratégie
+#### Personne 1, Direction & stratégie
 - **Nom** : `[À compléter]` *(Yann ?)*
 - **Rôle** : Fondateur & stratégie
 - **Phrase** : Pilote chaque projet de bout en bout. Veille à ce que le site serve un vrai objectif business, pas juste à exister.
 
-#### Personne 2 — Direction artistique
+#### Personne 2, Direction artistique
 - **Nom** : `[À compléter]`
 - **Rôle** : Direction artistique & UX
 - **Phrase** : Conçoit l'identité visuelle et l'expérience de chaque site. Convaincue qu'un beau design qui ne convertit pas n'est pas un bon design.
 
-#### Personne 3 — Développement
+#### Personne 3, Développement
 - **Nom** : `[À compléter]`
 - **Rôle** : Développement & performance
 - **Phrase** : Construit des sites rapides, sécurisés et maintenables. Obsessionnel des scores Lighthouse à 95+.
 
-#### Personne 4 — SEO & growth
+#### Personne 4, SEO & growth
 - **Nom** : `[À compléter]`
 - **Rôle** : SEO & croissance
 - **Phrase** : Intègre le SEO dès la conception. Suit les performances après la mise en ligne pour que le site continue de progresser.
 
-### 1.8 Section Teaser Réalisations — "Quelques projets récents"
+### 1.8 Section Teaser Réalisations, "Quelques projets récents"
 
 **Eyebrow** : `Réalisations`
 **H2** : Quelques projets récents
@@ -178,9 +178,9 @@ Mise en ligne sur votre domaine, configuration analytics, formation rapide pour 
 **Format d'un témoignage** :
 - ⭐⭐⭐⭐⭐
 - "Verbatim court de 2-3 phrases."
-- — Prénom Nom, Fonction, Entreprise
+-, Prénom Nom, Fonction, Entreprise
 
-### 1.10 Section Fourchettes — "Combien ça coûte ?"
+### 1.10 Section Fourchettes, "Combien ça coûte ?"
 
 **Eyebrow** : `Combien ça coûte ?`
 **H2** : Des fourchettes claires, pas figées
@@ -192,14 +192,14 @@ Mise en ligne sur votre domaine, configuration analytics, formation rapide pour 
 | Site vitrine étoffé / E-commerce simple | **4 500 € – 7 500 €** | 6 à 10 pages, SEO renforcé, intégration analytics, formulaires avancés ou boutique de base. |
 | Projet plus complexe | **Sur devis** | Plateforme métier, e-commerce avancé, multi-langues, intégrations sur-mesure. On en parle ensemble. |
 
-**Disclaimer** : *Pas figé — chaque projet est calibré selon votre besoin. Devis détaillé sous 48h.*
+**Disclaimer** : *Pas figé, chaque projet est calibré selon votre besoin. Devis détaillé sous 48h.*
 
 ### 1.11 Section FAQ
 
 **H2** : Vos questions, nos réponses
 
 #### Q1. Pourquoi livrer en 3 semaines, c'est pas trop court ?
-On a structuré la méthode pour aller vite sans bâcler : composants design réutilisables, process clair, équipe rodée. Le délai court vient de l'absence de zones grises dans le projet — pas d'une qualité moindre.
+On a structuré la méthode pour aller vite sans bâcler : composants design réutilisables, process clair, équipe rodée. Le délai court vient de l'absence de zones grises dans le projet, pas d'une qualité moindre.
 
 #### Q2. Que se passe-t-il si je veux modifier le site après livraison ?
 On vous forme à modifier le contenu courant (textes, images, articles). Pour les évolutions plus structurelles, on peut intervenir à la demande sur un format ponctuel ou un forfait mensuel d'évolution.
@@ -208,7 +208,7 @@ On vous forme à modifier le contenu courant (textes, images, articles). Pour le
 Le site est hébergé sur Vercel (ou OVH, à votre choix). Hébergement performant inclus la première année. Ensuite, environ 20€/mois selon l'option.
 
 #### Q4. Est-ce que je suis propriétaire du site ?
-Oui, intégralement. Code source, contenu, design — tout vous appartient. On vous transmet l'accès complet à la mise en ligne.
+Oui, intégralement. Code source, contenu, design, tout vous appartient. On vous transmet l'accès complet à la mise en ligne.
 
 #### Q5. Travaillez-vous avec des entreprises hors France ?
 On travaille principalement avec des PME françaises, mais on accompagne aussi des clients en Belgique, Suisse, Luxembourg. La langue de travail est le français.
@@ -226,7 +226,7 @@ Le SEO est intégré dès la conception (structure, contenu, vitesse). Pour un t
 - **Nom** *(obligatoire)*
 - **Email professionnel** *(obligatoire)*
 - **Type de projet** *(sélecteur, optionnel)* : Site vitrine / E-commerce / Refonte / SEO / Autre
-- **Parlez-nous de votre projet** *(textarea, obligatoire)* : *Quelques lignes suffisent — vos objectifs, votre activité, vos délais, ce qui vous bloque aujourd'hui.*
+- **Parlez-nous de votre projet** *(textarea, obligatoire)* : *Quelques lignes suffisent, vos objectifs, votre activité, vos délais, ce qui vous bloque aujourd'hui.*
 
 **Bouton** : `Envoyer ma demande →`
 
@@ -239,22 +239,22 @@ Le SEO est intégré dès la conception (structure, contenu, vitesse). Pour un t
 
 ### 1.13 Footer
 
-**Colonne 1 — Marque**
+**Colonne 1, Marque**
 - Logo `Synaptic.`
 - Tagline : *L'agence digitale qui livre aux petites PME. Beau, rapide, trouvé sur Google. En 3 semaines.*
 
-**Colonne 2 — Services**
+**Colonne 2, Services**
 - Site vitrine
 - E-commerce
 - Refonte
 - SEO & performance
 
-**Colonne 3 — Agence**
+**Colonne 3, Agence**
 - Notre approche *(ancre #approche sur home)*
 - Réalisations *(/realisations)*
 - Contact *(ancre #contact)*
 
-**Colonne 4 — Contact**
+**Colonne 4, Contact**
 - contact@synaptic-digital.fr
 - *(Optionnel : numéro de téléphone si Yann en veut un visible)*
 - Réserver un appel *(lien Calendly à mettre)*
@@ -270,7 +270,7 @@ Le SEO est intégré dès la conception (structure, contenu, vitesse). Pour un t
 
 ### Hero court
 **H1** : Nos réalisations
-**Intro** : Des projets livrés à des PME comme la vôtre. Sans Photoshop, sans habillage, sans esbroufe — des sites en ligne, avec des résultats mesurables.
+**Intro** : Des projets livrés à des PME comme la vôtre. Sans Photoshop, sans habillage, sans esbroufe, des sites en ligne, avec des résultats mesurables.
 
 ### Filtre (optionnel, Phase 6 si pertinent)
 Filtres par secteur : Tous · Services · Commerce · Industrie · Restauration · etc. *(à activer dès qu'on a 5+ cas)*
@@ -360,7 +360,7 @@ Structure type pour chaque cas. Yann remplira chaque section avec les vrais cont
 
 #### Hébergement
 Le site synaptic-digital.fr est hébergé par :
-**Vercel Inc.** *(ou OVH si Yann préfère rester chez OVH — à confirmer)*
+**Vercel Inc.** *(ou OVH si Yann préfère rester chez OVH, à confirmer)*
 *(Adresse de l'hébergeur à confirmer en fonction du choix final)*
 
 #### Propriété intellectuelle
@@ -379,7 +379,7 @@ Conformément à la réglementation en vigueur, vous disposez des droits suivant
 Pour exercer ces droits, contactez-nous à : contact@synaptic-digital.fr
 
 #### Cookies
-Le site synaptic-digital.fr utilise des cookies techniques nécessaires à son fonctionnement et, avec votre consentement, des cookies analytiques pour mesurer l'audience (Vercel Analytics ou Plausible — à confirmer). Vous pouvez à tout moment paramétrer votre choix via le bandeau cookies.
+Le site synaptic-digital.fr utilise des cookies techniques nécessaires à son fonctionnement et, avec votre consentement, des cookies analytiques pour mesurer l'audience (Vercel Analytics ou Plausible, à confirmer). Vous pouvez à tout moment paramétrer votre choix via le bandeau cookies.
 
 #### Responsabilité
 Synaptic Digital EURL s'efforce de fournir des informations aussi précises que possible sur le site synaptic-digital.fr. Toutefois, la société ne pourra être tenue responsable des omissions, inexactitudes ou carences dans la mise à jour des informations. Synaptic Digital EURL se réserve le droit de modifier les contenus du site à tout moment et sans préavis.
@@ -428,22 +428,22 @@ Les présentes mentions légales sont soumises au droit français. En cas de lit
 ---
 
 <a id="seo"></a>
-## 6. SEO — Title & meta description par page
+## 6. SEO, Title & meta description par page
 
 ### `/`
-- **Title** (60 car. max) : `Synaptic Digital — Agence web PME, sites livrés en 3 semaines`
+- **Title** (60 car. max) : `Synaptic Digital, Agence web PME, sites livrés en 3 semaines`
 - **Meta description** (155 car. max) : `Sites vitrine, e-commerce et refontes pour petites PME. Design soigné, performance technique, SEO intégré. Livré en 3 semaines, à partir de 3 000 €.`
 
 ### `/realisations`
-- **Title** : `Réalisations — Sites web livrés par Synaptic Digital`
+- **Title** : `Réalisations, Sites web livrés par Synaptic Digital`
 - **Meta description** : `Découvrez les sites web que nous avons conçus et livrés pour des PME en France. Cas clients détaillés avec résultats mesurables.`
 
 ### `/realisations/[cas]` (template)
-- **Title** : `[Nom client] — Cas client | Synaptic Digital`
+- **Title** : `[Nom client], Cas client | Synaptic Digital`
 - **Meta description** : `[Une phrase qui décrit le projet et son résultat clé, max 155 caractères]`
 
 ### `/mentions-legales`
-- **Title** : `Mentions légales — Synaptic Digital`
+- **Title** : `Mentions légales, Synaptic Digital`
 - **Meta description** : `Mentions légales du site synaptic-digital.fr, édité par Synaptic Digital EURL.`
 
 ---
@@ -461,4 +461,4 @@ Les présentes mentions légales sont soumises au droit français. En cas de lit
 
 ---
 
-*Prochaine phase une fois ce doc validé : Phase 4 — wireframes & maquettes (versions complètes des pages avec les textes intégrés, avant le dev Next.js).*
+*Prochaine phase une fois ce doc validé : Phase 4, wireframes & maquettes (versions complètes des pages avec les textes intégrés, avant le dev Next.js).*

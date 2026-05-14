@@ -5,12 +5,12 @@ Ce document explique comment publier automatiquement les contenus produits par l
 ## Vue d'ensemble
 
 ```
-[Agents Cowork]               [Toi]                  [GitHub]                  [Vercel]
-       │                        │                        │                          │
-       ▼                        ▼                        ▼                          ▼
-   Produisent           git add . && git push       Action déclenchée         Site déployé
-   un .md dans           depuis ton dossier          au push sur main         en 90 secondes
-   content/blog/         local synaptic-digital      → trigger Vercel
+[Agents Cowork] [Toi] [GitHub] [Vercel]
+ │ │ │ │
+ ▼ ▼ ▼ ▼
+ Produisent git add . && git push Action déclenchée Site déployé
+ un .md dans depuis ton dossier au push sur main en 90 secondes
+ content/blog/ local synaptic-digital → trigger Vercel
 ```
 
 **Temps total à publier un article** : 2 minutes (git push) → 1m30 (build + deploy Vercel) = **< 4 minutes**.
@@ -20,7 +20,7 @@ Ce document explique comment publier automatiquement les contenus produits par l
 ### 1. Cloner le repo sur ton poste
 
 ```bash
-cd ~/projets   # ou autre
+cd ~/projets # ou autre
 git clone https://github.com/YannKarroumPerso/synaptic-digital.git
 cd synaptic-digital
 ```
@@ -46,7 +46,7 @@ Mon PAT n'a pas le scope nécessaire pour le pousser directement dans `.github/w
 4. **Secret** : le token Vercel (`vcp_5jnu...`)
 5. "Add secret"
 
-C'est tout — à partir de là, chaque `git push` sur `main` déclenche automatiquement un deploy production sur Vercel.
+C'est tout, à partir de là, chaque `git push` sur `main` déclenche automatiquement un deploy production sur Vercel.
 
 ## Workflow hebdomadaire
 
@@ -60,18 +60,18 @@ Une fois validé :
 
 ```bash
 cd ~/projets/synaptic-digital
-git pull                                    # récupère les éventuels changements distants
+git pull # récupère les éventuels changements distants
 # ... copier les .md des agents dans content/blog/ si besoin
-git add content/blog/                       # stage les nouveaux articles
-git commit -m "Publication semaine XX"      # commit
-git push                                    # push → l'action GitHub déclenche le deploy
+git add content/blog/ # stage les nouveaux articles
+git commit -m "Publication semaine XX" # commit
+git push # push → l'action GitHub déclenche le deploy
 ```
 
 L'action GitHub Actions tourne automatiquement, déclenche le deploy Vercel, et **dans 90 secondes le nouvel article est en ligne** sur synaptic-digital.fr/blog/[slug].
 
 ### Vérifier qu'un deploy est en cours
 
-Ouvrir https://github.com/YannKarroumPerso/synaptic-digital/actions — l'action "Deploy production" doit apparaître avec un statut en cours (jaune) ou terminé (vert).
+Ouvrir https://github.com/YannKarroumPerso/synaptic-digital/actions, l'action "Deploy production" doit apparaître avec un statut en cours (jaune) ou terminé (vert).
 
 ## Format des fichiers markdown
 
@@ -84,13 +84,13 @@ coverAlt: "Description de l'image pour accessibilité"
 title: "Titre complet de l'article"
 slug: "slug-court-pour-l-url"
 date: "2026-05-13"
-type: "article"  # ou "etude" ou "decryptage"
-theme: "seo-local"  # ou "creation-site-web", "ia-pme", "reseaux-sociaux", "e-commerce"
+type: "article" # ou "etude" ou "decryptage"
+theme: "seo-local" # ou "creation-site-web", "ia-pme", "reseaux-sociaux", "e-commerce"
 excerpt: "Phrase d'accroche pour la liste (max 2 lignes)"
 metaDescription: "Meta description SEO 150-160 caractères"
 keywords:
-  - "mot-clé 1"
-  - "mot-clé 2"
+ - "mot-clé 1"
+ - "mot-clé 2"
 ---
 
 # Titre H1
@@ -102,7 +102,7 @@ Contenu en markdown standard…
 Méthode rapide pour les agents Cowork ou toi :
 
 1. Aller sur https://unsplash.com/s/photos/[keyword]
-   Exemples : `https://unsplash.com/s/photos/local-business`, `https://unsplash.com/s/photos/ai-business`
+ Exemples : `https://unsplash.com/s/photos/local-business`, `https://unsplash.com/s/photos/ai-business`
 2. Cliquer sur une photo qui colle au sujet
 3. Récupérer l'URL de l'image (clic droit → Copy image address sur la photo en grand)
 4. L'URL doit ressembler à : `https://images.unsplash.com/photo-XXX?w=...`
