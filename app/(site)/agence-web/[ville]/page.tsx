@@ -61,7 +61,7 @@ export default function AgenceWebVillePage({ params }: PageProps) {
  {ville.intro}
  </p>
  <div className="flex flex-wrap gap-3">
- <Button href="/contact" variant="primary" arrow>
+ <Button href="/devis" variant="primary" arrow>
  Démarrer mon projet
  </Button>
  <Button href="/services" variant="secondary">
@@ -212,7 +212,7 @@ export default function AgenceWebVillePage({ params }: PageProps) {
  Premier échange gratuit. Devis détaillé sous 48h. Livré en 3 semaines.
  </p>
  <div className="flex flex-wrap justify-center gap-4">
- <Button href="/contact" variant="primary" arrow>
+ <Button href="/devis" variant="primary" arrow>
  Démarrer mon projet
  </Button>
  <Link

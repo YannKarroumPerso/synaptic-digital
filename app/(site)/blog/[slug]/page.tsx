@@ -189,7 +189,7 @@ export default function BlogPost({ params }: PageProps) {
           <p className="text-text-light/70 text-[18px] max-w-[600px] mx-auto mb-8">
             On échange 30 minutes, devis détaillé sous 48h, sans engagement.
           </p>
-          <Link href="/contact" className="btn btn-primary btn-arrow">
+          <Link href="/devis" className="btn btn-primary btn-arrow">
             Démarrer mon projet
           </Link>
         </Container>
