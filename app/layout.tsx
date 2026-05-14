@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -57,18 +55,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${inter.variable} ${sora.variable}`}>
       <body>
         <StructuredData />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+        {children}
         <Analytics />
       </body>
     </html>
