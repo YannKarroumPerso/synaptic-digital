@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { getActiveVilles } from "@/lib/villes-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://synaptic-digital.fr";
@@ -21,5 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  const villePages: MetadataRoute.Sitemap = getActiveVilles().map((v) => ({
+    url: `${baseUrl}/agence-web/${v.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...blogPages, ...villePages];
 }
