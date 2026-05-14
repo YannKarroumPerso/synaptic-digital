@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { Menu, X, Mail, MapPin } from "lucide-react";
 
@@ -8,8 +9,14 @@ type NavLink = { href: string; label: string };
 
 export function MobileMenu({ links }: { links: NavLink[] }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  // Bloquer le scroll du body quand le menu est ouvert
+  // Pour SSR : on attend que le composant soit monté côté client avant de rendre le portal
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Lock scroll body quand le menu est ouvert
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -30,22 +37,11 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [isOpen]);
 
-  return (
+  const drawer = (
     <>
-      {/* Bouton burger (visible mobile + tablette, caché ≥ lg) */}
-      <button
-        type="button"
-        onClick={() => setIsOpen(true)}
-        className="lg:hidden w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl border border-border bg-bg-card text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shrink-0"
-        aria-label="Ouvrir le menu"
-        aria-expanded={isOpen}
-      >
-        <Menu size={20} strokeWidth={2} className="sm:hidden" /><Menu size={22} strokeWidth={2} className="hidden sm:block" />
-      </button>
-
-      {/* Overlay backdrop */}
+      {/* Backdrop */}
       <div
-        className={`lg:hidden fixed inset-0 z-[60] bg-bg-dark/50 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 z-[100] bg-bg-dark/50 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
@@ -54,14 +50,14 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
 
       {/* Drawer right-side */}
       <aside
-        className={`lg:hidden fixed top-0 right-0 bottom-0 z-[70] w-[min(380px,88vw)] bg-bg-light shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
+        className={`lg:hidden fixed top-0 right-0 bottom-0 z-[110] w-[min(380px,88vw)] bg-bg-light shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         role="dialog"
         aria-modal="true"
         aria-label="Menu de navigation"
       >
-        {/* Header du drawer : logo + bouton close */}
+        {/* Header du drawer */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-border">
           <Link
             href="/"
@@ -97,7 +93,7 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
           ))}
         </nav>
 
-        {/* Footer du drawer : contact direct (le CTA principal reste dans la nav sticky) */}
+        {/* Footer du drawer : contact direct */}
         <div className="px-6 py-6 border-t border-border">
           <div className="flex flex-col gap-2.5 text-sm">
             <a
@@ -115,6 +111,26 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
           </div>
         </div>
       </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Bouton burger reste dans la nav */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        className="lg:hidden w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl border border-border bg-bg-card text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shrink-0"
+        aria-label="Ouvrir le menu"
+        aria-expanded={isOpen}
+      >
+        <Menu size={20} strokeWidth={2} className="sm:hidden" />
+        <Menu size={22} strokeWidth={2} className="hidden sm:block" />
+      </button>
+
+      {/* Drawer + backdrop sont portés directement sous document.body
+          pour échapper au stacking context créé par backdrop-blur de la nav */}
+      {mounted && createPortal(drawer, document.body)}
     </>
   );
 }
