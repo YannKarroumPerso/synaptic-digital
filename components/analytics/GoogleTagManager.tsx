@@ -9,8 +9,8 @@ import Script from "next/script";
  * Le consent par défaut est "denied" (voir ConsentBanner.tsx).
  */
 export function GoogleTagManager() {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  if (!gtmId) return null;
+  // GTM ID hardcoded (valeur publique, pas un secret)
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NCQCXMTM";
 
   return (
     <Script id="gtm" strategy="afterInteractive">
@@ -34,8 +34,8 @@ export function GoogleTagManager() {
  * À placer juste après <body> dans le layout.
  */
 export function GoogleTagManagerNoScript() {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  if (!gtmId) return null;
+  // GTM ID hardcoded (valeur publique, pas un secret)
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NCQCXMTM";
   return (
     <noscript>
       <iframe
