@@ -2,12 +2,24 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import { submitContactForm, ContactFormState } from "@/app/actions";
+import { trackEvent, trackAdsConversion } from "@/lib/analytics";
+import { useEffect } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 
 const initialState: ContactFormState = {};
 
 export function LandingForm() {
   const [state, formAction] = useFormState(submitContactForm, initialState);
+
+  // Track les événements analytics
+  useEffect(() => {
+    if (state.success) {
+      trackEvent("lead_form_submit", { source: "ads" });
+      trackAdsConversion(); // déclenche la conversion Google Ads
+    } else if (state.error) {
+      trackEvent("lead_form_error", { source: "ads" });
+    }
+  }, [state]);
 
   return (
     <div id="form-devis" className="bg-bg-card border-2 border-accent/30 rounded-3xl p-7 lg:p-8 shadow-xl">

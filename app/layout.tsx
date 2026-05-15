@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { StructuredData } from "@/components/seo/StructuredData";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import { GoogleTagManager, GoogleTagManagerNoScript, ConsentModeInit } from "@/components/analytics/GoogleTagManager";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
+import { ClickTracker } from "@/components/analytics/ClickTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -58,10 +61,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${inter.variable} ${sora.variable}`}>
+      <head>
+        {/* Consent Mode v2 : tous les consents 'denied' par défaut (RGPD) */}
+        <ConsentModeInit />
+        {/* GTM container (charge gtm.js mais respecte le consent) */}
+        <GoogleTagManager />
+      </head>
       <body>
+        {/* GTM noscript fallback */}
+        <GoogleTagManagerNoScript />
         <StructuredData />
         {children}
-        <Analytics />
+        <ClickTracker />
+        <ConsentBanner />
+        <VercelAnalytics />
       </body>
     </html>
   );
