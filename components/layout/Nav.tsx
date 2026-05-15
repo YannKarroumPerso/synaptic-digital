@@ -27,6 +27,8 @@ export function Nav() {
             <Link
               href="/devis"
               className="btn btn-primary whitespace-nowrap text-[12px] sm:text-[14px] py-2 px-3 sm:py-2.5 sm:px-4"
+            data-track-cta="header_cta_demarrer"
+            data-track-location="nav"
             >
               <span className="sm:hidden">Démarrer</span>
               <span className="hidden sm:inline">Démarrer mon projet</span>
@@ -57,6 +59,8 @@ export function Nav() {
           <Link
             href="/devis"
             className="btn btn-primary whitespace-nowrap text-[15px] py-[14px] px-6"
+            data-track-cta="header_cta_demarrer"
+            data-track-location="nav"
           >
             Démarrer mon projet
           </Link>
