@@ -76,14 +76,25 @@ export function trackEvent(name: TrackEventName, params: TrackEventParams = {}) 
  * Marqueur de conversion Google Ads spécifique (en plus du dataLayer).
  * Appelé sur le succès du formulaire de la LP /devis.
  */
-export function trackAdsConversion(value?: number, currency = "EUR") {
-  if (typeof window === "undefined" || !window.gtag) return;
-  const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
-  const conversionLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
-  if (!adsId || !conversionLabel) return;
+/**
+ * IDs Google Ads (publics, pas un secret) — hardcodés pour simplicité.
+ * Override possible via env vars NEXT_PUBLIC_GOOGLE_ADS_ID / _CONVERSION_LABEL.
+ */
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18164827834";
+const GOOGLE_ADS_CONVERSION_LABEL =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || "8lDeCJflkq4cELqN1dVD";
 
+/**
+ * Valeur monétaire estimée d'un lead (sert à l'optimisation des enchères Google Ads).
+ * Estimation : panier moyen 3000€ × taux conversion 5% = 150€ par lead.
+ * Ajustable selon les données réelles dans 2-3 mois.
+ */
+const LEAD_VALUE_EUR = 150;
+
+export function trackAdsConversion(value: number = LEAD_VALUE_EUR, currency = "EUR") {
+  if (typeof window === "undefined" || !window.gtag) return;
   window.gtag("event", "conversion", {
-    send_to: `${adsId}/${conversionLabel}`,
+    send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
     value,
     currency,
   });
