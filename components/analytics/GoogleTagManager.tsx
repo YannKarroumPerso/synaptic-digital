@@ -49,6 +49,35 @@ export function GoogleTagManagerNoScript() {
 }
 
 /**
+ * Tag Google Ads chargé en direct (gtag.js).
+ * Garantit que les events de conversion partent même si GTM est mal configuré.
+ * Respecte le Consent Mode v2 : si ad_storage = denied, gtag.js ne pose pas de cookie
+ * et envoie un "ping" anonyme (conversion modeling).
+ */
+export function GoogleAdsTag() {
+  const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18164827834";
+  return (
+    <>
+      <Script
+        id="gtag-ads-src"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${adsId}`}
+      />
+      <Script id="gtag-ads-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          if (typeof window.gtag !== 'function') {
+            window.gtag = function(){ dataLayer.push(arguments); };
+          }
+          gtag('js', new Date());
+          gtag('config', '${adsId}');
+        `}
+      </Script>
+    </>
+  );
+}
+
+/**
  * Initialisation du dataLayer + Consent Mode v2 (RGPD).
  * Tous les consents sont "denied" par défaut. La bannière les passera à "granted"
  * si l'utilisateur accepte.

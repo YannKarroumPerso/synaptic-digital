@@ -3,7 +3,7 @@ import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import { GoogleTagManager, GoogleTagManagerNoScript, ConsentModeInit } from "@/components/analytics/GoogleTagManager";
+import { GoogleTagManager, GoogleTagManagerNoScript, ConsentModeInit, GoogleAdsTag } from "@/components/analytics/GoogleTagManager";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import { ClickTracker } from "@/components/analytics/ClickTracker";
 
@@ -66,6 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ConsentModeInit />
         {/* GTM container (charge gtm.js mais respecte le consent) */}
         <GoogleTagManager />
+        {/* Tag Google Ads en direct (fallback robuste pour les conversions) */}
+        <GoogleAdsTag />
       </head>
       <body>
         {/* GTM noscript fallback */}
