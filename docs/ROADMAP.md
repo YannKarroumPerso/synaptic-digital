@@ -11,7 +11,7 @@
 
 | # | Sujet | Pourquoi c'est important | Statut |
 |---|---|---|---|
-| D-1 | Numéro de téléphone WhatsApp à afficher | Bouton WhatsAppFloat utilise un placeholder `33612345678` à remplacer | À décider |
+| D-1 | ~~Numéro WhatsApp à afficher~~ → Décision : Crisp Chat + Calendly | Plus besoin de numéro perso, voir `guide-crisp-calendly.md` | ✅ 18/05/2026 |
 | D-2 | Adresse postale à afficher publiquement | Critique pour Google Business Profile et SEO local | À décider |
 | D-3 | Budget mensuel acquisition confirmé | 3 scénarios proposés : light 500 €, recommandé 1 380 €, premium 2 580 € | À décider |
 | D-4 | Email pro Synaptic (contact@synaptic-digital.fr) | À créer pour cohérence vs yannkarroum@gmail.com | À décider |
@@ -35,6 +35,7 @@
 | W1-8 | Constituer liste de 50 PME charentaises | 2h | À faire | P1 |
 | W1-9 | Envoyer 20 premiers cold emails personnalisés (templates `templates-cold-email.md`) | 2h | À faire | P1 |
 | W1-10 | Demander 10 avis Google aux clients existants (`templates-linkedin-et-avis.md`) | 30 min | À faire | P1 |
+| W1-11 | Activer Crisp Chat et Calendly (`guide-crisp-calendly.md`) | 20 min | À faire | P0 |
 
 **Total effort estimé** : 12h sur la semaine. Objectif : 3-5 leads chauds d'ici dimanche 24 mai.
 
@@ -130,6 +131,7 @@
 | 18/05/2026 | Workflow git : Claude merge lui-même les PR | Vitesse > validation manuelle |
 | 18/05/2026 | Validation identité annonceur Google Ads | Débloque les campagnes SEA |
 | 18/05/2026 | Pas d'em-dashes dans tous les textes du site | Préférence rédactionnelle forte de Yann |
+| 18/05/2026 | Pas de numéro personnel affiché, choix Crisp Chat + Calendly | Yann préfère ne pas exposer son numéro perso. Combo gratuit qui couvre temps réel + RDV. |
 
 ---
 
