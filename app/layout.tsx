@@ -6,7 +6,8 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { GoogleTagManager, GoogleTagManagerNoScript, ConsentModeInit, GoogleAdsTag } from "@/components/analytics/GoogleTagManager";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import { ClickTracker } from "@/components/analytics/ClickTracker";
-import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
+import { CrispChat } from "@/components/ui/CrispChat";
+import { CalendlyButton } from "@/components/ui/CalendlyButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,7 +78,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <ClickTracker />
         <ConsentBanner />
-        <WhatsAppFloat />
+        <CalendlyButton />
+        <CrispChat />
         <VercelAnalytics />
       </body>
     </html>
