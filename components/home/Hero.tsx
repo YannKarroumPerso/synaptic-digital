@@ -27,7 +27,7 @@ export function Hero() {
  On conçoit, développe et lance le site qui fera décoller votre PME. Design soigné, performance technique, SEO intégré dès le départ, sans le délai habituel de 3 mois.
  </p>
  <div className="flex flex-wrap gap-3 items-center mb-8">
- <Button href="#contact" variant="primary" arrow>
+ <Button href="/devis" variant="primary" arrow>
  Démarrer mon projet
  </Button>
  <Button href="/#realisations" variant="secondary">
