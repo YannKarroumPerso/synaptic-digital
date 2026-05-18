@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/devis`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/mentions-legales`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/comparer/wix-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/comparer/wordpress-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/comparer/freelance-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
