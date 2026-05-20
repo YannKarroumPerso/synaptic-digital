@@ -22,7 +22,7 @@ export function LandingForm() {
   }, [state]);
 
   return (
-    <div id="form-devis" className="bg-bg-card border-2 border-accent/30 rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl">
+    <div id="form-devis" className="bg-bg-card border-2 border-accent/30 rounded-3xl p-4 sm:p-7 lg:p-8 shadow-xl max-w-full">
       <div className="flex items-center gap-2 mb-2 text-accent font-semibold text-[13px] uppercase tracking-wider">
         <Phone size={14} />
         Recontact sous 48h, garanti
