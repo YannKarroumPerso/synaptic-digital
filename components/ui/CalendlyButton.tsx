@@ -12,7 +12,7 @@ import { trackEvent } from "@/lib/analytics";
  */
 export function CalendlyButton() {
   const [showTooltip, setShowTooltip] = useState(true);
-  const url = process.env.NEXT_PUBLIC_CALENDLY_URL;
+  const url = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/yannkarroum/30min";
 
   // Charger le widget Calendly (popup) une seule fois
   useEffect(() => {
