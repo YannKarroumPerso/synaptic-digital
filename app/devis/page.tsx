@@ -88,14 +88,14 @@ export default function DevisLandingPage() {
       <section className="relative overflow-hidden py-10 lg:py-14 bg-bg-light">
         <div className="absolute -top-40 -right-32 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(255,123,71,0.08)_0%,transparent_70%)] z-0" />
         <div className="container-page relative z-10">
-          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-start">
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-start min-w-0">
             {/* Colonne gauche : pitch */}
             <div>
               <div className="inline-flex items-center gap-2 bg-accent/12 text-accent rounded-full px-3.5 py-1.5 text-[13px] font-semibold mb-6">
                 <Star size={13} fill="currentColor" />
                 Note 4.9/5 · Plus de 50 PME accompagnées
               </div>
-              <h1 className="text-primary mb-5" style={{ fontSize: "clamp(36px, 5vw, 56px)", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+              <h1 className="text-primary mb-5" style={{ fontSize: "clamp(28px, 5vw, 56px)", fontWeight: 700, lineHeight: 1.07, letterSpacing: "-0.02em" }}>
                 Votre site web pro,<br />
                 <span className="text-accent">livré en 3 semaines.</span><br />
                 Devis gratuit sous 48h.
@@ -167,7 +167,7 @@ export default function DevisLandingPage() {
               <h2 className="text-primary mb-6" style={{ fontSize: "clamp(28px, 3.6vw, 38px)", fontWeight: 700 }}>
                 Quelques chiffres qui parlent
               </h2>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6 min-w-0">
                 <Stat value="50+" label="PME accompagnées" />
                 <Stat value="3 sem." label="Délai moyen" />
                 <Stat value="95+" label="Score Lighthouse" />
@@ -256,8 +256,8 @@ export default function DevisLandingPage() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div>
-      <div className="font-sora font-bold text-primary leading-none mb-1.5 tracking-tight" style={{ fontSize: "clamp(36px, 4vw, 48px)" }}>
+    <div className="min-w-0">
+      <div className="font-sora font-bold text-primary leading-none mb-1.5 tracking-tight break-words" style={{ fontSize: "clamp(30px, 4vw, 48px)" }}>
         {value}
       </div>
       <div className="text-[13px] text-text-muted uppercase tracking-wider font-medium">{label}</div>
