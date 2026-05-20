@@ -1,21 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Calendar, X } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 /**
  * Bouton flottant "Réserver un appel" qui ouvre Calendly en popup.
- * Activation : créer un compte Calendly, copier l'URL publique et la mettre
- * dans NEXT_PUBLIC_CALENDLY_URL (format : https://calendly.com/ton-pseudo/30min).
- * Si l'env var n'est pas définie, le composant ne s'affiche pas.
+ * Sur desktop : pill élargie avec label permanent "Réserver un appel".
+ * Sur mobile : pill compacte avec icône + label court.
  */
 export function CalendlyButton() {
-  const [showTooltip, setShowTooltip] = useState(true);
-  const url = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/yannkarroum/30min";
+  const [mounted, setMounted] = useState(false);
+  const url =
+    process.env.NEXT_PUBLIC_CALENDLY_URL ||
+    "https://calendly.com/yannkarroum/30min";
 
-  // Charger le widget Calendly (popup) une seule fois
   useEffect(() => {
+    setMounted(true);
     if (!url) return;
     if (document.getElementById("calendly-widget-script")) return;
     const script = document.createElement("script");
@@ -48,41 +49,21 @@ export function CalendlyButton() {
     }
   }
 
-  function dismiss(e: React.MouseEvent) {
-    e.preventDefault();
-    e.stopPropagation();
-    setShowTooltip(false);
-  }
-
   return (
     <button
       onClick={onClick}
-      aria-label="Réserver un appel"
-      className="fixed bottom-5 right-5 z-[100] group"
+      aria-label="Réserver un appel gratuit de 20 minutes"
+      className={`fixed bottom-5 right-5 z-[100] group inline-flex items-center gap-2.5 bg-accent hover:bg-orange-600 text-white rounded-full shadow-xl transition-all hover:scale-105 active:scale-95 px-4 py-3 sm:px-5 sm:py-3.5 ${
+        mounted ? "animate-[fade-in_0.6s_ease-out]" : "opacity-0"
+      }`}
     >
-      <div className="flex items-center gap-3">
-        {showTooltip && (
-          <div
-            role="presentation"
-            onClick={(e) => e.stopPropagation()}
-            className="hidden sm:flex items-center gap-2 bg-bg-card border border-border rounded-2xl shadow-lg px-4 py-2.5 animate-[fade-in_0.4s_ease-out]"
-          >
-            <span className="text-[13px] font-medium text-primary whitespace-nowrap">
-              Réserver un appel de 20 min, gratuit.
-            </span>
-            <button
-              onClick={dismiss}
-              aria-label="Fermer"
-              className="text-text-muted hover:text-primary transition-colors p-0.5"
-            >
-              <X size={14} />
-            </button>
-          </div>
-        )}
-        <div className="bg-accent hover:bg-orange-600 text-white rounded-full p-3.5 shadow-xl transition-all hover:scale-110 active:scale-95">
-          <Calendar size={26} strokeWidth={2} />
-        </div>
-      </div>
+      <span className="relative flex items-center justify-center">
+        <span className="absolute inset-0 rounded-full bg-white/30 animate-ping" />
+        <Calendar size={22} strokeWidth={2.2} className="relative" />
+      </span>
+      <span className="text-[14px] sm:text-[15px] font-semibold whitespace-nowrap">
+        Réserver un appel
+      </span>
     </button>
   );
 }
