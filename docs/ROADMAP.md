@@ -35,7 +35,8 @@
 | W1-8 | Constituer liste de 50 PME charentaises | 2h | À faire | P1 |
 | W1-9 | Envoyer 20 premiers cold emails personnalisés (templates `templates-cold-email.md`) | 2h | À faire | P1 |
 | W1-10 | Demander 10 avis Google aux clients existants (`templates-linkedin-et-avis.md`) | 30 min | À faire | P1 |
-| W1-11 | Activer Crisp Chat et Calendly (`guide-crisp-calendly.md`) | 20 min | À faire | P0 |
+| W1-11a | ~~Activer Calendly~~ → URL `calendly.com/yannkarroum/30min` intégrée et bouton flottant en prod | 0 min | ✅ 18/05/2026 | P0 |
+| W1-11b | Activer Crisp Chat (créer compte + récupérer Website ID, je l intègre ensuite) | 10 min | À faire | P0 |
 
 **Total effort estimé** : 12h sur la semaine. Objectif : 3-5 leads chauds d'ici dimanche 24 mai.
 
