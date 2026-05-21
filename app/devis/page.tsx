@@ -71,9 +71,9 @@ export default function DevisLandingPage() {
       {/* HEADER MINIMAL : logo seul, pas de nav (best practice Google Ads) */}
       <header className="border-b border-border bg-bg-light">
         <div className="container-page flex items-center justify-between py-4">
-          <div className="font-sora font-extrabold text-[22px] text-primary tracking-tight">
+          <Link href="/" aria-label="Retour a l accueil Synaptic Digital" className="font-sora font-extrabold text-[22px] text-primary tracking-tight hover:opacity-80 transition-opacity">
             Synaptic<span className="text-accent">.</span>
-          </div>
+          </Link>
           <a
             href="mailto:contact@synaptic-digital.fr"
             className="hidden sm:flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors"
