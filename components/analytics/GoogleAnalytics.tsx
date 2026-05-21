@@ -14,8 +14,7 @@ import Script from "next/script";
  */
 export function GoogleAnalytics() {
   const measurementId =
-    process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-PLACEHOLDER";
-  if (!measurementId || measurementId === "G-PLACEHOLDER") return null;
+    process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-1J6SR8MXVV";
 
   return (
     <>
