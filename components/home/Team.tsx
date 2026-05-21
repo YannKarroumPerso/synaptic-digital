@@ -36,9 +36,6 @@ export function Team() {
  </div>
  ))}
  </div>
- <p className="text-center mt-10 text-[13px] text-text-muted">
- 💡 <em>Avatars placeholder, Yann remplira avec les vraies photos et bios de son équipe.</em>
- </p>
  </Container>
  </Section>
  );
