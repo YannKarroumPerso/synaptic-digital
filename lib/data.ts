@@ -222,11 +222,11 @@ export const methodSteps = [
 
 export const team = [
  {
- name: "Marc D.",
+ name: "Yann K.",
  role: "Fondateur & stratégie",
  bio: "Pilote chaque projet de bout en bout. Veille à ce que le site serve un vrai objectif business, pas juste à exister.",
  bioExtended: "Quinze ans dans le digital, dont sept à diriger des projets pour des PME et ETI françaises. A fondé Synaptic après avoir trop souvent vu des projets web tourner court, délais qui explosent, sites livrés qui ne servent à rien, devis qui ne tiennent pas. Veille à ce que chaque projet ait un objectif business clair dès le brief.",
- seed: "MarcD",
+ seed: "YannK",
  bgColor: "fde2cd",
  },
  {

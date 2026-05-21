@@ -249,9 +249,6 @@ export default function AgencePage() {
  </article>
  ))}
  </div>
- <p className="text-center mt-8 text-[13px] text-text-muted">
- 💡 <em>Avatars et bios placeholder, Yann remplacera par les vraies photos et parcours.</em>
- </p>
  </Container>
  </Section>
 
