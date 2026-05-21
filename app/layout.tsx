@@ -4,6 +4,7 @@ import "./globals.css";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { GoogleTagManager, GoogleTagManagerNoScript, ConsentModeInit, GoogleAdsTag } from "@/components/analytics/GoogleTagManager";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import { ClickTracker } from "@/components/analytics/ClickTracker";
 import { CrispChat } from "@/components/ui/CrispChat";
@@ -70,6 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <GoogleTagManager />
         {/* Tag Google Ads en direct (fallback robuste pour les conversions) */}
         <GoogleAdsTag />
+        {/* Google Analytics 4 en direct */}
+        <GoogleAnalytics />
       </head>
       <body>
         {/* GTM noscript fallback */}
