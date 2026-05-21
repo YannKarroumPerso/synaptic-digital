@@ -21,7 +21,7 @@ export function Team() {
  >
  <div className="w-[120px] h-[120px] rounded-full overflow-hidden mx-auto mb-5 bg-bg-warm border-[3px] border-bg-card shadow-sm">
  <Image
- src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}&backgroundColor=${member.bgColor}&size=280`}
+ src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}&backgroundColor=${member.bgColor}&size=280${member.hairVariant ? `&hair=${member.hairVariant}` : ""}`}
  alt={`Avatar de ${member.name}`}
  width={280}
  height={280}

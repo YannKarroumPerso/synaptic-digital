@@ -230,7 +230,7 @@ export default function AgencePage() {
  >
  <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-bg-warm border-[3px] border-bg-card shadow-sm shrink-0">
  <Image
- src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}&backgroundColor=${member.bgColor}&size=240`}
+ src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}&backgroundColor=${member.bgColor}&size=240${member.hairVariant ? `&hair=${member.hairVariant}` : ""}`}
  alt={`Avatar de ${member.name}`}
  width={240}
  height={240}

@@ -192,7 +192,7 @@ export function teamPersonsSchema() {
     jobTitle: member.role,
     description: member.bio,
     worksFor: { "@id": ORG_ID },
-    image: `https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}`,
+    image: `https://api.dicebear.com/7.x/lorelei/svg?seed=${member.seed}${member.hairVariant ? `&hair=${member.hairVariant}` : ""}`,
   }));
 }
 
