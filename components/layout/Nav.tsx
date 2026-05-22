@@ -4,6 +4,7 @@ import { MobileMenu } from "./MobileMenu";
 const navLinks = [
   { href: "/agence", label: "L'agence" },
   { href: "/services", label: "Services" },
+  { href: "/services/automatisation-pme", label: "Automatisation" },
   { href: "/blog", label: "Ressources" },
 ];
 
