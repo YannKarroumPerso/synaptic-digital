@@ -2,7 +2,7 @@
 
 > Fichier de suivi à long terme. Versionné dans le repo (`docs/ROADMAP.md`) + copie consultable dans le dossier OneDrive Synaptic. Mis à jour à chaque décision ou avancement notable.
 
-**Dernière mise à jour** : 18 mai 2026
+**Dernière mise à jour** : 22 mai 2026
 **Maintenu par** : Yann + Claude
 
 ---
@@ -133,6 +133,7 @@
 | 18/05/2026 | Validation identité annonceur Google Ads | Débloque les campagnes SEA |
 | 18/05/2026 | Pas d'em-dashes dans tous les textes du site | Préférence rédactionnelle forte de Yann |
 | 18/05/2026 | Pas de numéro personnel affiché, choix Crisp Chat + Calendly | Yann préfère ne pas exposer son numéro perso. Combo gratuit qui couvre temps réel + RDV. |
+| 22/05/2026 | Lancement offre Automatisation PME | 4 cas d'usage packagés (prise de RDV, devis artisan, réservation resto, gestion leads). Élargit le panier moyen (tickets 1 200-2 800 €) et différencie vs autres agences locales. Pages déployées sur synaptic-digital.fr. |
 
 ---
 
@@ -185,6 +186,7 @@
 | Roadmap globale (ce fichier) | `ROADMAP-SYNAPTIC.md` |
 | Plan de tracking analytics | `docs/tracking-plan.md` (repo) |
 | Stratégie SEO refonte | `docs/refonte/phase-1-strategie.md` (repo) |
+| Offre Automatisation PME (5 pages live) | `/services/automatisation-pme` + 4 cas d'usage sur synaptic-digital.fr |
 
 ---
 
