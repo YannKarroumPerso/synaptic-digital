@@ -16,6 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/comparer/wix-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${baseUrl}/comparer/wordpress-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${baseUrl}/comparer/freelance-vs-synaptic`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/services/automatisation-pme`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/services/prise-de-rdv-automatique`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/services/devis-en-ligne-artisan`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/services/reservation-restaurant-sans-commission`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/services/gestion-leads-commerce-local`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({

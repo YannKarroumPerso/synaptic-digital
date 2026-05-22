@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-bg-dark text-text-light pt-20 pb-8">
       <div className="container-page">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 pb-10 mb-12 border-b border-white/10">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr] gap-10 pb-10 mb-12 border-b border-white/10">
           <div>
             <div className="font-sora font-extrabold text-[22px] text-text-light mb-4">
               Synaptic<span className="text-accent">.</span>
@@ -37,6 +37,16 @@ export function Footer() {
               { label: "E-commerce", href: "/services#e-commerce" },
               { label: "Refonte", href: "/services#refonte" },
               { label: "SEO & performance", href: "/services#seo-performance" },
+              { label: "Automatisation PME", href: "/services/automatisation-pme" },
+            ]}
+          />
+          <FooterColumn
+            title="Automatisation"
+            links={[
+              { label: "Prise de RDV automatique", href: "/services/prise-de-rdv-automatique" },
+              { label: "Devis en ligne artisan", href: "/services/devis-en-ligne-artisan" },
+              { label: "Réservation restaurant", href: "/services/reservation-restaurant-sans-commission" },
+              { label: "Gestion leads centralisée", href: "/services/gestion-leads-commerce-local" },
             ]}
           />
           <FooterColumn
