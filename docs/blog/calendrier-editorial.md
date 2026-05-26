@@ -14,7 +14,7 @@ Statuts : ⬜ à publier · 🔄 en cours · ✅ publié
 |---|---|---|---|---|---|
 | Lun 18/05 | ✅ | Prix | Site vitrine ou e-commerce, quel choix selon votre business | site-vitrine-ou-ecommerce-choisir-pme | site vitrine ou ecommerce |
 | Mer 20/05 | ✅ | Métier | Site web pour artisan du bâtiment, ce qui change vraiment | site-web-artisan-batiment | site web artisan |
-| Ven 22/05 | ⬜ | SEO | SEO local Angoulême, le guide concret pour PME en 2026 | seo-local-angouleme-pme-2026 | seo local angoulême |
+| Ven 22/05 | ✅ | SEO | SEO local Angoulême, le guide concret pour PME en 2026 | seo-local-angouleme-pme-2026 | seo local angoulême |
 
 ## Semaine 2 (25 mai 2026)
 
