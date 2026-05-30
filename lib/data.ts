@@ -366,6 +366,13 @@ export type Realisation = {
 
 export const realisations: Realisation[] = [
  {
+ name: "Nokto Beds",
+ category: "Marque de literie · DTC",
+ description: "Site marque pour une gamme de literie 4 modèles. Univers nuit, mise en scène produit immersive, parcours achat clair.",
+ image: "/realisations/nokto.png",
+ imageMobile: "/realisations/nokto-mobile.png",
+ },
+ {
  name: "Altitude Trail",
  category: "Média éditorial",
  description: "Média d'actualités trail running : courses, ultra-trail, entraînement, nutrition.",
