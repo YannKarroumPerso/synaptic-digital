@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageSchemas } from "@/components/seo/StructuredData";
+import { faqSchema } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { getVilleBySlug, getActiveVilles, type ProfilProspect } from "@/lib/villes-data";
@@ -45,6 +46,10 @@ export default function AgenceWebVillePage({ params }: PageProps) {
 
  return (
  <>
+ <PageSchemas
+ breadcrumb={[{ name: "Accueil", url: "/" }, { name: "Agence web" }, { name: ville.nom }]}
+ additional={ville.faq && ville.faq.length > 0 ? [faqSchema(ville.faq)] : []}
+ />
  {/* HERO */}
  <section className="relative overflow-hidden pt-16 pb-12 lg:pt-20 lg:pb-14 bg-bg-light">
  <div className="absolute -top-40 -right-32 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(255,123,71,0.08)_0%,transparent_70%)] z-0" />
@@ -177,6 +182,29 @@ export default function AgenceWebVillePage({ params }: PageProps) {
  </div>
  </Container>
  </Section>
+
+ {/* FAQ locale, ciblage SEO requetes */}
+ {ville.faq && ville.faq.length > 0 && (
+ <Section className="bg-bg-card">
+ <Container narrow>
+ <div className="text-center mb-10">
+ <span className="section-eyebrow">Questions fréquentes</span>
+ <h2 className="text-primary mb-4">Création de site web à {ville.nom}, vos questions</h2>
+ </div>
+ <div className="space-y-4 max-w-[760px] mx-auto">
+ {ville.faq.map((item) => (
+ <details key={item.question} className="group bg-bg-light border border-border rounded-2xl p-6">
+ <summary className="flex items-center justify-between cursor-pointer font-semibold text-primary text-[17px] list-none">
+ {item.question}
+ <ArrowRight size={18} className="text-accent transition-transform group-open:rotate-90 shrink-0 ml-4" />
+ </summary>
+ <p className="text-text-muted leading-relaxed mt-4 text-[16px]">{item.answer}</p>
+ </details>
+ ))}
+ </div>
+ </Container>
+ </Section>
+ )}
 
  {/* MAILLAGE, autres villes */}
  <Section className="bg-bg-light tight">
