@@ -22,7 +22,7 @@ Statuts : ⬜ à publier · 🔄 en cours · ✅ publié
 |---|---|---|---|---|---|
 | Lun 25/05 | ✅ | Local | Refaire son site web en Charente, le bon moment c'est maintenant | refonte-site-web-pme-charente | refonte site charente |
 | Mer 27/05 | ✅ | Prix | Wix, Wordpress, sur mesure, qui coûte vraiment le moins sur 5 ans | wix-wordpress-sur-mesure-cout-5-ans | wix wordpress comparaison |
-| Ven 29/05 | ⬜ | Métier | Site web pour restaurant, les 7 erreurs qui font fuir les clients | site-web-restaurant-erreurs | site internet restaurant |
+| Ven 29/05 | ✅ | Métier | Site web pour restaurant, les 7 erreurs qui font fuir les clients | site-web-restaurant-erreurs | site internet restaurant |
 
 ## Semaine 3 (1er juin 2026)
 
