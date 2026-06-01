@@ -22,6 +22,9 @@ export type VilleData = {
  // Distance / zones desservies depuis le siège
  distance: string;
 
+ // FAQ optionnelle, ciblage SEO local + rich results Google
+ faq?: { question: string; answer: string }[];
+
  active: boolean;
 };
 
@@ -94,6 +97,33 @@ export const villes: VilleData[] = [
  },
  ],
  distance: "À 45 minutes de notre siège. On se déplace sur Cognac sans frais pour les premiers échanges.",
+ faq: [
+ {
+ question: "Combien coûte la création d'un site internet à Cognac ?",
+ answer:
+ "La création d'un site internet à Cognac démarre à 1 500 € pour un site vitrine professionnel, livré en 3 semaines. Le budget dépend du nombre de pages, du besoin de boutique en ligne et d'une version bilingue FR/EN, fréquente pour les maisons de Cognac qui visent une clientèle internationale. On vous remet un devis détaillé sous 48h, sans surprise.",
+ },
+ {
+ question: "Pourquoi choisir une agence web à Cognac plutôt qu'un freelance à distance ?",
+ answer:
+ "Une agence web qui connaît le marché cognaçais comprend vos enjeux : clientèle locale, tourisme viticole, acheteurs étrangers. On se déplace gratuitement sur Cognac pour cadrer le projet, et on intègre dès le départ le référencement local pour que vous sortiez sur les recherches \"création site internet Cognac\" et \"agence web Cognac\".",
+ },
+ {
+ question: "Faites-vous des sites bilingues FR/EN pour la filière du Cognac ?",
+ answer:
+ "Oui. Beaucoup de producteurs et de maisons de Cognac ont une clientèle internationale mais un site uniquement en français. On construit des sites bilingues propres, avec un balisage technique qui permet à Google de servir la bonne langue selon le pays du visiteur.",
+ },
+ {
+ question: "En combien de temps livrez-vous un site web à Cognac ?",
+ answer:
+ "Trois semaines en moyenne, du brief à la mise en ligne. Notre méthode est rodée : compréhension du besoin, maquettes, développement avec performance et SEO intégrés, puis lancement et suivi pendant 30 jours.",
+ },
+ {
+ question: "Assurez-vous le référencement local sur Google à Cognac ?",
+ answer:
+ "Oui, le SEO local est intégré à chaque site qu'on livre à Cognac : structure optimisée, balises ciblées sur vos services et votre ville, configuration de votre fiche Google Business Profile. C'est ce qui vous fait remonter face aux concurrents sur les recherches locales.",
+ },
+ ],
  active: true,
  },
  {
