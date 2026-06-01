@@ -29,7 +29,8 @@ Statuts : ⬜ à publier · 🔄 en cours · ✅ publié
 | Date | Statut | Thème | Titre | Slug | Mot-clé cible |
 |---|---|---|---|---|---|
 | Lun 01/06 | ✅ | Performance | Core Web Vitals, pourquoi votre site dépassé ne ranke plus en 2026 | core-web-vitals-pme-2026 | core web vitals site lent |
-| Mer 03/06 | ⬜ | Local | Réussir son site web à Cognac, contraintes d'un territoire viticole | site-web-cognac-viticulteurs | création site web cognac |
+| Mer 03/06 | ✅ | Local | Réussir son site web à Cognac, contraintes d'un territoire viticole | site-web-cognac-viticulteurs | création site web cognac |
+| Bonus 02/06 | ✅ | Local | Création de site internet à Cognac, le guide complet 2026 | creation-site-internet-cognac-guide | création site internet cognac | (hors cadence, renfort cluster Cognac) |
 | Ven 05/06 | ⬜ | Métier | Site web pour fleuriste et paysagiste, vendre une émotion en ligne | site-web-fleuriste-paysagiste | site internet fleuriste |
 
 ## Semaine 4 (8 juin 2026)
