@@ -1,7 +1,15 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
+import { useEffect } from "react";
 import { submitContactForm, ContactFormState } from "@/app/actions";
+
+// Déclaration TypeScript pour gtag (Google Tag injecté en head)
+declare global {
+ interface Window {
+ gtag?: (...args: unknown[]) => void;
+ }
+}
 
 const initialState: ContactFormState = {};
 
@@ -11,6 +19,30 @@ interface ContactFormProps {
 
 export function ContactForm({ variant = "dark" }: ContactFormProps) {
  const [state, formAction] = useFormState(submitContactForm, initialState);
+
+ // Tracking conversion : déclenche l'événement GA4 generate_lead à chaque
+ // soumission réussie. Si GA4 est lié à Google Ads et que cet événement est
+ // marqué comme conversion principale, l'algo Smart Bidding reçoit le signal.
+ useEffect(() => {
+ if (state.success && typeof window !== "undefined" && typeof window.gtag === "function") {
+ window.gtag("event", "generate_lead", {
+ currency: "EUR",
+ value: 50,
+ form_location: typeof window !== "undefined" ? window.location.pathname : "",
+ });
+ // Google Ads direct (si label de conversion fourni via env)
+ const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18164827834";
+ const adsLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+ if (adsLabel) {
+ window.gtag("event", "conversion", {
+ send_to: `${adsId}/${adsLabel}`,
+ value: 50,
+ currency: "EUR",
+ });
+ }
+ }
+ }, [state.success]);
+
  const isDark = variant === "dark";
 
  const labelClass = isDark ? "text-text-light" : "text-primary";
