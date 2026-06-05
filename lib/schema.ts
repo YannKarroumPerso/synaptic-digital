@@ -23,7 +23,7 @@ export function localBusinessSchema() {
     foundingDate: "2024",
     founder: { "@type": "Person", name: "Yann Karroum" },
     description:
-      "Agence web en Charente et Charente-Maritime. Création de sites vitrine, e-commerce, refonte et SEO pour petites PME. Sites livrés en 3 semaines, à partir de 1 500 €.",
+      "Agence web en Charente et Charente-Maritime. Création de sites vitrine, e-commerce, refonte et SEO pour petites PME. Sites livrés en 3 semaines. Devis détaillé sous 48h.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "33 rue des Petits Champs",
