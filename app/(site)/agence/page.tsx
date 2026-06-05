@@ -208,7 +208,7 @@ export default function AgencePage() {
  <ValueCard
  Icon={Heart}
  title="Le bon prix"
- text="Entre 3 000 € et 7 500 € pour 90% des projets. Pas un budget de grande agence, pas un budget de freelance débordé. Le juste prix pour un travail sérieux."
+ text="Tarif aligné sur le standard agence française PME, en dessous des cabinets parisiens et au-dessus du freelance qui plante son client. Le juste prix pour un travail sérieux. Devis détaillé sous 48h, sans engagement."
  />
  </div>
  </Container>
