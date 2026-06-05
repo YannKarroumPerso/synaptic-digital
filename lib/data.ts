@@ -46,8 +46,8 @@ export const services: Service[] = [
  idealFor:
  "TPE et petites PME qui veulent une présence digitale propre et professionnelle, sans pour autant avoir besoin d'une boutique en ligne ou d'outils métier.",
  duration: "Livré en 2 à 3 semaines",
- price: "1 500 €",
- priceRange: "1 500 € – 4 500 €",
+ price: "",
+ priceRange: "",
  },
  {
  slug: "e-commerce",
@@ -74,8 +74,8 @@ export const services: Service[] = [
  idealFor:
  "Commerçants qui passent au digital, marques artisanales qui veulent toucher au-delà de leur région, professionnels qui vendent produits ou prestations en ligne.",
  duration: "Livré en 4 semaines",
- price: "4 900 €",
- priceRange: "4 900 € – 12 000 €",
+ price: "",
+ priceRange: "",
  },
  {
  slug: "refonte",
@@ -101,8 +101,8 @@ export const services: Service[] = [
  idealFor:
  "Entreprises avec un site existant qui sous-performe (lent, daté, peu mobile-friendly, faible SEO) et qui veulent reprendre la main sans tout recommencer de zéro.",
  duration: "Livrée en 3 à 4 semaines",
- price: "2 900 €",
- priceRange: "2 900 € – 8 000 €",
+ price: "",
+ priceRange: "",
  },
  {
  slug: "seo-performance",
@@ -128,8 +128,8 @@ export const services: Service[] = [
  idealFor:
  "Sites existants qui ne convertissent pas faute d'être trouvés sur Google, ou trop lents pour retenir les visiteurs. Audits ponctuels ou accompagnement continu.",
  duration: "1 à 2 semaines pour un audit + chantier d'optimisation",
- price: "1 500 €",
- priceRange: "1 500 € – 4 500 €",
+ price: "",
+ priceRange: "",
  },
  {
  slug: "social-media",
@@ -155,8 +155,8 @@ export const services: Service[] = [
  idealFor:
  "PME qui veulent une présence sociale régulière et qualitative sans embaucher en interne. Idéal pour générer du trafic récurrent vers votre site et entretenir votre marque.",
  duration: "Setup en 1-2 semaines, puis accompagnement mensuel",
- price: "900 € / mois",
- priceRange: "900 € – 2 500 € / mois",
+ price: "",
+ priceRange: "",
  },
 ];
 

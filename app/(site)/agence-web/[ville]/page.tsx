@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
  return {
  title: `Création site web ${ville.nom}, Agence web ${ville.departement}`,
- description: `Agence digitale à ${ville.nom} : sites vitrine, e-commerce, refonte pour PME locales. Livré en 3 semaines, à partir de 1 500 €. SEO local intégré.`,
+ description: `Agence digitale à ${ville.nom} : sites vitrine, e-commerce, refonte pour PME locales. Livré en 3 semaines. Devis gratuit sous 48h. SEO local intégré.`,
  keywords: [
  `création site web ${ville.nom}`,
  `agence web ${ville.nom}`,

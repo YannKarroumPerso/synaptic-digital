@@ -31,10 +31,13 @@ export function Services() {
                     {service.description}
                   </p>
                   <div className="pt-4 border-t border-border text-sm text-text-muted mt-auto">
-                    À partir de{" "}
-                    <strong className="font-sora font-bold text-accent text-[17px]">
-                      {service.price}
-                    </strong>
+                    <Link
+                      href={`/services#${service.slug || ''}`}
+                      className="text-accent font-semibold hover:underline inline-flex items-center gap-1 group"
+                    >
+                      En savoir plus
+                      <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Synaptic Digital",
   },
   description:
-    "Sites vitrine, e-commerce et refontes pour petites PME en Charente. Design soigné, performance technique, SEO intégré. Livré en 3 semaines, à partir de 1 500 €.",
+    "Sites vitrine, e-commerce et refontes pour petites PME en Charente. Design soigné, performance technique, SEO intégré. Livré en 3 semaines. Devis détaillé sous 48h.",
   keywords: [
     "agence web PME",
     "création site internet",

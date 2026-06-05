@@ -584,8 +584,7 @@ function ServiceFooter({ service, inverted = false }: { service: Service; invert
  Tarif
  </div>
  <div className={`text-[15px] font-medium ${textClass}`}>
- <span className="text-text-muted text-[12px]">À partir de</span>{" "}
- <span className="text-accent font-bold">{service.price}</span>
+ <span className="text-text-muted text-[12px]">Devis détaillé sous 48h</span>
  </div>
  </div>
  </div>

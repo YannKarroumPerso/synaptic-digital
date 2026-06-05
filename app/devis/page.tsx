@@ -5,7 +5,7 @@ import { LandingForm } from "@/components/landing/LandingForm";
 import { LandingMockup } from "@/components/landing/LandingMockup";
 
 export const metadata: Metadata = {
-  title: "Devis site web PME, livré en 3 semaines, à partir de 1 500 €",
+  title: "Devis site web PME, livré en 3 semaines, détaillé sous 48h",
   description:
     "Demandez votre devis gratuit pour un site web professionnel. Sites vitrine, e-commerce, refonte. Devis détaillé sous 48h. Sans engagement.",
 };
@@ -18,8 +18,8 @@ const benefits = [
   },
   {
     Icon: Zap,
-    title: "À partir de 1 500 €",
-    text: "Tarif transparent annoncé en amont. Pas de mauvaise surprise au devis.",
+    title: "Devis détaillé sous 48h",
+    text: "Tarif transparent, ventilé poste par poste. Pas de mauvaise surprise en cours de projet.",
   },
   {
     Icon: Search,
@@ -49,7 +49,7 @@ const testimonials = [
 const faqs = [
   {
     q: "Combien coûte vraiment un site web ?",
-    a: "Entre 1 500 € pour un site one-page jusqu'à 7 500 € pour un site étoffé ou un e-commerce simple. Le devis détaillé tient compte de votre projet précis et arrive sous 48h après notre échange initial.",
+    a: "Le bon prix dépend de votre projet précis. On vous envoie un devis détaillé sous 48h après notre échange initial, ventilé poste par poste, sans engagement. Vous pouvez aussi consulter notre guide complet sur les prix d un site internet PME en 2026 sur le blog.",
   },
   {
     q: "En combien de temps mon site est-il en ligne ?",
@@ -101,7 +101,7 @@ export default function DevisLandingPage() {
                 Devis gratuit sous 48h.
               </h1>
               <p className="text-[18px] text-text-muted leading-relaxed mb-8 max-w-[540px]">
-                Site vitrine, e-commerce ou refonte. Design soigné, SEO intégré, livré dans les délais. À partir de 1 500 €, sans surprise.
+                Site vitrine, e-commerce ou refonte. Design soigné, SEO intégré, livré dans les délais. Devis détaillé sous 48h, sans engagement.
               </p>
 
               {/* Garanties chip row */}

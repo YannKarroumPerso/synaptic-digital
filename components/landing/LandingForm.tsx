@@ -91,10 +91,11 @@ export function LandingForm() {
               className="w-full px-4 py-2.5 text-[15px] bg-bg-light border border-border rounded-[10px] text-text-dark focus:outline-none focus:border-accent focus:bg-bg-card transition-all"
             >
               <option value="">— Préciser si possible —</option>
-              <option value="1 500 - 3 000 €">1 500 € — 3 000 €</option>
-              <option value="3 000 - 5 000 €">3 000 € — 5 000 €</option>
-              <option value="5 000 - 8 000 €">5 000 € — 8 000 €</option>
-              <option value="8 000 €+">8 000 € et plus</option>
+              <option value="petit">Petit projet (one-page ou site simple)</option>
+              <option value="classique">Site PME classique (4 à 8 pages)</option>
+              <option value="ambitieux">Projet ambitieux (e-commerce, SEO renforcé)</option>
+              <option value="sur-mesure">Plateforme ou sur-mesure</option>
+              <option value="pas-defini">Pas encore défini</option>
               <option value="À définir">À définir avec vous</option>
             </select>
           </label>
