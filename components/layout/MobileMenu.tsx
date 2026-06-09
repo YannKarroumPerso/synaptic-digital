@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { Menu, X, Mail, MapPin } from "lucide-react";
+import { Menu, X, Mail, MapPin, Phone } from "lucide-react";
 
 type NavLink = { href: string; label: string };
 
@@ -95,6 +95,17 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
 
         {/* Footer du drawer : contact direct */}
         <div className="px-6 py-6 border-t border-border">
+          <a
+            href="tel:+33783337065"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-center gap-2 w-full mb-4 btn btn-primary text-[15px] py-3"
+            aria-label="Nous appeler au 07 83 33 70 65"
+            data-track-cta="mobile_menu_phone_call"
+            data-track-location="mobile_menu"
+          >
+            <Phone size={16} strokeWidth={2.2} />
+            07 83 33 70 65
+          </a>
           <div className="flex flex-col gap-2.5 text-sm">
             <a
               href="mailto:contact@synaptic-digital.fr"
