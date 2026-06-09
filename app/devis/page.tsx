@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, Phone, Check, Clock, Zap, Search, Star, ArrowRight } from "lucide-react";
+import { Check, Clock, Zap, Search, Star, ArrowRight } from "lucide-react";
 import { LandingForm } from "@/components/landing/LandingForm";
 import { LandingMockup } from "@/components/landing/LandingMockup";
 
@@ -74,13 +74,6 @@ export default function DevisLandingPage() {
           <Link href="/" aria-label="Retour a l accueil Synaptic Digital" className="font-sora font-extrabold text-[22px] text-primary tracking-tight hover:opacity-80 transition-opacity">
             Synaptic<span className="text-accent">.</span>
           </Link>
-          <a
-            href="mailto:contact@synaptic-digital.fr"
-            className="hidden sm:flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors"
-          >
-            <Mail size={14} />
-            contact@synaptic-digital.fr
-          </a>
         </div>
       </header>
 

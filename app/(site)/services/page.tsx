@@ -426,14 +426,6 @@ function ServiceSocialFeed({ service }: { service: Service }) {
  {/* Mock feed posts en grille, illustre la création régulière */}
  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[920px] mx-auto mb-12">
  <SocialPost
- gradient="from-[#FF7B47] via-[#FF9670] to-[#FFB698]"
- title="Comment on a livré ce site en 19 jours"
- likes={142}
- comments={18}
- shares={9}
- badge="Étude de cas"
- />
- <SocialPost
  gradient="from-[#1A2840] via-[#2A3A55] to-[#3B4A66]"
  title="3 erreurs à éviter sur sa home"
  likes={89}
