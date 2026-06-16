@@ -39,7 +39,7 @@ Statuts : ⬜ à publier · 🔄 en cours · ✅ publié
 |---|---|---|---|---|---|
 | Lun 08/06 | ✅ | Conversion | Pourquoi votre site ne convertit pas et 5 fixes en moins de 2h | site-web-ne-convertit-pas-fixes | site qui ne convertit pas |
 | Mer 10/06 | ✅ | Métier | Site web pour commerce de centre-ville, capter le local en digital | site-web-commerce-centre-ville | site internet commerçant |
-| Ven 12/06 | ⬜ | SEO | Avis Google pour PME, comment les obtenir et les gérer sans tricher | avis-google-pme-strategie | avis google entreprise |
+| Ven 12/06 | ✅ | SEO | Avis Google pour PME, comment les obtenir et les gérer sans tricher | avis-google-pme-strategie | avis google entreprise |
 
 ## Semaine 5 (15 juin 2026)
 
